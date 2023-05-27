@@ -62,7 +62,10 @@ This is a working readme file and should be updated before submission
 
 ### Built With
 
+- [![MongoDB][mongodb.com]][MongoDB-url]
+- [![Express][expressjs.com]][Express-url]
 - [![React][React.js]][React-url]
+- [![NodeJS][nodejs.org]][NodeJS-url]
 - [![Sass][sass-lang.com]][Sass-url]
 - [![Typescript][typescriptlang.org]][Typescript-url]
 
@@ -160,3 +163,9 @@ Project Link: [https://github.com/aubreybmina/mission-5](https://github.com/aubr
 [Sass-url]: https://sass-lang.com/
 [typescriptlang.org]: https://img.shields.io/badge/Typescript-20232A?style=for-the-badge&logo=typescript&logoColor=3178C6
 [Typescript-url]: https://www.typescriptlang.org/
+[mongodb.com]: https://img.shields.io/badge/MongoDB-20232A?style=for-the-badge&logo=mongodb&logoColor=409937
+[MongoDB-url]: https://www.typescriptlang.org/
+[expressjs.com]: https://img.shields.io/badge/Express-20232A?style=for-the-badge&logo=expressjs&logoColor=646464
+[Express-url]: https://www.typescriptlang.org/
+[nodejs.org]: https://img.shields.io/badge/NodeJS-20232A?style=for-the-badge&logo=nodejs&logoColor=5AAB46
+[NodeJS-url]: https://nodejs.org/en
