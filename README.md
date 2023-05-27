@@ -165,7 +165,7 @@ Project Link: [https://github.com/aubreybmina/mission-5](https://github.com/aubr
 [Typescript-url]: https://www.typescriptlang.org/
 [mongodb.com]: https://img.shields.io/badge/MongoDB-20232A?style=for-the-badge&logo=mongodb&logoColor=409937
 [MongoDB-url]: https://www.typescriptlang.org/
-[expressjs.com]: https://img.shields.io/badge/Express-20232A?style=for-the-badge&logo=expressjs&logoColor=646464
+[expressjs.com]: https://img.shields.io/badge/Express-20232A?style=for-the-badge&logo=express&logoColor=646464
 [Express-url]: https://www.typescriptlang.org/
-[nodejs.org]: https://img.shields.io/badge/NodeJS-20232A?style=for-the-badge&logo=nodejs&logoColor=5AAB46
+[nodejs.org]: https://img.shields.io/badge/NodeJS-20232A?style=for-the-badge&logo=node.js&logoColor=5AAB46
 [NodeJS-url]: https://nodejs.org/en
