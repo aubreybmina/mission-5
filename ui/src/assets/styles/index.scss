@@ -1,0 +1,11 @@
+@use 'colors' as c;
+@use 'properties';
+@use 'nav';
+@use 'hero';
+@use 'footer';
+@use 'missing';
+
+.main {
+  background: c.$tertiary-color;
+  font-family: 'Segoe UI', sans-serif;
+}
