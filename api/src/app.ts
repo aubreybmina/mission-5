@@ -39,9 +39,6 @@ app.use((req, res, next) => {
 //Routes
 app.use('/api', userRoutes)
 
-//Healthcheck
-app.get('/ping', (req, res, next) => res.status(200).json({ message: 'pong' }))
-
 //Error Handling
 app.use((req, res, next) => {
   const error = new Error('not found')
@@ -49,7 +46,5 @@ app.use((req, res, next) => {
 
   return res.status(404).json({ message: error.message })
 })
-
-//app.use('/api', routes)
 
 export default app

@@ -8,7 +8,7 @@ import {
 } from '../controller/userController'
 
 const router = express.Router()
-/*Routes for carController*/
+
 router.get('/user/', getAllUsers)
 router.post('/user/', createUser)
 router.get('/user/:userId', getUser)
