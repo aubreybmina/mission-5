@@ -1,6 +1,6 @@
-import * as carController from '../../controller/carController'
+import * as carController from '../../controller/userController'
 import { createRequest, createResponse } from 'node-mocks-http'
-import { TestModelYear } from '../../types/Interface'
+import { TestModelYear } from '../../types/Interfaces'
 
 describe('getAllCars', () => {
   test('should send all car via response', () => {
