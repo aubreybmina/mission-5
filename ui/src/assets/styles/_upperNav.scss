@@ -1,0 +1,35 @@
+@use 'colors' as c;
+@use 'utils' as u;
+@use 'media-queries' as m;
+@use 'fonts' as f;
+
+.upperNav {
+  height: u.toRem(34);
+  background-color: c.$secondary-color;
+  display: flex;
+  align-items: center;
+  position: relative;
+  font-family: f.$roboto;
+  color: white;
+  font-size: u.toRem(12);
+  font-weight: 500;
+
+  &__mainBtns {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+    width: 70%;
+    padding-left: u.toRem(170);
+  }
+
+  &__appBtn {
+    display: flex;
+    align-items: center;
+    padding-left: u.toRem(40);
+
+    &--mobileIcon {
+      margin-right: u.toRem(5);
+    }
+  }
+}

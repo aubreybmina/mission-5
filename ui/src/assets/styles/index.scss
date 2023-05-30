@@ -4,8 +4,12 @@
 @use 'hero';
 @use 'footer';
 @use 'missing';
+@use 'upperNav';
+@use 'fonts';
 
 .main {
-  background: c.$tertiary-color;
-  font-family: 'Segoe UI', sans-serif;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
 }

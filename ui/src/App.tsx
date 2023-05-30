@@ -6,19 +6,23 @@ import Login from './pages/Login'
 import Search from './pages/search/Search'
 import Missing from './pages/Missing'
 import Footer from './components/Footer'
+import UpperNav from './components/UpperNav'
 
 function App() {
   return (
-    <BrowserRouter>
-      <Nav />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="login" element={<Login />} />
-        <Route path="search" element={<Search />} />
-        <Route path="*" element={<Missing />} />
-      </Routes>
-      <Footer />
-    </BrowserRouter>
+    <div className="main">
+      <BrowserRouter>
+        <UpperNav />
+        <Nav />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="login" element={<Login />} />
+          <Route path="search" element={<Search />} />
+          <Route path="*" element={<Missing />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+    </div>
   )
 }
 
