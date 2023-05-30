@@ -47,6 +47,7 @@ app.use((req, res, next) => {
   next(createHttpError(404, 'Endpoint not found'))
 })
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 app.use((error: unknown, req: Request, res: Response, next: NextFunction) => {
   Logging.error(error)
   let errorMessage = 'An unknown error occured.'
