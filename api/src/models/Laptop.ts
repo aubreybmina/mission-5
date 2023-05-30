@@ -11,7 +11,7 @@ const LaptopSchema: Schema = new Schema(
     cpuFamily: { type: String, required: false },
     memorySize: { type: Number, required: false },
     screenSize: { type: Number, required: false },
-    screenResultion: { type: String, required: false },
+    screenResolution: { type: String, required: false },
     ssdCapacity: { type: Number, required: false },
     operatingSystem: { type: String, required: false },
     warranty: { type: String, required: false },
