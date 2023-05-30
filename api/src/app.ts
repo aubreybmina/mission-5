@@ -1,6 +1,7 @@
 import express from 'express'
 import Logging from './library/Logging'
 import userRoutes from './routes/userRoutes'
+import laptopRoutes from './routes/laptopRoutes'
 
 const app = express()
 
@@ -37,7 +38,8 @@ app.use((req, res, next) => {
 })
 
 //Routes
-app.use('/api', userRoutes)
+app.use('/api/user', userRoutes)
+app.use('/api/laptop', laptopRoutes)
 
 //Error Handling
 app.use((req, res, next) => {
