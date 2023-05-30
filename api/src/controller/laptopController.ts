@@ -10,7 +10,7 @@ export const createLaptop = (
   const model = req.body.model
   const category = req.body.category
   const screenSize = req.body.screenSize
-  const screenResultion = req.body.screenResultion
+  const screenResolution = req.body.screenResolution
   const cpuFamily = req.body.cpuFamily
   const memorySize = req.body.memorySize
   const ssdCapacity = req.body.ssdCapacity
@@ -25,7 +25,7 @@ export const createLaptop = (
     model: model,
     category: category,
     screenSize: screenSize,
-    screenResultion: screenResultion,
+    screenResolution: screenResolution,
     cpuFamily: cpuFamily,
     memorySize: memorySize,
     ssdCapacity: ssdCapacity,
@@ -73,7 +73,7 @@ export const updateLaptop = (
   const cpuFamily = req.body.cpuFamily
   const memorySize = parseInt(req.body.memorySize)
   const screenSize = parseInt(req.body.screenSize)
-  const screenResultion = req.body.screenResultion
+  const screenResolution = req.body.screenResolution
   const ssdCapacity = parseInt(req.body.ssdCapacity)
   const operatingSystem = req.body.operatingSystem
   const warranty = req.body.warranty
@@ -86,7 +86,7 @@ export const updateLaptop = (
     model: model,
     category: category,
     screenSize: screenSize,
-    screenResultion: screenResultion,
+    screenResolution: screenResolution,
     cpuFamily: cpuFamily,
     memorySize: memorySize,
     ssdCapacity: ssdCapacity,

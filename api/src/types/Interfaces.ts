@@ -11,7 +11,7 @@ export interface ILaptop {
   cpuFamily: string
   memorySize: number
   screenSize: number
-  screenResultion: string
+  screenResolution: string
   ssdCapacity: number
   operatingSystem: string
   warranty: string
