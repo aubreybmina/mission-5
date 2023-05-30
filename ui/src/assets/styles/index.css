@@ -82,115 +82,33 @@
   display: flex;
   justify-content: space-between;
   z-index: 10;
-  position: relative;
-}
-.navbar__logo {
-  color: #021724;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 2rem;
-  margin-left: 1.5rem;
-  display: flex;
-  align-items: center;
-  width: 12.5rem;
-}
-.navbar__bars {
-  opacity: 0;
-}
-@media (max-width: 48rem) {
-  .navbar__bars {
-    color: #021724;
-    opacity: 1;
-    position: absolute;
-    top: 1.375rem;
-    right: 1.25rem;
-    font-size: 2rem;
-  }
-}
-.navbar__bars--icon {
-  color: #021724;
-}
-.navbar__bars--icon:hover {
-  color: #e73336;
-  transition: all 0.3s ease;
-}
-.navbar__bars__container {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  right: 0;
-  background-color: #ffffff;
-  color: #021724;
-  font-weight: 500;
-  animation: fade-in-animation 0.3s;
-}
-.navbar__bars__container--link {
-  font-size: 1.125rem;
-  padding: 0.3125rem 0.625rem;
-  margin: 0.9375rem 1.25rem;
-  color: #021724;
-  justify-content: center;
-  text-decoration: none;
-  align-items: center;
-}
-.navbar__bars__container--link:hover {
-  color: #e73336;
-  transition: all 0.3s ease;
-}
-.navbar__bars__container--button {
-  padding: 0.75rem 1.5rem;
-  border: none;
-  outline: none;
-  border-radius: 0.25rem;
-  background: #e73336;
-  margin-left: 1rem;
-  color: #0d4f77;
-}
-.navbar__bars__container--button:hover {
-  border: 0rem solid #e73336;
   background-color: #0d4f77;
-  transition: border 100ms, color 100ms;
+  padding-left: 14.875rem;
 }
 .navbar__menu {
-  list-style: none;
-  text-align: center;
-  margin-right: 1.5rem;
   display: flex;
   align-items: center;
 }
-@media (max-width: 48rem) {
-  .navbar__menu {
-    display: none;
-  }
-}
-.navbar__menu--link {
-  font-size: 1.125rem;
-  font-weight: 500;
-  color: #021724;
-  justify-content: center;
-  text-decoration: none;
-  padding: 0 1rem;
-  display: flex;
-  align-items: center;
-}
-.navbar__menu--link:hover {
-  color: #e73336;
-  transition: all 0.3s ease;
-}
-.navbar__menu--button {
-  padding: 0.75rem 1.5rem;
-  border: none;
-  outline: none;
-  border-radius: 0.25rem;
-  background: #e73336;
-  margin-left: 1rem;
-  color: #0d4f77;
+.navbar__menu--logo {
   cursor: pointer;
+  font-size: 2rem;
+  margin-left: 1.5rem;
+  width: 12.5rem;
 }
-.navbar__menu--button:hover {
-  border: 0.0625rem solid #e73336;
-  background-color: #0d4f77;
-  transition: border 100ms, color 100ms;
+.navbar__search {
+  padding-left: 2.5rem;
+}
+.navbar__search--input {
+  width: 37.5rem;
+  height: 1.875rem;
+}
+.navbar__search--btn {
+  margin-left: 0;
+  height: 2.125rem;
+  width: 3.75rem;
+  color: white;
+  background-color: #f08222;
+  border: none;
 }
 
 .hero {
