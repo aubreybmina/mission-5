@@ -77,38 +77,104 @@
   background-color: #ffffff;
 }
 
-.navbar {
-  height: 5rem;
+.navbarMid {
+  height: 3.75rem;
   display: flex;
   justify-content: space-between;
   z-index: 10;
   background-color: #0d4f77;
   padding-left: 14.875rem;
+  padding-right: 14.875rem;
+  font-family: "Roboto", sans-serif;
 }
-.navbar__menu {
+.navbarMid__home {
   display: flex;
   align-items: center;
 }
-.navbar__menu--logo {
+.navbarMid__home--logo {
   cursor: pointer;
   font-size: 2rem;
   margin-left: 1.5rem;
   width: 12.5rem;
 }
-.navbar__search {
+.navbarMid__search {
   padding-left: 2.5rem;
 }
-.navbar__search--input {
+.navbarMid__search--input {
   width: 37.5rem;
   height: 1.875rem;
 }
-.navbar__search--btn {
+.navbarMid__search--btn {
   margin-left: 0;
   height: 2.125rem;
   width: 3.75rem;
   color: white;
   background-color: #f08222;
   border: none;
+}
+.navbarMid__account {
+  display: flex;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: white;
+}
+.navbarMid__account--signin {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 11.875rem;
+  margin-left: 4.375rem;
+  padding: 0rem 0.625rem;
+  border-radius: 5px;
+  background-color: #0e4364;
+}
+.navbarMid__account--wishlist {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 5.625rem;
+  margin-left: 0.625rem;
+  padding: 0rem 0.625rem;
+  border-radius: 5px;
+  background-color: #0e4364;
+}
+.navbarMid__account--cart {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 4.0625rem;
+  margin-left: 0.625rem;
+  padding: 0rem 0.625rem;
+  border-radius: 5px;
+  background-color: #0e4364;
+}
+.navbarMid__account--cart--number {
+  text-align: center;
+  width: 0.9375rem;
+  border-radius: 5px;
+  background-color: #f08222;
+  padding: 0rem 0.125rem;
+}
+
+.navbarLower {
+  background-color: #0d4f77;
+  height: 2.5rem;
+  padding-left: 14.875rem;
+  display: flex;
+  align-items: center;
+  color: white;
+  font-family: "Roboto", sans-serif;
+}
+.navbarLower__burger {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 11.25rem;
+  height: 2.5rem;
+  transition: background-color 0.2s ease-in;
+}
+.navbarLower__burger:hover {
+  background-color: #0e4364;
 }
 
 .hero {
@@ -289,4 +355,5 @@
   left: 0;
   right: 0;
 }
-}/*# sourceMappingURL=index.css.map */
+
+/*# sourceMappingURL=index.css.map */

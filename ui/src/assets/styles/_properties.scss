@@ -38,7 +38,7 @@
       &:hover &--bedbath {
         cursor: pointer;
         border: u.toRem(0) solid c.$standout-color;
-        background-color: c.$primary-color;
+        background-color: c.$pb-blue;
         color: c.$standout-color;
         transition: border 100ms, color 100ms;
       }
@@ -48,7 +48,7 @@
         top: 0;
         background: c.$standout-color;
         background: c.$standout-seethrough; /* Standout see-through */
-        color: c.$primary-color;
+        color: c.$pb-blue;
         transition: 0.5s ease;
         border-radius: u.toRem(4);
         font-size: u.toRem(12);

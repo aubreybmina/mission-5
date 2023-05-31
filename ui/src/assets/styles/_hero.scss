@@ -10,7 +10,7 @@
   align-items: center;
   background-size: cover;
   padding: 6% 6%;
-  color: c.$primary-color;
+  color: c.$pb-blue;
 
   &__taglinecontainer {
     width: 100%;
@@ -24,12 +24,12 @@
       font-size: u.toRem(50);
       font-weight: 900;
       line-height: 1.24;
-      color: c.$primary-color;
+      color: c.$pb-blue;
     }
 
     p {
       font-size: u.toRem(20);
-      color: c.$primary-color;
+      color: c.$pb-blue;
       font-weight: 600;
     }
   }
@@ -63,7 +63,7 @@
       input {
         background-color: c.$tertiary-color;
         border: c.$tertiary-color;
-        color: c.$secondary-color;
+        color: c.$pb-blue-dark;
         float: left;
         height: u.toRem(40);
         width: 550px;
@@ -95,7 +95,7 @@
         background: c.$standout-color;
         border: none;
         outline: none;
-        color: c.$primary-color;
+        color: c.$pb-blue;
         cursor: pointer;
         height: u.toRem(60);
         padding: 0 u.toRem(30);

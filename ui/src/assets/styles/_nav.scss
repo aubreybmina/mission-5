@@ -1,16 +1,19 @@
 @use 'colors' as c;
 @use 'utils' as u;
 @use 'media-queries' as m;
+@use 'fonts' as f;
 
-.navbar {
-  height: u.toRem(80);
+.navbarMid {
+  height: u.toRem(60);
   display: flex;
   justify-content: space-between;
   z-index: 10;
-  background-color: c.$primary-color;
+  background-color: c.$pb-blue;
   padding-left: u.toRem(238);
+  padding-right: u.toRem(238);
+  font-family: f.$roboto;
 
-  &__menu {
+  &__home {
     display: flex;
     align-items: center;
 
@@ -38,5 +41,76 @@
       background-color: c.$pb-orange;
       border: none;
     }
+  }
+
+  &__account {
+    display: flex;
+    font-size: u.toRem(14);
+    font-weight: 500;
+    color: white;
+
+    &--signin {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: u.toRem(190);
+      margin-left: u.toRem(70);
+      padding: u.toRem(0) u.toRem(10);
+      border-radius: 5px;
+      background-color: c.$pb-blue-mid;
+    }
+
+    &--wishlist {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: u.toRem(90);
+      margin-left: u.toRem(10);
+      padding: u.toRem(0) u.toRem(10);
+      border-radius: 5px;
+      background-color: c.$pb-blue-mid;
+    }
+
+    &--cart {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: u.toRem(65);
+      margin-left: u.toRem(10);
+      padding: u.toRem(0) u.toRem(10);
+      border-radius: 5px;
+      background-color: c.$pb-blue-mid;
+
+      &--number {
+        text-align: center;
+        width: u.toRem(15);
+        border-radius: 5px;
+        background-color: c.$pb-orange;
+        padding: u.toRem(0) u.toRem(2);
+      }
+    }
+  }
+}
+
+.navbarLower {
+  background-color: c.$pb-blue;
+  height: u.toRem(40);
+  padding-left: u.toRem(238);
+  display: flex;
+  align-items: center;
+  color: white;
+  font-family: f.$roboto;
+
+  &__burger {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: u.toRem(180);
+    height: u.toRem(40);
+    transition: background-color 0.2s ease-in;
+  }
+
+  &__burger:hover {
+    background-color: c.$pb-blue-mid;
   }
 }
