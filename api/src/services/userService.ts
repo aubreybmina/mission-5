@@ -21,7 +21,7 @@ export const getUser = async (userId: string) => {
   }
   const user = await User.findById(userId)
   if (!user) {
-    throw createHttpError(404, 'User not found')
+    throw 'User not found'
   }
   return user
 }
@@ -69,5 +69,5 @@ export const deleteUser = async (userId: string) => {
     throw createHttpError(404, 'User not found')
   }
 
-  return `User account ${user?.userName} has been deleted.`
+  return `User account of ${user?.firstName} ${user?.lastName} has been deleted.`
 }

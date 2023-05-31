@@ -11,9 +11,9 @@ describe('MongoDB service', () => {
 
   const user = new User({
     _id: new mongoose.Types.ObjectId(),
-    firstName: 'Aubrey',
-    lastName: 'Mina',
-    userName: 'abmina',
+    firstName: 'John',
+    lastName: 'Doe',
+    userName: 'johndoe',
   })
 
   beforeAll(async () => {
@@ -23,20 +23,49 @@ describe('MongoDB service', () => {
   })
 
   afterAll(async () => {
+    await mongoClient.connection.db.dropDatabase()
     await mongoClient.connection.close()
   })
 
-  afterEach(async () => {
-    await mongoClient.connection.db.dropDatabase()
-  })
-
-  describe('Users', () => {
-    test('Add new user and get all users', async () => {
+  describe('Users CRUD', () => {
+    test('Should create a new user and get all user then return the length = 1', async () => {
       await userService.createUser(user)
 
       const users = await userService.getAllUsers()
 
       expect(users.length).toBe(1)
+    })
+
+    test('Should get the id of the first user from getAllUsers() then use it for getUser function', async () => {
+      const users = await userService.getAllUsers()
+      const retrieve = await userService.getUser(users[0]._id)
+
+      expect(users.length).toBe(1)
+      expect(retrieve).toEqual(users[0])
+    })
+
+    test('Should get the id of the first user from getAllUsers() then use it for updateUser function', async () => {
+      const expected = 'jdoe'
+      const input = {
+        firstName: 'John',
+        lastName: 'Doe',
+        userName: expected,
+      }
+      const users = await userService.getAllUsers()
+
+      const user = await userService.updateUser(users[0]._id, input)
+
+      expect(user?.userName).toEqual(expected)
+    })
+
+    test('Should delete the user using the id of the first user retrieved from getAllUsers', async () => {
+      const users = await userService.getAllUsers()
+
+      const retrieve = await userService.deleteUser(users[0]._id)
+
+      expect(retrieve).toEqual(
+        `User account of ${users[0].firstName} ${users[0].lastName} has been deleted.`
+      )
     })
   })
 })
