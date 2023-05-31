@@ -1,7 +1,7 @@
 import { IUser } from '../types/Interfaces'
 import User from '../models/User'
 import mongoose from 'mongoose'
-import Logging from '../library/Logging'
+import createHttpError from 'http-errors'
 
 export const createUser = async (input: IUser) => {
   const user = new User({
@@ -16,54 +16,58 @@ export const createUser = async (input: IUser) => {
 }
 
 export const getUser = async (userId: string) => {
-  try {
-    const user = await User.findById(userId)
-    return user
-  } catch (e) {
-    const error = new Error('No record found.')
-    Logging.error(error)
+  if (!mongoose.isValidObjectId(userId)) {
+    throw createHttpError(400, 'Invalid user ID.')
   }
+  const user = await User.findById(userId)
+  if (!user) {
+    throw createHttpError(404, 'User not found')
+  }
+  return user
 }
 
 export const getAllUsers = async () => {
-  let users
-  try {
-    users = await User.find()
-  } catch (e) {
-    const error = new Error('No records found.')
-    Logging.error(error)
+  const users = await User.find()
+  if (users.length === 0) {
+    throw createHttpError(404, 'No records yet.')
   }
   return users
 }
 
 export const updateUser = async (userId: string, input: IUser) => {
-  let user
-  try {
-    user = await User.findById(userId)
+  if (!mongoose.isValidObjectId(userId)) {
+    throw createHttpError(400, 'Invalid user ID.')
+  }
 
-    if (user) {
-      const newInput = {
-        firstName: input.firstName,
-        lastName: input.lastName,
-        userName: input.userName,
-      }
-      user.set(newInput)
-      user.save()
+  const user = await User.findById(userId)
 
-      return user
+  if (!user) {
+    throw createHttpError(404, 'User not found')
+  }
+
+  if (user) {
+    const newInput = {
+      firstName: input.firstName,
+      lastName: input.lastName,
+      userName: input.userName,
     }
-  } catch (e) {
-    const error = new Error('No record found.')
-    Logging.error(error)
+    user.set(newInput)
+    user.save()
+
+    return user
   }
 }
 
 export const deleteUser = async (userId: string) => {
-  try {
-    const user = await User.findByIdAndDelete(userId)
-    return `User account ${user?.userName} has been deleted.`
-  } catch (e) {
-    const error = new Error('No record found.')
-    Logging.error(error)
+  if (!mongoose.isValidObjectId(userId)) {
+    throw createHttpError(400, 'Invalid user ID.')
   }
+
+  const user = await User.findByIdAndDelete(userId)
+
+  if (!user) {
+    throw createHttpError(404, 'User not found')
+  }
+
+  return `User account ${user?.userName} has been deleted.`
 }

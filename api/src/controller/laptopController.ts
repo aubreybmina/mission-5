@@ -39,7 +39,7 @@ export const createLaptop = (
   laptopService
     .createLaptop(input)
     .then((newLaptop) => res.status(200).json({ newLaptop }))
-    .catch((error) => res.status(500).json({ error }))
+    .catch((error) => next(error))
 }
 
 export const getLaptop = (req: Request, res: Response, next: NextFunction) => {
@@ -47,7 +47,7 @@ export const getLaptop = (req: Request, res: Response, next: NextFunction) => {
   laptopService
     .getLaptop(laptopId)
     .then((laptop) => res.status(200).json({ laptop }))
-    .catch((error) => res.status(500).json({ error }))
+    .catch((error) => next(error))
 }
 
 export const getAllLaptops = (
@@ -58,7 +58,7 @@ export const getAllLaptops = (
   laptopService
     .getAllLaptops()
     .then((laptops) => res.status(200).json({ laptops }))
-    .catch((error) => res.status(500).json({ error }))
+    .catch((error) => next(error))
 }
 
 export const updateLaptop = (
@@ -100,7 +100,7 @@ export const updateLaptop = (
   laptopService
     .updateLaptop(laptopId, input)
     .then((laptop) => res.status(200).json({ laptop }))
-    .catch((error) => res.status(500).json({ error }))
+    .catch((error) => next(error))
 }
 
 export const deleteLaptop = (
@@ -112,5 +112,5 @@ export const deleteLaptop = (
   laptopService
     .deleteLaptop(laptopId)
     .then((message) => res.status(200).json({ message }))
-    .catch((error) => res.status(500).json({ error }))
+    .catch((error) => next(error))
 }

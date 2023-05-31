@@ -13,7 +13,7 @@ export const createUser = (req: Request, res: Response, next: NextFunction) => {
   userService
     .createUser(input)
     .then((newUser) => res.status(200).json({ newUser }))
-    .catch((error) => res.status(500).json({ error }))
+    .catch((error) => next(error))
 }
 
 export const getUser = (req: Request, res: Response, next: NextFunction) => {
@@ -21,7 +21,7 @@ export const getUser = (req: Request, res: Response, next: NextFunction) => {
   userService
     .getUser(userId)
     .then((user) => res.status(200).json({ user }))
-    .catch((error) => res.status(500).json({ error }))
+    .catch((error) => next(error))
 }
 
 export const getAllUsers = (
@@ -32,7 +32,7 @@ export const getAllUsers = (
   userService
     .getAllUsers()
     .then((users) => res.status(200).json({ users }))
-    .catch((error) => res.status(500).json({ error }))
+    .catch((error) => next(error))
 }
 
 export const updateUser = (req: Request, res: Response, next: NextFunction) => {
@@ -48,7 +48,7 @@ export const updateUser = (req: Request, res: Response, next: NextFunction) => {
   userService
     .updateUser(userId, input)
     .then((user) => res.status(200).json({ user }))
-    .catch((error) => res.status(500).json({ error }))
+    .catch((error) => next(error))
 }
 
 export const deleteUser = (req: Request, res: Response, next: NextFunction) => {
@@ -56,5 +56,5 @@ export const deleteUser = (req: Request, res: Response, next: NextFunction) => {
   userService
     .deleteUser(userId)
     .then((message) => res.status(200).json({ message }))
-    .catch((error) => res.status(500).json({ error }))
+    .catch((error) => next(error))
 }

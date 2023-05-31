@@ -1,7 +1,8 @@
-import express from 'express'
+import express, { Request, Response, NextFunction } from 'express'
 import Logging from './library/Logging'
 import userRoutes from './routes/userRoutes'
 import laptopRoutes from './routes/laptopRoutes'
+import createHttpError, { isHttpError } from 'http-errors'
 
 const app = express()
 
@@ -43,10 +44,19 @@ app.use('/api/laptop', laptopRoutes)
 
 //Error Handling
 app.use((req, res, next) => {
-  const error = new Error('not found')
-  Logging.error(error)
+  next(createHttpError(404, 'Endpoint not found'))
+})
 
-  return res.status(404).json({ message: error.message })
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+app.use((error: unknown, req: Request, res: Response, next: NextFunction) => {
+  Logging.error(error)
+  let errorMessage = 'An unknown error occured.'
+  let statusCode = 500
+  if (isHttpError(error)) {
+    statusCode = error.status
+    errorMessage = error.message
+  }
+  res.status(statusCode).json({ error: errorMessage })
 })
 
 export default app
