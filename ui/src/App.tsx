@@ -2,6 +2,7 @@ import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Nav from './components/Nav'
 import Home from './pages/home/Home'
+import Laptop from './pages/laptop/Laptop'
 import Login from './pages/Login'
 import Search from './pages/search/Search'
 import Missing from './pages/Missing'
@@ -17,6 +18,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="login" element={<Login />} />
+          <Route path="laptop" element={<Laptop />} />
           <Route path="search" element={<Search />} />
           <Route path="*" element={<Missing />} />
         </Routes>

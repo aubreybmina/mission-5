@@ -1,12 +1,12 @@
 import React from 'react'
 import Hero from './Hero'
-import Properties from './Properties'
+import LaptopList from '../laptop/LaptopList'
 
 const Home = () => {
   return (
     <>
       <Hero />
-      <Properties />
+      <LaptopList />
     </>
   )
 }
