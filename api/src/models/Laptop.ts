@@ -1,5 +1,6 @@
 import mongoose, { Document, Schema } from 'mongoose'
 import { ILaptop } from '../types/Interfaces'
+import User from './User'
 
 export interface ILaptopModel extends ILaptop, Document {}
 
@@ -18,7 +19,7 @@ const LaptopSchema: Schema = new Schema(
     features: { type: String, required: false },
     price: { type: Number, required: true },
     imageURL: { type: String, required: true },
-    userName: { type: Schema.Types.ObjectId, required: true, ref: 'User' },
+    userName: { type: Schema.Types.ObjectId, required: true, ref: User },
   },
   {
     timestamps: true,
