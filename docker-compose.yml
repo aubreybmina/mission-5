@@ -1,0 +1,27 @@
+version: "1"
+services:
+  api:
+    container_name: laptop_api_service
+    image: laptop_api
+    restart: always
+    build: ./api
+    ports:
+      - "9090:9090"
+    links:
+      - mongo
+  mongo:
+    container_name: mongo
+    image: mongo
+    volumes:
+      - ./data:/data/db
+    ports:
+      - "27018:27017"
+  ui:
+    container_name: pb_frontend_service
+    image: pb_frontend
+    restart: always
+    build: ./ui
+    ports:
+      - "3000:3000"
+    links:
+      - mongo
