@@ -8,8 +8,6 @@ import { useState } from 'react'
 import logo from '../assets/images/pb-logo-alt.svg'
 import { Link } from 'react-router-dom'
 
-const [burger, setBurger] = useState(false)
-
 const Nav = () => {
   return (
     <nav>

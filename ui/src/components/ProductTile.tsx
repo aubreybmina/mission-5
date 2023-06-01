@@ -7,7 +7,12 @@ const ProductTile = ({ laptop }: LaptopProps) => {
     style: 'currency',
     currency: 'NZD',
   })
-
+  const images = require.context(
+    '../../public/images',
+    true,
+    /\.(png|ico|svg|jpg|gif)$/
+  )
+  const imageList = images.keys().map((image: string) => images(image))
   return (
     <>
       <div className="products__card">
@@ -27,6 +32,9 @@ const ProductTile = ({ laptop }: LaptopProps) => {
           <p>{formatter.format(price)}</p>
         </div>
       </div>
+      {imageList.map((image: string, index: number) => (
+        <img key={index} src={image} alt={`image-${index}`} />
+      ))}
     </>
   )
 }
