@@ -24,62 +24,85 @@
     justify-content: center;
     align-items: center;
     flex: 1;
-    margin-block: u.toRem(30);
+    margin: u.toRem(5);
+    border-radius: u.toRem(4);
+    background-color: c.$propertycardbg-color;
 
     &--image {
-      max-width: 85%;
-      max-height: 85%;
+      margin: u.toRem(8);
+      max-width: u.toRem(300);
+      max-height: u.toRem(300);
 
       img {
         width: 100%;
         box-sizing: border-box;
       }
 
-      &:hover &--bedbath {
-        cursor: pointer;
-        border: u.toRem(0) solid c.$standout-color;
-        background-color: c.$pb-blue;
-        color: c.$standout-color;
-        transition: border 100ms, color 100ms;
-      }
-
-      &--bedbath {
+      &--icons {
         position: absolute;
         top: 0;
-        background: c.$standout-color;
-        background: c.$standout-seethrough; /* Standout see-through */
-        color: c.$pb-blue;
+        right: 0;
         transition: 0.5s ease;
-        border-radius: u.toRem(4);
-        font-size: u.toRem(12);
-        font-weight: 700;
-        padding: u.toRem(8);
-        margin: u.toRem(45) u.toRem(8) u.toRem(8) u.toRem(8);
+        padding: u.toRem(4);
+        margin: u.toRem(8);
         text-align: center;
+
+        &--scaleheart {
+          margin: u.toRem(8);
+          padding: u.toRem(4);
+          height: u.toRem(12);
+          border-radius: u.toRem(50);
+          background-color: c.$propertycardbg-color;
+          color: c.$details-color;
+
+          &:hover {
+            cursor: pointer;
+            border: u.toRem(0) solid c.$standout-color;
+            color: c.$standout-color;
+            background-color: c.$pb-blue;
+            transition: border 100ms, color 100ms;
+          }
+        }
       }
     }
 
     &--text {
-      background-color: c.$propertycardbg-color;
-      width: 85%;
-      padding: u.toRem(15) u.toRem(10);
-      box-sizing: border-box;
-      text-align: center;
+      width: u.toRem(300);
+      height: u.toRem(200);
 
-      h3 {
-        font-size: u.toRem(21);
+      &--productName {
+        font-size: u.toRem(18);
         font-weight: 700;
+        color: c.$text-highlight;
+        margin: u.toRem(5) u.toRem(0);
+      }
+
+      &--normalPriceLabel {
+        font-size: u.toRem(15);
+        color: c.$tertiary-color;
+        margin: u.toRem(5) u.toRem(0);
+      }
+
+      &--priceDollar {
+        font-size: u.toRem(28);
         color: c.$details-color;
         display: inline;
+        margin: u.toRem(5) u.toRem(0);
       }
-
-      p {
+      &--priceCents {
+        position: absolute;
+        margin: u.toRem(5) u.toRem(5) u.toRem(0) u.toRem(5);
+        font-size: u.toRem(13);
+        color: c.$details-color;
+        display: inline;
+        margin: u.toRem(5) u.toRem(0);
+      }
+      &--shipping {
+        position: absolute;
+        bottom: 0;
         font-size: u.toRem(15);
         color: c.$details-color;
-      }
-
-      &:hover {
-        background-color: c.$tertiary-color;
+        display: inline;
       }
     }
   }
