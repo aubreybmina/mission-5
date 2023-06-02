@@ -20,6 +20,7 @@ const LaptopList = () => {
     }
     loadLaptops()
   }, [])
+
   return (
     <>
       {laptops?.length > 0 ? (
