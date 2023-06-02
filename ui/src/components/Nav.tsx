@@ -1,62 +1,117 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
-import { faUser } from '@fortawesome/free-solid-svg-icons'
-import { faHeart } from '@fortawesome/free-solid-svg-icons'
-import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
+import ShoppingCartLineIcon from 'remixicon-react/ShoppingCartLineIcon'
+import UserLineIcon from 'remixicon-react/UserLineIcon'
+import HeartLineIcon from 'remixicon-react/HeartLineIcon'
+import SearchLineIcon from 'remixicon-react/SearchLineIcon'
+import ArrowDownSLineIcon from 'remixicon-react/ArrowDownSLineIcon'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
-import { useState } from 'react'
 import logo from '../assets/images/pb-logo-alt.svg'
 import { Link } from 'react-router-dom'
-
-// const [burger, setBurger] = useState(false)
+import { useState } from 'react'
+import BurgerMenu from './BurgerMenu'
 
 const Nav = () => {
+  const [burger, setBurger] = useState(false)
+  const [account, setAccount] = useState(false)
+
+  const openBurger = () => {
+    setBurger(true)
+  }
+
+  const closeBurger = () => {
+    setBurger(false)
+  }
+
+  const openAccount = () => {
+    setAccount(true)
+  }
+
+  const closeAccount = () => {
+    setAccount(false)
+  }
+
   return (
     <nav>
       <div className="navbarMid">
         <div className="navbarMid__home">
-          <a href="/" className="navbarMid__home--link">
+          <Link to="/">
             <img className="navbarMid__home--logo" src={logo} alt="PB Tech" />
-          </a>
-          <div className="navbarMid__search">
-            <form>
+          </Link>
+          <form className="navbarMid__search">
+            <div className="navbarMid__search--wrapper">
               <input
-                className="navbarMid__search--input"
+                className="navbarMid__search--wrapper-input"
                 type="text"
                 name="search"
                 placeholder="Search by keywords or part #"
               />
-              <button className="navbarMid__search--btn" type="submit">
-                <FontAwesomeIcon icon={faMagnifyingGlass} size="xl" />
-              </button>
-            </form>
-          </div>
+              <div className="navbarMid__search--wrapper-addon">
+                <span>in All Departments</span>
+                <ArrowDownSLineIcon color="#0d4f77" />
+              </div>
+            </div>
+            <button className="navbarMid__search--btn" type="submit">
+              <SearchLineIcon />
+            </button>
+          </form>
           <div className="navbarMid__account">
-            <div className="navbarMid__account--signin">
-              <FontAwesomeIcon icon={faUser} size="lg" />
-              <p>Sign In</p>
-              <span style={{ color: '#0f70a5' }}>or</span>
-              <p>Create Account</p>
+            <div className="navbarMid__account--cart">
+              <ShoppingCartLineIcon />
             </div>
             <div className="navbarMid__account--wishlist">
-              <FontAwesomeIcon icon={faHeart} size="lg" />
-              <p>Wishlist</p>
+              <HeartLineIcon />
             </div>
-            <div className="navbarMid__account--cart">
-              <FontAwesomeIcon icon={faCartShopping} size="lg" />
-              <p className="navbarMid__account--cart--number">0</p>
+            <div className="navbarMid__account--signin">
+              <UserLineIcon
+                onMouseEnter={openAccount}
+                onMouseLeave={closeAccount}
+              />
             </div>
           </div>
         </div>
       </div>
       <div className="navbarLower">
-        <div className="navbarLower__burger">
+        <div
+          className="navbarLower__burger"
+          onMouseEnter={openBurger}
+          onMouseLeave={closeBurger}
+        >
           <FontAwesomeIcon icon={faBars} size="lg" />
           <h3>Departments</h3>
         </div>
-        <div className="navbarLower__dropdowns"></div>
-        <div className="navbarLower__accountOptions"></div>
+        <div className="navbarLower__dropdowns">
+          <div className="navbarLower__dropdowns--chevrons">
+            <div className="navbarLower__dropdowns--chevrons--1">
+              <p>Brands</p>
+              <ArrowDownSLineIcon />
+            </div>
+            <div className="navbarLower__dropdowns--chevrons--2">
+              <p>Services</p>
+              <ArrowDownSLineIcon />
+            </div>
+          </div>
+          <p>Promos</p>
+          <p>Deals</p>
+          <p>New</p>
+          <p>Tax Free</p>
+        </div>
+        <div className="navbarLower__contact">
+          <p>Help</p>
+          <p>Stores</p>
+        </div>
       </div>
+      <div>
+        {burger ? (
+          <div
+            className="burgerMenu"
+            onMouseEnter={openBurger}
+            onMouseLeave={closeBurger}
+          >
+            <BurgerMenu />
+          </div>
+        ) : null}
+      </div>
+      <div>{account ? <div className="accountMenu"></div> : null}</div>
     </nav>
   )
 }

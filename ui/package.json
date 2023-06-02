@@ -2,7 +2,7 @@
   "name": "mission-5",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:9090/",
+  "proxy": "http://localhost:9090",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
     "@fortawesome/free-brands-svg-icons": "^6.4.0",
@@ -22,6 +22,7 @@
     "react-icons": "^4.8.0",
     "react-router-dom": "^6.11.2",
     "react-scripts": "5.0.1",
+    "remixicon-react": "^1.0.0",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },

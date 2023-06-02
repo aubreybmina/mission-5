@@ -1,0 +1,76 @@
+@use 'colors' as c;
+@use 'utils' as u;
+@use 'media-queries' as m;
+@use 'fonts' as f;
+
+.burgerMenu {
+  display: flex;
+  position: absolute;
+  z-index: 10;
+  font-size: u.toRem(12);
+  padding-bottom: u.toRem(20);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  color: c.$menu-text;
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+
+    &--options {
+      display: flex;
+      align-items: center;
+      width: u.toRem(300);
+      background-color: c.$menu-gray;
+      padding-left: u.toRem(12);
+      cursor: pointer;
+    }
+
+    &--options:hover {
+      color: c.$pb-orange;
+    }
+  }
+
+  &__right {
+    background-color: white;
+    width: u.toRem(600);
+
+    &--upper {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      text-align: center;
+    }
+
+    &--lower {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-evenly;
+    }
+  }
+
+  &__tile {
+    display: flex;
+    flex-direction: column;
+    background-color: c.$menu-tile;
+    margin: u.toRem(10);
+    padding-top: u.toRem(-25);
+    border-radius: 4px;
+
+    &--image {
+      transform: scale(0.5);
+      border-radius: 4px;
+      margin: 0;
+    }
+
+    &--text {
+      font-size: u.toRem(12);
+      font-weight: 500;
+      margin-top: u.toRem(-45);
+      background-color: c.$menu-tile;
+    }
+  }
+}
+
+.headerText {
+  font-weight: 700;
+}
