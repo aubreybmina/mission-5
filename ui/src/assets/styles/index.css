@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
-.properties {
+.products {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
@@ -7,108 +7,196 @@
   margin: 2.5rem;
 }
 @media (max-width: 48rem) {
-  .properties {
+  .products {
     grid-template-columns: 1fr 1fr;
     height: 100%;
   }
 }
 @media (max-width: 31.25rem) {
-  .properties {
+  .products {
     grid-template-columns: 1fr;
     height: 100%;
   }
 }
-.properties__card {
+.products__card {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   flex: 1;
-  margin-block: 1.875rem;
+  margin: 0.3125rem;
+  border-radius: 0.25rem;
+  background-color: #e4e4e4;
 }
-.properties__card--image {
-  max-width: 85%;
-  max-height: 85%;
+.products__card--image {
+  margin: 0.5rem;
+  max-width: 18.75rem;
+  max-height: 18.75rem;
 }
-.properties__card--image img {
+.products__card--image img {
   width: 100%;
   box-sizing: border-box;
 }
-.properties__card--image:hover .properties__card--image--bedbath {
-  cursor: pointer;
-  border: 0rem solid #e73336;
-  background-color: #0d4f77;
-  color: #e73336;
-  transition: border 100ms, color 100ms;
-}
-.properties__card--image--bedbath {
+.products__card--image--icons {
   position: absolute;
   top: 0;
-  background: #e73336;
-  background: rgba(231, 51, 54, 0.5019607843); /* Standout see-through */
-  color: #0d4f77;
+  right: 0;
   transition: 0.5s ease;
-  border-radius: 0.25rem;
-  font-size: 0.75rem;
-  font-weight: 700;
-  padding: 0.5rem;
-  margin: 2.8125rem 0.5rem 0.5rem 0.5rem;
+  padding: 0.25rem;
+  margin: 0.5rem;
   text-align: center;
 }
-.properties__card--text {
-  background-color: #dddddd;
-  width: 85%;
-  padding: 0.9375rem 0.625rem;
-  box-sizing: border-box;
-  text-align: center;
+.products__card--image--icons--scaleheart {
+  margin: 0.5rem;
+  padding: 0.25rem;
+  height: 0.75rem;
+  border-radius: 3.125rem;
+  background-color: #e4e4e4;
+  color: #000000;
 }
-.properties__card--text h3 {
-  font-size: 1.3125rem;
+.products__card--image--icons--scaleheart:hover {
+  cursor: pointer;
+  border: 0rem solid #ffffff;
+  color: #ffffff;
+  background-color: #0d4f77;
+  transition: border 100ms, color 100ms;
+}
+.products__card--text {
+  width: 18.75rem;
+  height: 12.5rem;
+}
+.products__card--text--productName {
+  font-size: 1.125rem;
   font-weight: 700;
+  color: #1278a5;
+  margin: 0.3125rem 0rem;
+}
+.products__card--text--normalPriceLabel {
+  font-size: 0.9375rem;
+  color: #6d6d6d;
+  margin: 0.3125rem 0rem;
+}
+.products__card--text--priceDollar {
+  font-size: 1.75rem;
+  color: #000000;
+  display: inline;
+  margin: 0.3125rem 0rem;
+}
+.products__card--text--priceCents {
+  position: absolute;
+  margin: 0.3125rem 0.3125rem 0rem 0.3125rem;
+  font-size: 0.8125rem;
+  color: #000000;
+  display: inline;
+  margin: 0.3125rem 0rem;
+}
+.products__card--text--shipping {
+  position: absolute;
+  bottom: 0;
+  font-size: 0.9375rem;
   color: #000000;
   display: inline;
 }
-.properties__card--text p {
-  font-size: 0.9375rem;
-  color: #000000;
-}
-.properties__card--text:hover {
-  background-color: #ffffff;
-}
 
-.navbar {
-  height: 5rem;
+.navbarMid {
+  height: 3.75rem;
   display: flex;
   justify-content: space-between;
   z-index: 10;
   background-color: #0d4f77;
   padding-left: 14.875rem;
+  padding-right: 14.875rem;
+  font-family: "Roboto", sans-serif;
 }
-.navbar__menu {
+.navbarMid__home {
   display: flex;
   align-items: center;
 }
-.navbar__menu--logo {
+.navbarMid__home--logo {
   cursor: pointer;
   font-size: 2rem;
   margin-left: 1.5rem;
   width: 12.5rem;
 }
-.navbar__search {
+.navbarMid__search {
   padding-left: 2.5rem;
 }
-.navbar__search--input {
+.navbarMid__search--input {
   width: 37.5rem;
   height: 1.875rem;
 }
-.navbar__search--btn {
+.navbarMid__search--btn {
   margin-left: 0;
   height: 2.125rem;
   width: 3.75rem;
   color: white;
   background-color: #f08222;
   border: none;
+}
+.navbarMid__account {
+  display: flex;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: white;
+}
+.navbarMid__account--signin {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 11.875rem;
+  margin-left: 4.375rem;
+  padding: 0rem 0.625rem;
+  border-radius: 5px;
+  background-color: #0e4364;
+}
+.navbarMid__account--wishlist {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 5.625rem;
+  margin-left: 0.625rem;
+  padding: 0rem 0.625rem;
+  border-radius: 5px;
+  background-color: #0e4364;
+}
+.navbarMid__account--cart {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 4.0625rem;
+  margin-left: 0.625rem;
+  padding: 0rem 0.625rem;
+  border-radius: 5px;
+  background-color: #0e4364;
+}
+.navbarMid__account--cart--number {
+  text-align: center;
+  width: 0.9375rem;
+  border-radius: 5px;
+  background-color: #f08222;
+  padding: 0rem 0.125rem;
+}
+
+.navbarLower {
+  background-color: #0d4f77;
+  height: 2.5rem;
+  padding-left: 14.875rem;
+  display: flex;
+  align-items: center;
+  color: white;
+  font-family: "Roboto", sans-serif;
+}
+.navbarLower__burger {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 11.25rem;
+  height: 2.5rem;
+  transition: background-color 0.2s ease-in;
+}
+.navbarLower__burger:hover {
+  background-color: #0e4364;
 }
 
 .hero {
@@ -169,8 +257,8 @@
   }
 }
 .hero__searchcontainer--form input {
-  background-color: #ffffff;
-  border: #ffffff;
+  background-color: #6d6d6d;
+  border: #6d6d6d;
   color: #021724;
   float: left;
   height: 2.5rem;
@@ -202,7 +290,7 @@
   }
 }
 .hero__searchcontainer--form button {
-  background: #e73336;
+  background: #ffffff;
   border: none;
   outline: none;
   color: #0d4f77;
@@ -212,15 +300,15 @@
   font-size: 1rem;
 }
 .hero__searchcontainer--form button:hover, .hero__searchcontainer--form button:focus {
-  border: 0rem solid #e73336;
-  background-color: #ffffff;
+  border: 0rem solid #ffffff;
+  background-color: #6d6d6d;
   transition: border 100ms, color 100ms;
-  color: #e73336;
+  color: #ffffff;
 }
 
 .footer {
   align-items: center;
-  background-color: #ffffff;
+  background-color: #6d6d6d;
   display: flex;
   justify-content: center;
   padding: 3.125rem 0;
@@ -288,5 +376,4 @@
   top: 0;
   left: 0;
   right: 0;
-}
 }/*# sourceMappingURL=index.css.map */

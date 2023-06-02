@@ -1,0 +1,109 @@
+@use 'colors' as c;
+@use 'utils' as u;
+@use 'media-queries' as m;
+
+.products {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  margin: u.toRem(40);
+  @include m.tablet {
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+  }
+  @include m.mobile500px {
+    grid-template-columns: 1fr;
+    height: 100%;
+  }
+
+  &__card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    margin: u.toRem(5);
+    border-radius: u.toRem(4);
+    background-color: c.$propertycardbg-color;
+
+    &--image {
+      margin: u.toRem(8);
+      max-width: u.toRem(300);
+      max-height: u.toRem(300);
+
+      img {
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      &--icons {
+        position: absolute;
+        top: 0;
+        right: 0;
+        transition: 0.5s ease;
+        padding: u.toRem(4);
+        margin: u.toRem(8);
+        text-align: center;
+
+        &--scaleheart {
+          margin: u.toRem(8);
+          padding: u.toRem(4);
+          height: u.toRem(12);
+          border-radius: u.toRem(50);
+          background-color: c.$propertycardbg-color;
+          color: c.$details-color;
+
+          &:hover {
+            cursor: pointer;
+            border: u.toRem(0) solid c.$standout-color;
+            color: c.$standout-color;
+            background-color: c.$pb-blue;
+            transition: border 100ms, color 100ms;
+          }
+        }
+      }
+    }
+
+    &--text {
+      width: u.toRem(300);
+      height: u.toRem(200);
+
+      &--productName {
+        font-size: u.toRem(18);
+        font-weight: 700;
+        color: c.$text-highlight;
+        margin: u.toRem(5) u.toRem(0);
+      }
+
+      &--normalPriceLabel {
+        font-size: u.toRem(15);
+        color: c.$tertiary-color;
+        margin: u.toRem(5) u.toRem(0);
+      }
+
+      &--priceDollar {
+        font-size: u.toRem(28);
+        color: c.$details-color;
+        display: inline;
+        margin: u.toRem(5) u.toRem(0);
+      }
+      &--priceCents {
+        position: absolute;
+        margin: u.toRem(5) u.toRem(5) u.toRem(0) u.toRem(5);
+        font-size: u.toRem(13);
+        color: c.$details-color;
+        display: inline;
+        margin: u.toRem(5) u.toRem(0);
+      }
+      &--shipping {
+        position: absolute;
+        bottom: 0;
+        font-size: u.toRem(15);
+        color: c.$details-color;
+        display: inline;
+      }
+    }
+  }
+}
