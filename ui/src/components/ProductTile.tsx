@@ -1,11 +1,13 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { LaptopProps } from '../types/Interfaces'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHeart } from '@fortawesome/free-regular-svg-icons'
 import { faScaleBalanced, faCheck } from '@fortawesome/free-solid-svg-icons'
+import { faHeart } from '@fortawesome/free-regular-svg-icons'
 
 const ProductTile = ({ laptop }: LaptopProps) => {
   const {
+    _id,
     brand,
     model,
     category,
@@ -28,27 +30,29 @@ const ProductTile = ({ laptop }: LaptopProps) => {
   return (
     <>
       <div className="products__card">
-        <div className="products__card--image">
-          <img
-            className="products__card--photo"
-            src={
-              imageURL !== 'N/A'
-                ? imageURL
-                : 'https://www.pbtech.co.nz/imgprod/N/B/NBKASU506040__1.jpg?h=2005533558'
-            }
-            alt={`${brand} ${model}`}
-          />
-          <div className="products__card--image--icons">
-            <FontAwesomeIcon
-              className="products__card--image--icons--scaleheart"
-              icon={faScaleBalanced}
+        <Link to={`${_id}/${brand}-${model}-${screenSize}-${category}-Laptop`}>
+          <div className="products__card--image">
+            <img
+              className="products__card--photo"
+              src={
+                imageURL !== 'N/A'
+                  ? imageURL
+                  : 'https://www.pbtech.co.nz/imgprod/N/B/NBKASU506040__1.jpg?h=2005533558'
+              }
+              alt={`${brand} ${model}`}
             />
-            <FontAwesomeIcon
-              className="products__card--image--icons--scaleheart"
-              icon={faHeart}
-            />
+            <div className="products__card--image--icons">
+              <FontAwesomeIcon
+                className="products__card--image--icons--scaleheart"
+                icon={faScaleBalanced}
+              />
+              <FontAwesomeIcon
+                className="products__card--image--icons--scaleheart"
+                icon={faHeart}
+              />
+            </div>
           </div>
-        </div>
+        </Link>
         <div
           className="products__card--text"
           onMouseEnter={() => setshowAltDetails(true)}

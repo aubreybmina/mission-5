@@ -12,6 +12,7 @@ const laptopRouter = express.Router()
 laptopRouter.get('/', getAllLaptops)
 laptopRouter.post('/', createLaptop)
 laptopRouter.get('/:laptopId', getLaptop)
+laptopRouter.get('/:laptopId/:title', getLaptop)
 laptopRouter.put('/:laptopId', updateLaptop)
 laptopRouter.delete('/:laptopId', deleteLaptop)
 
