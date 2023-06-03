@@ -1,0 +1,75 @@
+@use 'colors' as c;
+@use 'utils' as u;
+@use 'media-queries' as m;
+@import url('https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css');
+
+.sitelinks {
+  background-color: c.$ft-testimonial-tile;
+  display: flex;
+  justify-content: space-between;
+  align-content: flex-start;
+  padding: 0 u.toRem(180);
+
+  &--icon {
+    color: c.$pb-orange;
+    padding-right: u.toRem(5);
+  }
+
+  &__section {
+    display: flex;
+    justify-content: space-between;
+
+    &--title {
+      font-size: u.toRem(12);
+      color: c.$ft-testimonial-text;
+      font-weight: 700;
+      padding: u.toRem(20) 0;
+    }
+
+    &--department {
+      display: grid;
+
+      &--list {
+        font-size: u.toRem(12);
+
+        &-ul {
+          color: c.$standout-color;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          font-size: u.toRem(12);
+          padding: 0;
+          margin: 0;
+          list-style: none;
+        }
+
+        &-li {
+          padding: u.toRem(5) 0;
+        }
+      }
+    }
+
+    &--company {
+      grid-template-rows: 1fr 1fr;
+      justify-content: flex-start;
+
+      &--list {
+        font-size: u.toRem(12);
+
+        &-ul {
+          color: c.$standout-color;
+          font-size: u.toRem(12);
+          padding: 0;
+          margin: 0;
+          list-style: none;
+        }
+        ul li::before {
+          content: '\f04b';
+          color: c.$pb-orange;
+          padding-right: u.toRem(5);
+          font-family: 'Font Awesome\ 5 Free' !important;
+          font-weight: 900;
+        }
+      }
+    }
+  }
+}

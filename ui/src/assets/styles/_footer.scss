@@ -3,10 +3,10 @@
 
 .footer {
   background-color: c.$tertiary-color;
-  padding: u.toRem(50) 0;
+  padding: u.toRem(15) 0;
 
   &__copyright {
-    font-size: u.toRem(15);
+    font-size: u.toRem(10);
     font-weight: 700;
     color: c.$ft-testimonial-text;
     display: flex;
@@ -15,7 +15,7 @@
   }
 
   &__disclaimer {
-    font-size: u.toRem(15);
+    font-size: u.toRem(10);
     color: c.$ft-testimonial-text;
     display: flex;
     justify-content: center;

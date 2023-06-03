@@ -4,13 +4,12 @@
 
 .testimonial {
   background-color: c.$ft-testimonial;
-  display: grid;
   padding: 0 u.toRem(180);
 
-  p {
+  &__title {
     font-size: u.toRem(15);
     color: c.$standout-color;
-    margin: u.toRem(20);
+    padding: u.toRem(20);
   }
 
   a {
@@ -22,7 +21,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 0 u.toRem(20) 0;
+    padding: 0 u.toRem(20) u.toRem(20);
 
     &--card {
       display: flex;
@@ -32,7 +31,7 @@
       margin: u.toRem(5);
       border-radius: u.toRem(4);
       background-color: c.$ft-testimonial-tile;
-      height: u.toRem(250);
+      min-height: u.toRem(180);
       width: u.toRem(273.75);
 
       @include m.tablet {
@@ -44,10 +43,8 @@
 
       &review {
         font-size: u.toRem(13.2);
-        font-weight: u.toRem(1);
         color: c.$standout-color;
-        margin: 0 u.toRem(10);
-        padding: u.toRem(5.28) 0 u.toRem(9.2);
+        padding: u.toRem(15);
       }
 
       &bottom {
@@ -84,9 +81,9 @@
           }
 
           &date {
-            font-size: u.toRem(10);
-            color: c.$ft-testimonial-text !important;
-            margin: 0 u.toRem(10) u.toRem(20) !important;
+            color: c.$ft-testimonial-text;
+            margin: 0 u.toRem(10) u.toRem(20);
+            font-size: u.toRem(13.2);
           }
 
           &flag {

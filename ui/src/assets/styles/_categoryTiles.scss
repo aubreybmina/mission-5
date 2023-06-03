@@ -45,7 +45,7 @@
     background-color: c.$text-highlight;
     padding: u.toRem(0) u.toRem(8);
     border-radius: 4px;
-    font-family: f.$inter;
+    font-family: f.$inter !important;
   }
 }
 

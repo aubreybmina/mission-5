@@ -1,14 +1,13 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFlag } from '@fortawesome/free-solid-svg-icons'
-
 const TestimonialTile = () => {
   return (
     <>
       <div className="testimonial__tiles--card">
-        <p className="testimonial__tiles--cardreview">
+        <div className="testimonial__tiles--cardreview">
           "Saad Malik was most helpful in suggesting and alternate product when
           the ordered product was..."
-        </p>
+        </div>
         <div className="testimonial__tiles--cardbottom">
           <div className="testimonial__tiles--cardbottom--reviewer">
             <span className="testimonial__tiles--cardbottom--reviewerpic">
@@ -29,9 +28,9 @@ const TestimonialTile = () => {
         </div>
       </div>
       <div className="testimonial__tiles--card">
-        <p className="testimonial__tiles--cardreview">
+        <div className="testimonial__tiles--cardreview">
           "Saad Malik was most helpful in suggesting..."
-        </p>
+        </div>
         <div className="testimonial__tiles--cardbottom">
           <div className="testimonial__tiles--cardbottom--reviewer">
             <span className="testimonial__tiles--cardbottom--reviewerpic">
@@ -53,10 +52,10 @@ const TestimonialTile = () => {
       </div>
 
       <div className="testimonial__tiles--card">
-        <p className="testimonial__tiles--cardreview">
+        <div className="testimonial__tiles--cardreview">
           "Saad Malik was most helpful in suggesting and alternate product when
           the ordered product was..."
-        </p>
+        </div>
         <div className="testimonial__tiles--cardbottom">
           <div className="testimonial__tiles--cardbottom--reviewer">
             <span className="testimonial__tiles--cardbottom--reviewerpic">
@@ -77,9 +76,9 @@ const TestimonialTile = () => {
         </div>
       </div>
       <div className="testimonial__tiles--card">
-        <p className="testimonial__tiles--cardreview">
+        <div className="testimonial__tiles--cardreview">
           "Saad Malik was most helpful in suggesting..."
-        </p>
+        </div>
         <div className="testimonial__tiles--cardbottom">
           <div className="testimonial__tiles--cardbottom--reviewer">
             <span className="testimonial__tiles--cardbottom--reviewerpic">
@@ -100,9 +99,9 @@ const TestimonialTile = () => {
         </div>
       </div>
       <div className="testimonial__tiles--card">
-        <p className="testimonial__tiles--cardreview">
+        <div className="testimonial__tiles--cardreview">
           "Saad Malik was most helpful in suggesting..."
-        </p>
+        </div>
         <div className="testimonial__tiles--cardbottom">
           <div className="testimonial__tiles--cardbottom--reviewer">
             <span className="testimonial__tiles--cardbottom--reviewerpic">
