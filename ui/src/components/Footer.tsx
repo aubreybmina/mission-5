@@ -1,10 +1,12 @@
 import React from 'react'
-import TestimonialList from './TestimonialList'
+import FooterTestimonialList from './FooterTestimonialList'
+import FooterSiteLinks from './FooterSiteLinks'
 
 const Footer = () => {
   return (
     <>
-      <TestimonialList />
+      <FooterTestimonialList />
+      <FooterSiteLinks />
       <footer className="footer">
         <div className="footer__copyright">
           Copyright &copy; PB Technologies Ltd All rights reserved. 587 Great

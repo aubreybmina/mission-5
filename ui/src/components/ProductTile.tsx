@@ -24,13 +24,14 @@ const ProductTile = ({ laptop }: LaptopProps) => {
   const formatPrice = price.toFixed(2).toString().split('.')
   const whole = formatPrice[0]
   const cents = formatPrice[1]
+  const link = `${_id}/${brand} ${model} ${screenSize} ${category} Laptop`
 
   const [showAltDetails, setshowAltDetails] = useState(false)
 
   return (
     <>
       <div className="products__card">
-        <Link to={`${_id}/${brand}-${model}-${screenSize}-${category}-Laptop`}>
+        <Link to={link.split(' ').join('-')}>
           <div className="products__card--image">
             <img
               className="products__card--photo"

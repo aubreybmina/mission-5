@@ -1,6 +1,8 @@
 @use 'colors' as c;
+@use 'fonts' as f;
 @use 'productCard';
 @use 'testimonial';
+@use 'sitelinks';
 @use 'nav';
 @use 'hero';
 @use 'footer';
@@ -18,4 +20,6 @@
   top: 0;
   left: 0;
   right: 0;
+  bottom: 0;
+  font-family: f.$roboto;
 }

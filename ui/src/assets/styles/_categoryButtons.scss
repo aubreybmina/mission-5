@@ -20,7 +20,7 @@
     justify-content: space-between;
     margin-left: u.toRem(350);
     margin-right: u.toRem(375);
-    font-family: f.$inter;
+    font-family: f.$inter !important;
 
     &--buttons {
       font-size: u.toRem(16);

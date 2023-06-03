@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css");
 .products {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -101,13 +102,12 @@
 
 .testimonial {
   background-color: #464646;
-  display: grid;
   padding: 0 11.25rem;
 }
-.testimonial p {
+.testimonial__title {
   font-size: 0.9375rem;
   color: #ffffff;
-  margin: 1.25rem;
+  padding: 1.25rem;
 }
 .testimonial a {
   color: #ffffff;
@@ -117,7 +117,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 0 1.25rem 0;
+  padding: 0 1.25rem 1.25rem;
 }
 .testimonial__tiles--card {
   display: flex;
@@ -127,7 +127,7 @@
   margin: 0.3125rem;
   border-radius: 0.25rem;
   background-color: #313131;
-  height: 15.625rem;
+  min-height: 11.25rem;
   width: 17.109375rem;
 }
 @media (max-width: 48rem) {
@@ -142,10 +142,8 @@
 }
 .testimonial__tiles--cardreview {
   font-size: 0.825rem;
-  font-weight: 0.0625rem;
   color: #ffffff;
-  margin: 0 0.625rem;
-  padding: 0.33rem 0 0.575rem;
+  padding: 0.9375rem;
 }
 .testimonial__tiles--cardbottom {
   color: #ffffff;
@@ -178,9 +176,9 @@
   margin: 1.25rem 0.625rem 0;
 }
 .testimonial__tiles--cardbottom--reviewerdate {
-  font-size: 0.625rem;
-  color: #979797 !important;
-  margin: 0 0.625rem 1.25rem !important;
+  color: #979797;
+  margin: 0 0.625rem 1.25rem;
+  font-size: 0.825rem;
 }
 .testimonial__tiles--cardbottom--reviewerflag {
   margin: 1.25rem;
@@ -194,6 +192,67 @@
   transition: border 100ms, color 100ms;
 }
 
+.sitelinks {
+  background-color: #313131;
+  display: flex;
+  justify-content: space-between;
+  align-content: flex-start;
+  padding: 0 11.25rem;
+}
+.sitelinks--icon {
+  color: #f08222;
+  padding-right: 0.3125rem;
+}
+.sitelinks__section {
+  display: flex;
+  justify-content: space-between;
+}
+.sitelinks__section--title {
+  font-size: 0.75rem;
+  color: #979797;
+  font-weight: 700;
+  padding: 1.25rem 0;
+}
+.sitelinks__section--department {
+  display: grid;
+}
+.sitelinks__section--department--list {
+  font-size: 0.75rem;
+}
+.sitelinks__section--department--list-ul {
+  color: #ffffff;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-size: 0.75rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.sitelinks__section--department--list-li {
+  padding: 0.3125rem 0;
+}
+.sitelinks__section--company {
+  grid-template-rows: 1fr 1fr;
+  justify-content: flex-start;
+}
+.sitelinks__section--company--list {
+  font-size: 0.75rem;
+}
+.sitelinks__section--company--list-ul {
+  color: #ffffff;
+  font-size: 0.75rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.sitelinks__section--company--list ul li::before {
+  content: "\f04b";
+  color: #f08222;
+  padding-right: 0.3125rem;
+  font-family: "Font Awesome 5 Free" !important;
+  font-weight: 900;
+}
+
 .navbarMid {
   height: 3.75rem;
   display: flex;
@@ -203,7 +262,7 @@
   background-color: #0d4f77;
   padding-left: 3.125rem;
   padding-top: 0.625rem;
-  font-family: "Inter";
+  font-family: "Inter" !important;
 }
 .navbarMid__home {
   display: flex;
@@ -275,7 +334,7 @@
   align-items: center;
   justify-content: space-between;
   color: white;
-  font-family: "Inter";
+  font-family: "Inter" !important;
 }
 .navbarLower__burger {
   display: flex;
@@ -331,7 +390,7 @@
   height: 14.5rem;
   background-color: white;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-  font-family: "Inter";
+  font-family: "Inter" !important;
 }
 .accountMenu__upper {
   display: flex;
@@ -482,10 +541,10 @@
 
 .footer {
   background-color: #6d6d6d;
-  padding: 3.125rem 0;
+  padding: 0.9375rem 0;
 }
 .footer__copyright {
-  font-size: 0.9375rem;
+  font-size: 0.625rem;
   font-weight: 700;
   color: #979797;
   display: flex;
@@ -493,7 +552,7 @@
   align-items: end;
 }
 .footer__disclaimer {
-  font-size: 0.9375rem;
+  font-size: 0.625rem;
   color: #979797;
   display: flex;
   justify-content: center;
@@ -580,7 +639,7 @@
   padding-bottom: 1.25rem;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
   color: #3e586d;
-  font-family: "Inter";
+  font-family: "Inter" !important;
 }
 .burgerMenu__left {
   display: flex;
@@ -691,7 +750,7 @@
   justify-content: space-between;
   margin-left: 21.875rem;
   margin-right: 23.4375rem;
-  font-family: "Inter";
+  font-family: "Inter" !important;
 }
 .laptopType__container--buttons,
 .screenSize__container--buttons {
@@ -788,7 +847,7 @@
   background-color: #1278a5;
   padding: 0rem 0.5rem;
   border-radius: 4px;
-  font-family: "Inter";
+  font-family: "Inter" !important;
 }
 
 .popGaming {
@@ -826,4 +885,6 @@
   top: 0;
   left: 0;
   right: 0;
+  bottom: 0;
+  font-family: "Roboto", sans-serif;
 }/*# sourceMappingURL=index.css.map */

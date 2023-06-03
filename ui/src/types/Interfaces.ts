@@ -5,6 +5,7 @@ export interface LaptopProps {
 }
 
 export interface ITestimonial {
+  id: string
   testimonial: string
   name: string
   date: string
