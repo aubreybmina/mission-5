@@ -1,11 +1,11 @@
 import React from 'react'
-// import TestimonialList from './TestimonialList'
+import TestimonialList from './TestimonialList'
 
 const Footer = () => {
   const today = new Date()
   return (
     <>
-      {/* <TestimonialList /> */}
+      <TestimonialList />
       <footer className="footer">
         <p>Copyright &copy; {today.getFullYear()}</p>
       </footer>
