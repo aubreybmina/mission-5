@@ -1,0 +1,18 @@
+@use 'colors' as c;
+@use 'utils' as u;
+@use 'media-queries' as m;
+@use 'fonts' as f;
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  color: c.$pb-blue;
+  font-size: u.toRem(13);
+  font-family: f.$roboto;
+  margin-left: u.toRem(350);
+  margin-top: u.toRem(30);
+
+  &__current {
+    color: #4e4e4e;
+  }
+}

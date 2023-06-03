@@ -1,0 +1,80 @@
+@use 'colors' as c;
+@use 'utils' as u;
+@use 'media-queries' as m;
+@use 'fonts' as f;
+
+.whatsHot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: u.toRem(350);
+  margin-top: u.toRem(37);
+  width: u.toRem(420);
+  font-family: f.$roboto;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-right: u.toRem(500);
+
+    &--tiles {
+      margin-left: u.toRem(340);
+      background-color: c.$laptoptile-color;
+      height: u.toRem(450);
+      width: u.toRem(289);
+
+      &_img {
+        width: u.toRem(250);
+        margin-left: u.toRem(20);
+        margin-top: u.toRem(20);
+      }
+    }
+  }
+}
+
+.header {
+  font-size: u.toRem(26);
+  color: c.$pb-blue;
+
+  &__button {
+    display: flex;
+    align-items: center;
+    font-size: u.toRem(13);
+    color: white;
+    background-color: c.$text-highlight;
+    padding: u.toRem(0) u.toRem(8);
+    border-radius: 4px;
+    font-family: f.$inter;
+  }
+}
+
+.popGaming {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: u.toRem(350);
+  margin-top: u.toRem(37);
+  width: u.toRem(500);
+  font-family: f.$roboto;
+}
+
+.popBusiness {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: u.toRem(350);
+  margin-top: u.toRem(37);
+  width: u.toRem(520);
+  font-family: f.$roboto;
+}
+
+.laptopArticles {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: u.toRem(350);
+  margin-top: u.toRem(37);
+  width: u.toRem(550);
+  font-family: f.$roboto;
+}
