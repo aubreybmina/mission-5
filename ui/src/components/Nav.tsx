@@ -61,11 +61,12 @@ const Nav = () => {
             <div className="navbarMid__account--wishlist">
               <HeartLineIcon />
             </div>
-            <div className="navbarMid__account--signin">
-              <UserLineIcon
-                onMouseEnter={openAccount}
-                onMouseLeave={closeAccount}
-              />
+            <div
+              className="navbarMid__account--signin"
+              onMouseEnter={openAccount}
+              onMouseLeave={closeAccount}
+            >
+              <UserLineIcon />
             </div>
           </div>
         </div>
@@ -111,7 +112,27 @@ const Nav = () => {
           </div>
         ) : null}
       </div>
-      <div>{account ? <div className="accountMenu"></div> : null}</div>
+      <div>
+        {account ? (
+          <div
+            className="accountMenu"
+            onMouseEnter={openAccount}
+            onMouseLeave={closeAccount}
+          >
+            <div className="accountMenu__upper">
+              <button className="accountMenu__upper--register">Register</button>
+              <button className="accountMenu__upper--signin">Sign In</button>
+            </div>
+            <div className="accountMenu__lower">
+              <p className="accountMenu__lower--text">My Orders</p>
+              <p className="accountMenu__lower--text">Returns</p>
+              <p className="accountMenu__lower--text">Wish list</p>
+              <p className="accountMenu__lower--text">Payment</p>
+              <p className="accountMenu__lower--text">My Coupons</p>
+            </div>
+          </div>
+        ) : null}
+      </div>
     </nav>
   )
 }

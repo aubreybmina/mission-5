@@ -29,7 +29,7 @@ export default function BurgerMenu() {
               {...eventHandlers}
             >
               <menu.icon />
-              <p>{menu.option}</p>
+              <p className="burgerMenu__left--text">{menu.option}</p>
             </div>
           )
         })}

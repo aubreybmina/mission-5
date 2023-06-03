@@ -8,6 +8,10 @@
 @use 'upperNav';
 @use 'fonts';
 @use 'burgerMenu';
+@use 'home';
+@use 'carousel';
+@use 'categoryButtons';
+@use 'categoryTiles';
 
 .main {
   position: absolute;

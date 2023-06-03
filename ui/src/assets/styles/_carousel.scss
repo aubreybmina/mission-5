@@ -1,0 +1,10 @@
+@use 'utils' as u;
+
+.carousel {
+  margin-left: u.toRem(485);
+  margin-top: u.toRem(19);
+
+  &__image {
+    transform: scale(1.3);
+  }
+}
