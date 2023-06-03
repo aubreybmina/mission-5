@@ -12,7 +12,7 @@
   background-color: c.$pb-blue;
   padding-left: u.toRem(50);
   padding-top: u.toRem(10);
-  font-family: f.$roboto;
+  font-family: f.$inter;
 
   &__home {
     display: flex;
@@ -25,7 +25,7 @@
   }
 
   &__search {
-    padding-left: u.toRem(40);
+    padding-left: u.toRem(100);
     width: u.toRem(1100);
     display: flex;
     align-items: center;
@@ -40,6 +40,7 @@
       &-input {
         width: u.toRem(900);
         border: none;
+        outline: none;
         border-radius: 2px 0 0 2px;
         padding-left: u.toRem(10);
       }
@@ -51,6 +52,7 @@
         font-size: u.toRem(13);
         width: u.toRem(150);
         color: c.$text-gray;
+        cursor: pointer;
       }
     }
 
@@ -62,6 +64,7 @@
       background-color: c.$pb-orange;
       border: none;
       border-radius: 0 2px 2px 0;
+      cursor: pointer;
     }
   }
 
@@ -90,7 +93,7 @@
   align-items: center;
   justify-content: space-between;
   color: white;
-  font-family: f.$roboto;
+  font-family: f.$inter;
 
   &__burger {
     display: flex;
@@ -113,7 +116,7 @@
     justify-content: space-between;
     width: u.toRem(750);
     font-size: u.toRem(14);
-    margin-right: u.toRem(585);
+    margin-right: u.toRem(470);
 
     &--chevrons {
       display: flex;
@@ -133,6 +136,7 @@
       }
     }
   }
+
   &__contact {
     display: flex;
     align-items: center;
@@ -140,5 +144,64 @@
     font-size: u.toRem(12);
     width: u.toRem(150);
     margin-right: u.toRem(65);
+  }
+}
+
+.accountMenu {
+  position: absolute;
+  z-index: 11;
+  right: u.toRem(99);
+  top: u.toRem(92);
+  width: u.toRem(230);
+  height: u.toRem(232);
+  background-color: white;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  font-family: f.$inter;
+
+  &__upper {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: u.toRem(13);
+
+    &--register {
+      width: u.toRem(90);
+      height: u.toRem(31);
+      border: none;
+      border-radius: 4px;
+      background-color: c.$pb-blue;
+      color: white;
+      cursor: pointer;
+    }
+
+    &--signin {
+      width: u.toRem(90);
+      height: u.toRem(31);
+      border: solid black 1px;
+      border-radius: 4px;
+      background-color: white;
+      cursor: pointer;
+    }
+
+    &--register:hover {
+      color: c.$pb-orange;
+    }
+
+    &--signin:hover {
+      color: c.$pb-orange;
+    }
+  }
+
+  &__lower {
+    margin-left: u.toRem(22);
+    font-size: u.toRem(13);
+
+    &--text {
+      cursor: pointer;
+    }
+
+    &--text:hover {
+      color: c.$pb-orange;
+    }
   }
 }

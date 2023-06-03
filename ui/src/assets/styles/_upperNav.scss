@@ -44,4 +44,11 @@
       margin-right: u.toRem(5);
     }
   }
+
+  &__mainBtns--text:hover,
+  &__appBtn:hover,
+  &__homeBtn:hover {
+    color: c.$pb-orange;
+    cursor: pointer;
+  }
 }
