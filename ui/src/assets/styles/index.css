@@ -99,104 +99,7 @@
   display: inline;
 }
 
-.testimonial { 
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  align-items: center;
-  justify-items: center;
-  margin: 2.5rem;
-}
-@media (max-width: 48rem) {
-  .testimonial {
-    grid-template-columns: 1fr 1fr;
-    height: 100%;
-  }
-}
-@media (max-width: 31.25rem) {
-  .testimonial {
-    grid-template-columns: 1fr;
-    height: 100%;
-  }
-}
-.testimonial__card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex: 1;
-  margin: 0.3125rem;
-  border-radius: 0.25rem;
-  background-color: #eeeeee;
-}
-.testimonial__card--image {
-  margin: 0.5rem;
-  max-width: 18.75rem;
-  max-height: 18.75rem;
-}
-.testimonial__card--image img {
-  width: 100%;
-  box-sizing: border-box;
-}
-.testimonial__card--image--icons {
-  position: absolute;
-  top: 0;
-  right: 0;
-  transition: 0.5s ease;
-  padding: 0.25rem;
-  margin: 0.5rem;
-  text-align: center;
-}
-.testimonial__card--image--icons--scaleheart {
-  margin: 0.5rem;
-  padding: 0.25rem;
-  height: 0.75rem;
-  border-radius: 3.125rem;
-  background-color: #eeeeee;
-  color: #000000;
-}
-.testimonial__card--image--icons--scaleheart:hover {
-  cursor: pointer;
-  border: 0rem solid #ffffff;
-  color: #ffffff;
-  background-color: #0d4f77;
-  transition: border 100ms, color 100ms;
-}
-.testimonial__card--text {
-  width: 18.75rem;
-  height: 12.5rem;
-}
-.testimonial__card--text--productName {
-  font-size: 1.125rem;
-  font-weight: 700;
-  color: #1278a5;
-  margin: 0.3125rem 0rem;
-}
-.testimonial__card--text--normalPriceLabel {
-  font-size: 0.9375rem;
-  color: #6d6d6d;
-  margin: 0.3125rem 0rem;
-}
-.testimonial__card--text--priceDollar {
-  font-size: 1.75rem;
-  color: #000000;
-  display: inline;
-  margin: 0.3125rem 0rem;
-}
-.testimonial__card--text--priceCents {
-  position: absolute;
-  margin: 0.3125rem 0.3125rem 0rem 0.3125rem;
-  font-size: 0.8125rem;
-  color: #000000;
-  display: inline;
-  margin: 0.3125rem 0rem;
-}
-.testimonial__card--text--shipping {
-  position: absolute;
-  bottom: 0;
-  font-size: 0.9375rem;
-  color: #000000;
-  display: inline;
+.testimonial {
   background-color: #464646;
   display: grid;
   padding: 0 11.25rem;
@@ -578,11 +481,23 @@
 }
 
 .footer {
-  align-items: center;
   background-color: #6d6d6d;
+  padding: 3.125rem 0;
+}
+.footer__copyright {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: #979797;
   display: flex;
   justify-content: center;
-  padding: 3.125rem 0;
+  align-items: end;
+}
+.footer__disclaimer {
+  font-size: 0.9375rem;
+  color: #979797;
+  display: flex;
+  justify-content: center;
+  align-items: start;
 }
 
 .missing {
@@ -911,6 +826,4 @@
   top: 0;
   left: 0;
   right: 0;
-}
-
-/*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=index.css.map */
