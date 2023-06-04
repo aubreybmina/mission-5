@@ -1,4 +1,5 @@
 import ArrowRightLineIcon from 'remixicon-react/ArrowRightLineIcon'
+import { Link } from 'react-router-dom'
 
 export default function CategoryButtons() {
   const typeArray = [
@@ -29,11 +30,24 @@ export default function CategoryButtons() {
       </div>
       <div className="laptopType__container">
         {typeArray.map(function (type, index: number) {
-          return (
-            <div key={index} className="laptopType__container--buttons">
-              <p>{type}</p>
-            </div>
-          )
+          if (index === 0) {
+            return (
+              <Link
+                to="business-laptops"
+                className="laptopType__container--buttons"
+              >
+                <div key={index}>
+                  <p>{type}</p>
+                </div>
+              </Link>
+            )
+          } else {
+            return (
+              <div key={index} className="laptopType__container--buttons">
+                <p>{type}</p>
+              </div>
+            )
+          }
         })}
       </div>
       <div className="screenSize">

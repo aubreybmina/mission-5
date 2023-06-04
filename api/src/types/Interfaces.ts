@@ -17,6 +17,7 @@ export interface ILaptop {
   warranty: string
   features: string
   price: number
+  special: boolean
   imageURL: string
   userName: string
 }

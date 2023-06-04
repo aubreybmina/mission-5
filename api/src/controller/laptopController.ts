@@ -15,6 +15,7 @@ export const createLaptop = (
   const memorySize = req.body.memorySize
   const ssdCapacity = req.body.ssdCapacity
   const price = req.body.price
+  const special = req.body.special
   const operatingSystem = req.body.operatingSystem
   const warranty = req.body.warranty
   const features = req.body.features
@@ -30,6 +31,7 @@ export const createLaptop = (
     memorySize: memorySize,
     ssdCapacity: ssdCapacity,
     price: price,
+    special: special,
     operatingSystem: operatingSystem,
     warranty: warranty,
     features: features,
@@ -79,6 +81,7 @@ export const updateLaptop = (
   const warranty = req.body.warranty
   const features = req.body.features
   const price = req.body.price
+  const special = req.body.special
   const imageURL = req.body.imageURL
   const userName = req.body.userName
   const input = {
@@ -91,6 +94,7 @@ export const updateLaptop = (
     memorySize: memorySize,
     ssdCapacity: ssdCapacity,
     price: price,
+    special: special,
     operatingSystem: operatingSystem,
     warranty: warranty,
     features: features,
