@@ -1,0 +1,42 @@
+@use 'colors' as c;
+@use 'utils' as u;
+@use 'media-queries' as m;
+@use 'fonts' as f;
+
+.dropDown {
+  &__container {
+    text-align: left;
+    border: 1px solid black;
+    position: relative;
+    border-radius: 4px;
+    width: u.toRem(200);
+  }
+
+  &__input {
+    padding: u.toRem(5);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    user-select: none;
+  }
+
+  &__menu {
+    position: absolute;
+    transform: translateY(u.toRem(98)) translateX(u.toRem(-6));
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 4px;
+    overflow: auto;
+    max-height: u.toRem(150);
+    background-color: white;
+
+    &--item {
+      padding: u.toRem(5);
+      cursor: pointer;
+    }
+
+    &--item:hover {
+      background-color: c.$no-special-gray;
+    }
+  }
+}
