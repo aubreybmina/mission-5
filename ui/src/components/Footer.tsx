@@ -1,13 +1,21 @@
 import React from 'react'
-// import TestimonialList from './TestimonialList'
+import FooterTestimonialList from './FooterTestimonialList'
+import FooterSiteLinks from './FooterSiteLinks'
 
 const Footer = () => {
-  const today = new Date()
   return (
     <>
-      {/* <TestimonialList /> */}
+      <FooterTestimonialList />
+      <FooterSiteLinks />
       <footer className="footer">
-        <p>Copyright &copy; {today.getFullYear()}</p>
+        <div className="footer__copyright">
+          Copyright &copy; PB Technologies Ltd All rights reserved. 587 Great
+          South Road, Manukau, Auckland, New Zealand
+        </div>
+        <div className="footer__disclaimer">
+          PB Technologies Ltd is not responsible for typographical errors. All
+          prices and specifications are subject to change without notice.
+        </div>
       </footer>
     </>
   )

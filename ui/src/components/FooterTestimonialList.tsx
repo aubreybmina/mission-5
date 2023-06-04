@@ -6,13 +6,14 @@ import { faQuoteLeft } from '@fortawesome/free-solid-svg-icons'
 const LaptopList = () => {
   return (
     <div className="testimonial">
-      <h3>
+      <div className="testimonial__title">
         <FontAwesomeIcon icon={faQuoteLeft} />
         {` Customer Testimonials -`}
         <Link to="/"> See More</Link>
-      </h3>
-
-      <TestimonialTile />
+      </div>
+      <div className="testimonial__tiles">
+        <TestimonialTile />
+      </div>
     </div>
   )
 }

@@ -3,106 +3,102 @@
 @use 'media-queries' as m;
 
 .testimonial {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  align-items: center;
-  justify-items: center;
-  margin: u.toRem(40);
-  @include m.tablet {
-    grid-template-columns: 1fr 1fr;
-    height: 100%;
-  }
-  @include m.mobile500px {
-    grid-template-columns: 1fr;
-    height: 100%;
+  background-color: c.$ft-testimonial;
+  padding: 0 u.toRem(180);
+
+  &__title {
+    font-size: u.toRem(15);
+    color: c.$standout-color;
+    padding: u.toRem(20);
   }
 
-  &__card {
-    position: relative;
+  a {
+    color: c.$standout-color;
+    text-decoration: none;
+  }
+
+  &__tiles {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    flex: 1;
-    margin: u.toRem(5);
-    border-radius: u.toRem(4);
-    background-color: c.$propertycardbg-color;
+    justify-content: center;
+    padding: 0 u.toRem(20) u.toRem(20);
 
-    &--image {
-      margin: u.toRem(8);
-      max-width: u.toRem(300);
-      max-height: u.toRem(300);
+    &--card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: stretch;
+      margin: u.toRem(5);
+      border-radius: u.toRem(4);
+      background-color: c.$ft-testimonial-tile;
+      min-height: u.toRem(180);
+      width: u.toRem(273.75);
 
-      img {
-        width: 100%;
-        box-sizing: border-box;
+      @include m.tablet {
+        width: u.toRem(390);
+      }
+      @include m.mobile500px {
+        width: u.toRem(273.75);
       }
 
-      &--icons {
-        position: absolute;
-        top: 0;
-        right: 0;
-        transition: 0.5s ease;
-        padding: u.toRem(4);
-        margin: u.toRem(8);
-        text-align: center;
+      &review {
+        font-size: u.toRem(13.2);
+        color: c.$standout-color;
+        padding: u.toRem(15);
+      }
 
-        &--scaleheart {
-          margin: u.toRem(8);
-          padding: u.toRem(4);
-          height: u.toRem(12);
-          border-radius: u.toRem(50);
-          background-color: c.$propertycardbg-color;
-          color: c.$details-color;
+      &bottom {
+        color: c.$standout-color;
+        display: flex;
+        justify-content: space-between;
 
-          &:hover {
-            cursor: pointer;
-            border: u.toRem(0) solid c.$standout-color;
-            color: c.$standout-color;
-            background-color: c.$pb-blue;
-            transition: border 100ms, color 100ms;
+        &flag {
+          margin: u.toRem(20);
+          display: flex;
+          justify-content: flex-end;
+          align-items: flex-end;
+        }
+
+        &--reviewer {
+          display: flex;
+
+          &pic {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: u.toRem(50);
+            background-color: c.$text-highlight;
+            height: u.toRem(50);
+            width: u.toRem(50);
+            margin: u.toRem(14) 0 u.toRem(10) u.toRem(20);
+            font-size: u.toRem(25);
+            font-weight: 700;
+          }
+
+          &name {
+            font-size: u.toRem(13.2);
+            margin: u.toRem(20) u.toRem(10) 0;
+          }
+
+          &date {
+            color: c.$ft-testimonial-text;
+            margin: 0 u.toRem(10) u.toRem(20);
+            font-size: u.toRem(13.2);
+          }
+
+          &flag {
+            margin: u.toRem(20);
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+
+            &:hover {
+              cursor: pointer;
+              color: c.$pb-blue;
+              transition: border 100ms, color 100ms;
+            }
           }
         }
-      }
-    }
-
-    &--text {
-      width: u.toRem(300);
-      height: u.toRem(200);
-
-      &--productName {
-        font-size: u.toRem(18);
-        font-weight: 700;
-        color: c.$text-highlight;
-        margin: u.toRem(5) u.toRem(0);
-      }
-
-      &--normalPriceLabel {
-        font-size: u.toRem(15);
-        color: c.$tertiary-color;
-        margin: u.toRem(5) u.toRem(0);
-      }
-
-      &--priceDollar {
-        font-size: u.toRem(28);
-        color: c.$details-color;
-        display: inline;
-        margin: u.toRem(5) u.toRem(0);
-      }
-      &--priceCents {
-        position: absolute;
-        margin: u.toRem(5) u.toRem(5) u.toRem(0) u.toRem(5);
-        font-size: u.toRem(13);
-        color: c.$details-color;
-        display: inline;
-        margin: u.toRem(5) u.toRem(0);
-      }
-      &--shipping {
-        position: absolute;
-        bottom: 0;
-        font-size: u.toRem(15);
-        color: c.$details-color;
-        display: inline;
       }
     }
   }

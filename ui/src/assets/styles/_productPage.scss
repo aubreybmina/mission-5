@@ -1,0 +1,12 @@
+@use 'colors' as c;
+@use 'utils' as u;
+@use 'media-queries' as m;
+
+.productpage {
+  margin: u.toRem(60) u.toRem(350);
+
+  &__main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}

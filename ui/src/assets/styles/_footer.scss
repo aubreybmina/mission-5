@@ -2,9 +2,23 @@
 @use 'utils' as u;
 
 .footer {
-  align-items: center;
   background-color: c.$tertiary-color;
-  display: flex;
-  justify-content: center;
-  padding: u.toRem(50) 0;
+  padding: u.toRem(15) 0;
+
+  &__copyright {
+    font-size: u.toRem(10);
+    font-weight: 700;
+    color: c.$ft-testimonial-text;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+  }
+
+  &__disclaimer {
+    font-size: u.toRem(10);
+    color: c.$ft-testimonial-text;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+  }
 }

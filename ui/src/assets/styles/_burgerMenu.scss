@@ -11,7 +11,7 @@
   padding-bottom: u.toRem(20);
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
   color: c.$menu-text;
-  font-family: f.$inter;
+  font-family: f.$inter !important;
 
   &__left {
     display: flex;
