@@ -2,6 +2,7 @@ import { menuArray } from '../assets/data/menuArray'
 import { useState } from 'react'
 import menuLaptop from '../assets/images/menuLaptop.png'
 import menuPC from '../assets/images/menuPC.png'
+import { Link } from 'react-router-dom'
 
 export default function BurgerMenu() {
   const [popOut, setPopOut] = useState(false)
@@ -70,7 +71,9 @@ export default function BurgerMenu() {
               <p className="menuText">Desktop PCs</p>
               <p className="menuText">eReaders</p>
               <p className="menuText">Industrial PCs and IoT</p>
-              <p className="menuText">Laptops</p>
+              <Link to="/" className="menuText">
+                <p className="menuText">Laptops</p>
+              </Link>
               <p className="menuText">Off-Lease PCs</p>
               <p className="menuText">Servers</p>
               <p className="menuText">Single Board Computers</p>
