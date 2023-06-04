@@ -100,6 +100,14 @@
   display: inline;
 }
 
+.productpage {
+  margin: 3.75rem 21.875rem;
+}
+.productpage__main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 .testimonial {
   background-color: #464646;
   padding: 0 11.25rem;

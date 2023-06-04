@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import { Laptop as LaptopModel } from '../../models/laptop'
 import ArrowRightSLineIcon from 'remixicon-react/ArrowRightSLineIcon'
 
@@ -29,12 +29,17 @@ const LaptopPage = () => {
         <ArrowRightSLineIcon />
         <p>Computers & Tablets</p>
         <ArrowRightSLineIcon />
-        <p>Laptops</p>
+        <p>
+          <Link to="/laptop">Laptops</Link>
+        </p>
         <ArrowRightSLineIcon />
         <p className="breadcrumbs__current">{title?.split('-').join(' ')}</p>
       </div>
-      <div className="products">
-        <h3>Laptop details here: </h3>
+      <div className="productpage">
+        <div className="productpage__main">
+          <div>Pictures here: </div>
+          <div>Laptop details here: </div>
+        </div>
         {/* {JSON.stringify(laptop)} */}
       </div>
     </>
