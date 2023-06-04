@@ -88,6 +88,10 @@
   font-weight: 700;
 }
 
+.menuText {
+  text-decoration: none;
+}
+
 .menuHeader:hover,
 .menuText:hover {
   color: c.$pb-orange;

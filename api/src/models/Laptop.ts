@@ -18,6 +18,7 @@ const LaptopSchema: Schema = new Schema(
     warranty: { type: String, required: false },
     features: { type: String, required: false },
     price: { type: Number, required: true },
+    special: { type: Boolean, required: false },
     imageURL: { type: String, required: true },
     userName: { type: Schema.Types.ObjectId, required: true, ref: User },
   },

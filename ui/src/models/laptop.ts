@@ -12,6 +12,7 @@ export interface Laptop {
   warranty: string
   features: string
   price: number
+  special: boolean
   imageURL: string
   userName: {
     _id: string
