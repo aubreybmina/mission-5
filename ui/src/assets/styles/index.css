@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
-@import url("https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css");
 .products {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -102,12 +101,140 @@
 
 .productpage {
   margin: 3.75rem 21.875rem;
+  font-family: "Inter" !important;
 }
 .productpage__main {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+}
+.productpage__main--photos {
+  position: relative;
+  padding: 0.5rem;
+  width: 20.5rem;
+  height: 20.5rem;
+  border: 1px solid #e4e4e4;
+  border-radius: 4px;
+}
+.productpage__main--photos img {
+  width: 100%;
+  box-sizing: border-box;
+}
+.productpage__main--photos--icons {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: 0.5s ease;
+  padding: 0.25rem;
+  margin: 0.5rem;
+  text-align: center;
+}
+.productpage__main--photos--icons--scaleheart {
+  margin: 0.5rem;
+  padding: 0.25rem;
+  height: 0.75rem;
+  border-radius: 3.125rem;
+  background-color: #eeeeee;
+  color: #000000;
+}
+.productpage__main--photos--icons--scaleheart:hover {
+  cursor: pointer;
+  border: 0rem solid #ffffff;
+  color: #ffffff;
+  background-color: #0d4f77;
+  transition: border 100ms, color 100ms;
+}
+.productpage__main--details {
+  margin-left: 2.4375rem;
+}
+.productpage__main--details--productName {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #1278a5;
+  margin: 0.3125rem 0rem;
+}
+.productpage__frame {
+  margin: 1.875rem 0;
+}
+.productpage__frame--tile {
+  background-color: #eeeeee;
+  border-radius: 0.375rem;
+  padding: 0 1.875rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.875rem;
+  font-weight: 600;
+}
+.productpage__frame--tile--icon {
+  padding: 1.875rem 0;
+}
+.productpage__frame--tile--details {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 20px 30px;
+  gap: 10px;
+  position: relative;
+  background: #ffffff;
+}
+.productpage__frame--info {
+  background: #ffffff;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  padding: 1.25rem 1.875rem;
+  transform: translateY(-1%);
+  -webkit-transform: translateY(-1%);
+  animation: slide-in 0.5s backwards;
+  animation: slide-out 0.5s backwards;
+  -webkit-animation: slide-out 0.5s backwards;
+}
+.productpage__frame--info h2 h3 h4 {
+  font-size: 1.25rem;
+  line-height: 1.5125rem;
+}
+.productpage__frame--info h2 {
+  font-weight: 700;
+}
+.productpage__frame--info h3 {
+  font-weight: 600;
+}
+.productpage__frame--info h4 {
+  font-weight: 600;
+}
+.productpage__frame--info p li td {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.21rem;
+}
+.productpage__frame--info li {
+  padding-bottom: 0.625rem;
+}
+.productpage__frame--info tr {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 0.9375rem;
+}
+.productpage__frame--info th {
+  display: flex;
+  justify-content: start;
+  min-width: 15.625rem;
 }
 
+@keyframes slide-in {
+  0% {
+    -webkit-transform: translateY(-1%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+  }
+}
+@keyframes slide-out {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-1%);
+  }
+}
 .testimonial {
   background-color: #464646;
   padding: 0 11.25rem;
@@ -214,9 +341,12 @@
 .sitelinks__section {
   display: flex;
   justify-content: space-between;
+  align-items: start;
+  font-size: 0.75rem;
+  margin-bottom: 1.25rem;
+  padding: 0.625rem;
 }
 .sitelinks__section--title {
-  font-size: 0.75rem;
   color: #979797;
   font-weight: 700;
   padding: 1.25rem 0;
@@ -226,6 +356,7 @@
 }
 .sitelinks__section--department--list {
   font-size: 0.75rem;
+  padding-right: 3.125rem;
 }
 .sitelinks__section--department--list-ul {
   color: #ffffff;
@@ -242,23 +373,56 @@
 .sitelinks__section--company {
   grid-template-rows: 1fr 1fr;
   justify-content: flex-start;
-}
-.sitelinks__section--company--list {
-  font-size: 0.75rem;
+  padding: 0 3.125rem;
 }
 .sitelinks__section--company--list-ul {
   color: #ffffff;
-  font-size: 0.75rem;
   padding: 0;
   margin: 0;
   list-style: none;
 }
 .sitelinks__section--company--list ul li::before {
   content: "\f04b";
+  font-family: FontAwesome;
+  font-size: 0.5rem !important;
   color: #f08222;
   padding-right: 0.3125rem;
-  font-family: "Font Awesome 5 Free" !important;
-  font-weight: 900;
+}
+.sitelinks__section--company--list-li {
+  padding: 0.3125rem 0;
+}
+.sitelinks__section--insider {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  justify-content: flex-start;
+  margin: 0.3125rem;
+  border-radius: 0.25rem;
+  background-color: #464646;
+  min-height: 11.25rem;
+  width: 17.109375rem;
+}
+.sitelinks__section--insider--details {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+.sitelinks__section--insider--details img {
+  height: 3.75rem;
+  width: 3.75rem;
+  margin: 0.875rem 0 0.625rem 1.25rem;
+  font-size: 1.5625rem;
+  font-weight: 700;
+}
+.sitelinks__section--insider--details p {
+  font-size: 0.825rem;
+  color: #ffffff;
+  margin: 1.25rem 0.625rem 0;
+}
+.sitelinks__section--insider--button {
+  background-color: #f08222;
+  border-radius: 0.25rem;
+  height: 2.0625rem;
+  margin: 0.625rem;
 }
 
 .navbarMid {
@@ -730,6 +894,9 @@
 }
 .breadcrumbs__current {
   color: #4e4e4e;
+}
+.breadcrumbs a {
+  text-decoration: none;
 }
 
 .carousel {

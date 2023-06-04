@@ -1,7 +1,6 @@
 @use 'colors' as c;
 @use 'utils' as u;
 @use 'media-queries' as m;
-@import url('https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css');
 
 .sitelinks {
   background-color: c.$ft-testimonial-tile;
@@ -18,9 +17,12 @@
   &__section {
     display: flex;
     justify-content: space-between;
+    align-items: start;
+    font-size: u.toRem(12);
+    margin-bottom: u.toRem(20);
+    padding: u.toRem(10);
 
     &--title {
-      font-size: u.toRem(12);
       color: c.$ft-testimonial-text;
       font-weight: 700;
       padding: u.toRem(20) 0;
@@ -31,6 +33,7 @@
 
       &--list {
         font-size: u.toRem(12);
+        padding-right: u.toRem(50);
 
         &-ul {
           color: c.$standout-color;
@@ -51,24 +54,64 @@
     &--company {
       grid-template-rows: 1fr 1fr;
       justify-content: flex-start;
+      padding: 0 u.toRem(50);
 
       &--list {
-        font-size: u.toRem(12);
-
         &-ul {
           color: c.$standout-color;
-          font-size: u.toRem(12);
           padding: 0;
           margin: 0;
           list-style: none;
         }
         ul li::before {
           content: '\f04b';
+          font-family: FontAwesome;
+          font-size: u.toRem(8) !important;
           color: c.$pb-orange;
           padding-right: u.toRem(5);
-          font-family: 'Font Awesome\ 5 Free' !important;
-          font-weight: 900;
         }
+
+        &-li {
+          padding: u.toRem(5) 0;
+        }
+      }
+    }
+
+    &--insider {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      justify-content: flex-start;
+      margin: u.toRem(5);
+      border-radius: u.toRem(4);
+      background-color: c.$ft-testimonial;
+      min-height: u.toRem(180);
+      width: u.toRem(273.75);
+
+      &--details {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+
+        img {
+          height: u.toRem(60);
+          width: u.toRem(60);
+          margin: u.toRem(14) 0 u.toRem(10) u.toRem(20);
+          font-size: u.toRem(25);
+          font-weight: 700;
+        }
+
+        p {
+          font-size: u.toRem(13.2);
+          color: c.$standout-color;
+          margin: u.toRem(20) u.toRem(10) 0;
+        }
+      }
+
+      &--button {
+        background-color: c.$pb-orange;
+        border-radius: u.toRem(4);
+        height: u.toRem(33);
+        margin: u.toRem(10);
       }
     }
   }
