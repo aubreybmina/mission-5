@@ -4,10 +4,13 @@
 
 .sitelinks {
   background-color: c.$ft-testimonial-tile;
-  display: flex;
-  justify-content: space-between;
-  align-content: flex-start;
   padding: 0 u.toRem(180);
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-content: flex-start;
+  }
 
   &--icon {
     color: c.$pb-orange;
@@ -117,12 +120,23 @@
           &:hover {
             cursor: pointer;
             border: u.toRem(0) solid c.$standout-color;
-            color: c.$pb-orange;
-            background-color: c.$pb-blue;
+            text-decoration: underline;
+            background-color: c.$pb-orange-dark;
             transition: border 100ms, color 100ms;
           }
         }
       }
     }
+  }
+
+  hr {
+    color: c.$laptoptile-color;
+  }
+
+  &__bottom {
+    border-top: u.toRem(1) solid c.$ft-testimonial;
+    display: flex;
+    justify-content: space-between;
+    align-content: flex-start;
   }
 }

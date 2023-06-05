@@ -352,10 +352,12 @@
 
 .sitelinks {
   background-color: #313131;
+  padding: 0 11.25rem;
+}
+.sitelinks__top {
   display: flex;
   justify-content: space-between;
   align-content: flex-start;
-  padding: 0 11.25rem;
 }
 .sitelinks--icon {
   color: #f08222;
@@ -450,9 +452,18 @@
 .sitelinks__section--insider--details button:hover {
   cursor: pointer;
   border: 0rem solid #ffffff;
-  color: #f08222;
-  background-color: #0d4f77;
+  text-decoration: underline;
+  background-color: #fd7e14;
   transition: border 100ms, color 100ms;
+}
+.sitelinks hr {
+  color: #eeeeee;
+}
+.sitelinks__bottom {
+  border-top: 0.0625rem solid #464646;
+  display: flex;
+  justify-content: space-between;
+  align-content: flex-start;
 }
 
 .navbarMid {
