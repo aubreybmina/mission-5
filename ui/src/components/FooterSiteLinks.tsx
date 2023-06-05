@@ -14,11 +14,27 @@ import {
   faRobot,
   faGift,
   faPlus,
+  faGlobe,
 } from '@fortawesome/free-solid-svg-icons'
-import { faApple } from '@fortawesome/free-brands-svg-icons'
+import {
+  faAndroid,
+  faApple,
+  faFacebookSquare,
+  faInstagramSquare,
+  faLinkedin,
+  faTwitterSquare,
+  faYoutubeSquare,
+} from '@fortawesome/free-brands-svg-icons'
 import insiderlogo from '../assets/images/insider-logo.png'
 
 const FooterSiteLinks = () => {
+  const images = require.context(
+    '../assets/images/footerlogo',
+    true,
+    /\.(png|ico|svg|jpg|gif|webp)$/
+  )
+  const imageList = images.keys().map((image: string) => images(image))
+
   return (
     <div className="sitelinks">
       <div className="sitelinks__top">
@@ -234,8 +250,64 @@ const FooterSiteLinks = () => {
       </div>
       <div className="sitelinks__bottom">
         <div className="sitelinks__section">
-          <div className="sitelinks__section--insider">
-            <div className="sitelinks__section--title">Become a PB Insider</div>
+          <div className="sitelinks__section--pay">
+            {imageList.map((image: string, index: number) => (
+              <img key={index} src={image} alt={`image-${index}`} />
+            ))}
+          </div>
+        </div>
+        <div className="sitelinks__section">
+          <div className="sitelinks__section--country">
+            <FontAwesomeIcon
+              className="sitelinks__section--country--icon"
+              icon={faGlobe}
+            />
+            Countries:
+            <span>
+              <a href="https://www.pbtech.co.nz/">New Zealand</a> •
+              <a href="https://www.pbtech.com/au/">Australia</a> •
+              <a href="https://www.pbtech.com/pacific/">Pacific</a> •
+              <a href="https://www.pbtech.com/">Global</a>
+            </span>
+          </div>
+        </div>
+
+        <div className="sitelinks__section">
+          <div className="sitelinks__section--download">
+            Download our app:
+            <FontAwesomeIcon
+              className="sitelinks__section--download--icon"
+              icon={faApple}
+            />
+            <FontAwesomeIcon
+              className="sitelinks__section--download--icon"
+              icon={faAndroid}
+            />
+          </div>
+        </div>
+
+        <div className="sitelinks__section">
+          <div className="sitelinks__section--socials">
+            <FontAwesomeIcon
+              className="sitelinks__section--socials--icon sitelinks__fb"
+              icon={faFacebookSquare}
+            />
+            <FontAwesomeIcon
+              className="sitelinks__section--socials--icon sitelinks__twitter"
+              icon={faTwitterSquare}
+            />
+            <FontAwesomeIcon
+              className="sitelinks__section--socials--icon  sitelinks__yt"
+              icon={faYoutubeSquare}
+            />
+            <FontAwesomeIcon
+              className="sitelinks__section--socials--icon  sitelinks__ig"
+              icon={faInstagramSquare}
+            />
+            <FontAwesomeIcon
+              className="sitelinks__section--socials--icon  sitelinks__linkedin"
+              icon={faLinkedin}
+            />
           </div>
         </div>
       </div>
