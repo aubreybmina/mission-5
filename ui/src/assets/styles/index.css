@@ -391,38 +391,45 @@
 .sitelinks__section--company--list-li {
   padding: 0.3125rem 0;
 }
-.sitelinks__section--insider {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  justify-content: flex-start;
+.sitelinks__section--insider--details {
   margin: 0.3125rem;
   border-radius: 0.25rem;
   background-color: #464646;
-  min-height: 11.25rem;
+  min-height: 8.75rem;
   width: 17.109375rem;
 }
-.sitelinks__section--insider--details {
+.sitelinks__section--insider--details--content {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
 }
-.sitelinks__section--insider--details img {
+.sitelinks__section--insider--details--content img {
   height: 3.75rem;
   width: 3.75rem;
   margin: 0.875rem 0 0.625rem 1.25rem;
   font-size: 1.5625rem;
   font-weight: 700;
 }
-.sitelinks__section--insider--details p {
+.sitelinks__section--insider--details--content p {
   font-size: 0.825rem;
   color: #ffffff;
   margin: 1.25rem 0.625rem 0;
 }
-.sitelinks__section--insider--button {
+.sitelinks__section--insider--details button {
   background-color: #f08222;
+  color: #ffffff;
   border-radius: 0.25rem;
+  border-style: none;
   height: 2.0625rem;
+  width: 15.859375rem;
   margin: 0.625rem;
+}
+.sitelinks__section--insider--details button:hover {
+  cursor: pointer;
+  border: 0rem solid #ffffff;
+  color: #f08222;
+  background-color: #0d4f77;
+  transition: border 100ms, color 100ms;
 }
 
 .navbarMid {
