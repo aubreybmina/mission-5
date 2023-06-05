@@ -191,13 +191,20 @@ const FooterSiteLinks = () => {
         </div>
       </div>
       <div className="sitelinks__section">
-        <div className="sitelinks__section--title">Become a PB Insider</div>
         <div className="sitelinks__section--insider">
+          <div className="sitelinks__section--title">Become a PB Insider</div>
+
           <div className="sitelinks__section--insider--details">
-            <img src={insiderlogo} alt="PB Insider Logo" />
-            <p>Get early access to sales, exclusive discount coupons & more!</p>
+            <div className="sitelinks__section--insider--details--content">
+              <img src={insiderlogo} alt="PB Insider Logo" />
+              <p>
+                Get early access to sales, exclusive discount coupons & more!
+              </p>
+            </div>
+            <button className="sitelinks__section--insider--button">
+              Learn More
+            </button>
           </div>
-          <div className="sitelinks__section--insider--button">Learn More</div>
         </div>
       </div>
     </div>

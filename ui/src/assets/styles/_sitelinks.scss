@@ -78,40 +78,50 @@
     }
 
     &--insider {
-      display: grid;
-      grid-template-rows: 1fr 1fr;
-      justify-content: flex-start;
-      margin: u.toRem(5);
-      border-radius: u.toRem(4);
-      background-color: c.$ft-testimonial;
-      min-height: u.toRem(180);
-      width: u.toRem(273.75);
-
       &--details {
-        display: flex;
-        justify-content: space-between;
-        align-items: stretch;
-
-        img {
-          height: u.toRem(60);
-          width: u.toRem(60);
-          margin: u.toRem(14) 0 u.toRem(10) u.toRem(20);
-          font-size: u.toRem(25);
-          font-weight: 700;
-        }
-
-        p {
-          font-size: u.toRem(13.2);
-          color: c.$standout-color;
-          margin: u.toRem(20) u.toRem(10) 0;
-        }
-      }
-
-      &--button {
-        background-color: c.$pb-orange;
+        margin: u.toRem(5);
         border-radius: u.toRem(4);
-        height: u.toRem(33);
-        margin: u.toRem(10);
+        background-color: c.$ft-testimonial;
+        min-height: u.toRem(140);
+        width: u.toRem(273.75);
+
+        &--content {
+          display: flex;
+          justify-content: space-between;
+          align-items: stretch;
+
+          img {
+            height: u.toRem(60);
+            width: u.toRem(60);
+            margin: u.toRem(14) 0 u.toRem(10) u.toRem(20);
+            font-size: u.toRem(25);
+            font-weight: 700;
+          }
+
+          p {
+            font-size: u.toRem(13.2);
+            color: c.$standout-color;
+            margin: u.toRem(20) u.toRem(10) 0;
+          }
+        }
+
+        button {
+          background-color: c.$pb-orange;
+          color: c.$standout-color;
+          border-radius: u.toRem(4);
+          border-style: none;
+          height: u.toRem(33);
+          width: u.toRem(253.75);
+          margin: u.toRem(10);
+
+          &:hover {
+            cursor: pointer;
+            border: u.toRem(0) solid c.$standout-color;
+            color: c.$pb-orange;
+            background-color: c.$pb-blue;
+            transition: border 100ms, color 100ms;
+          }
+        }
       }
     }
   }
