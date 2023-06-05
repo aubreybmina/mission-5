@@ -352,10 +352,12 @@
 
 .sitelinks {
   background-color: #313131;
+  padding: 0 11.25rem;
+}
+.sitelinks__top {
   display: flex;
   justify-content: space-between;
   align-content: flex-start;
-  padding: 0 11.25rem;
 }
 .sitelinks--icon {
   color: #f08222;
@@ -450,9 +452,81 @@
 .sitelinks__section--insider--details button:hover {
   cursor: pointer;
   border: 0rem solid #ffffff;
-  color: #f08222;
-  background-color: #0d4f77;
+  text-decoration: underline;
+  background-color: #fd7e14;
   transition: border 100ms, color 100ms;
+}
+.sitelinks__section--pay img {
+  height: 1.4375rem;
+  margin: 0.15625rem;
+  border-radius: 0.25rem;
+}
+.sitelinks__section--country {
+  padding: 0.3125rem 0.625rem;
+  font-size: 0.825rem;
+  color: #ffffff;
+  border-radius: 0.25rem;
+  background-color: #464646;
+}
+.sitelinks__section--country--icon {
+  padding-right: 0.3125rem;
+}
+.sitelinks__section--country a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.3125rem;
+}
+.sitelinks__section--download {
+  padding: 0.3125rem 0.625rem;
+  font-size: 0.825rem;
+  color: #6d6d6d;
+  display: flex;
+  align-items: center;
+}
+.sitelinks__section--download--icon {
+  padding: 0 0.3125rem;
+  height: 1.5625rem;
+}
+.sitelinks__section--download--icon:hover {
+  cursor: pointer;
+  color: #ffffff;
+}
+.sitelinks__section--socials {
+  padding: 0.3125rem 0.625rem;
+  font-size: 0.825rem;
+  color: #6d6d6d;
+  display: flex;
+  align-items: center;
+}
+.sitelinks__section--socials--icon {
+  padding: 0 0.3125rem;
+  height: 1.5625rem;
+}
+.sitelinks__bottom {
+  border-top: 0.0625rem solid #464646;
+  display: flex;
+  justify-content: space-between;
+  align-content: flex-start;
+}
+.sitelinks__fb:hover {
+  cursor: pointer;
+  color: #1773ea;
+}
+.sitelinks__twitter:hover {
+  cursor: pointer;
+  color: #1c96e8;
+}
+.sitelinks__yt:hover {
+  cursor: pointer;
+  color: #ee1b0d;
+}
+.sitelinks__ig:hover {
+  cursor: pointer;
+  color: #c235a7;
+}
+.sitelinks__linkedin:hover {
+  cursor: pointer;
+  color: #0077b5;
 }
 
 .navbarMid {
