@@ -71,6 +71,7 @@ describe('MongoDB service', () => {
         warranty: '1 Year',
         features: 'WiFiAC + BT5, Webcam, USB-C, HDMI1.4b',
         price: 977.5,
+        special: true,
         imageURL:
           'https://www.pbtech.co.nz/imgprod/N/B/NBKLEN150200__1.jpg?h=2930035477',
         userName: '64760b2f2bbf7c731a5c7edf',

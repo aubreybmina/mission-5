@@ -18,7 +18,6 @@ const Home = () => {
         <CategoryButtons />
         <CategoryTiles />
       </div>
-      <LaptopList />
     </>
   )
 }

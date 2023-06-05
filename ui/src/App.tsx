@@ -9,6 +9,7 @@ import Search from './pages/search/Search'
 import Missing from './pages/Missing'
 import Footer from './components/Footer'
 import UpperNav from './components/UpperNav'
+import BusinessLaptops from './pages/businessLaptops/BusinessLaptops'
 import '@fontsource/inter/100.css'
 import '@fontsource/inter/200.css'
 import '@fontsource/inter/300.css'
@@ -33,6 +34,7 @@ function App() {
           <Route path="laptop/:id/:title" element={<LaptopPage />} />
           <Route path="search" element={<Search />} />
           <Route path="*" element={<Missing />} />
+          <Route path="business-laptops" element={<BusinessLaptops />} />
         </Routes>
         <Footer />
       </BrowserRouter>

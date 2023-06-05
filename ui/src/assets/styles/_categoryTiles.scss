@@ -3,7 +3,7 @@
 @use 'media-queries' as m;
 @use 'fonts' as f;
 
-.whatsHot {
+.laptopList {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -15,19 +15,111 @@
   &__container {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    margin-right: u.toRem(500);
+    justify-content: space-between;
+    width: u.toRem(1170);
+    margin-left: u.toRem(340);
 
     &--tiles {
-      margin-left: u.toRem(340);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
       background-color: c.$laptoptile-color;
-      height: u.toRem(450);
-      width: u.toRem(289);
+      height: u.toRem(550);
+      width: u.toRem(350);
+      border-radius: 4px;
 
       &_img {
-        width: u.toRem(250);
-        margin-left: u.toRem(20);
-        margin-top: u.toRem(20);
+        background-color: c.$laptoptile-color;
+        margin-left: u.toRem(5);
+        padding: u.toRem(10);
+        width: u.toRem(320);
+      }
+
+      &_text {
+        margin-top: u.toRem(-10);
+        padding-left: u.toRem(15);
+        font-family: f.$inter;
+        font-size: u.toRem(16);
+        font-weight: 700;
+        color: c.$text-highlight;
+      }
+
+      &_special {
+        font-family: f.$inter;
+        font-size: u.toRem(13);
+        font-weight: 700;
+        color: c.$special-red;
+      }
+
+      &_noSpecial {
+        font-family: f.$inter;
+        font-size: u.toRem(13);
+        font-weight: 700;
+        color: c.$no-special-gray;
+      }
+    }
+
+    &--price {
+      display: flex;
+      align-items: flex-start;
+
+      &_dollars {
+        color: black;
+        font-family: f.$inter;
+        font-size: u.toRem(26);
+        font-weight: 700;
+      }
+
+      &_cents {
+        color: black;
+        font-family: f.$inter;
+        font-size: u.toRem(13);
+        font-weight: 700;
+        vertical-align: top;
+      }
+    }
+  }
+
+  &__articlesContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: u.toRem(1170);
+    margin-left: u.toRem(340);
+    margin-bottom: u.toRem(10);
+
+    &--tiles {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      background-color: c.$laptoptile-color;
+      height: u.toRem(460);
+      width: u.toRem(350);
+      border-radius: 4px;
+
+      &_img {
+        background-color: c.$laptoptile-color;
+        margin-left: u.toRem(5);
+        padding: u.toRem(10);
+        width: u.toRem(320);
+        height: u.toRem(269);
+        object-fit: cover;
+      }
+
+      &_text {
+        margin-top: u.toRem(-10);
+        padding-left: u.toRem(15);
+        font-family: f.$inter;
+        font-size: u.toRem(16);
+        font-weight: 700;
+        color: c.$text-highlight;
+
+        &-date,
+        &-body {
+          padding-left: u.toRem(15);
+          font-size: u.toRem(13);
+          color: c.$no-special-gray;
+        }
       }
     }
   }
@@ -45,7 +137,12 @@
     background-color: c.$text-highlight;
     padding: u.toRem(0) u.toRem(8);
     border-radius: 4px;
-    font-family: f.$inter !important;
+    font-family: f.$inter;
+    text-decoration: none;
+  }
+
+  &__link {
+    text-decoration: none;
   }
 }
 

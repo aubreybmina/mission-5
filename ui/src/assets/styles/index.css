@@ -494,7 +494,7 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  margin-left: 15.625rem;
+  margin-left: 12.1875rem;
   font-size: 0.875rem;
   font-weight: 500;
   color: white;
@@ -563,7 +563,7 @@
 .accountMenu {
   position: absolute;
   z-index: 11;
-  right: 6.1875rem;
+  right: 5.875rem;
   top: 5.75rem;
   width: 14.375rem;
   height: 14.5rem;
@@ -884,6 +884,10 @@
   font-weight: 700;
 }
 
+.menuText {
+  text-decoration: none;
+}
+
 .menuHeader:hover,
 .menuText:hover {
   color: #f08222;
@@ -944,6 +948,7 @@
   padding: 1.25rem;
   text-align: center;
   margin: 1.25rem 1.25rem 1.25rem 0rem;
+  text-decoration: none;
 }
 
 .header {
@@ -990,7 +995,7 @@
   margin: 1.25rem 1.25rem 1.25rem 0rem;
 }
 
-.whatsHot {
+.laptopList {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -999,22 +1004,102 @@
   width: 26.25rem;
   font-family: "Roboto", sans-serif;
 }
-.whatsHot__container {
+.laptopList__container {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  margin-right: 31.25rem;
-}
-.whatsHot__container--tiles {
+  justify-content: space-between;
+  width: 73.125rem;
   margin-left: 21.25rem;
-  background-color: #eeeeee;
-  height: 28.125rem;
-  width: 18.0625rem;
 }
-.whatsHot__container--tiles_img {
-  width: 15.625rem;
-  margin-left: 1.25rem;
-  margin-top: 1.25rem;
+.laptopList__container--tiles {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #eeeeee;
+  height: 34.375rem;
+  width: 21.875rem;
+  border-radius: 4px;
+}
+.laptopList__container--tiles_img {
+  background-color: #eeeeee;
+  margin-left: 0.3125rem;
+  padding: 0.625rem;
+  width: 20rem;
+}
+.laptopList__container--tiles_text {
+  margin-top: -0.625rem;
+  padding-left: 0.9375rem;
+  font-family: "Inter";
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1278a5;
+}
+.laptopList__container--tiles_special {
+  font-family: "Inter";
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: #f02222;
+}
+.laptopList__container--tiles_noSpecial {
+  font-family: "Inter";
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: #6d6d6d;
+}
+.laptopList__container--price {
+  display: flex;
+  align-items: flex-start;
+}
+.laptopList__container--price_dollars {
+  color: black;
+  font-family: "Inter";
+  font-size: 1.625rem;
+  font-weight: 700;
+}
+.laptopList__container--price_cents {
+  color: black;
+  font-family: "Inter";
+  font-size: 0.8125rem;
+  font-weight: 700;
+  vertical-align: top;
+}
+.laptopList__articlesContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 73.125rem;
+  margin-left: 21.25rem;
+  margin-bottom: 0.625rem;
+}
+.laptopList__articlesContainer--tiles {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #eeeeee;
+  height: 28.75rem;
+  width: 21.875rem;
+  border-radius: 4px;
+}
+.laptopList__articlesContainer--tiles_img {
+  background-color: #eeeeee;
+  margin-left: 0.3125rem;
+  padding: 0.625rem;
+  width: 20rem;
+  height: 16.8125rem;
+  object-fit: cover;
+}
+.laptopList__articlesContainer--tiles_text {
+  margin-top: -0.625rem;
+  padding-left: 0.9375rem;
+  font-family: "Inter";
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1278a5;
+}
+.laptopList__articlesContainer--tiles_text-date, .laptopList__articlesContainer--tiles_text-body {
+  padding-left: 0.9375rem;
+  font-size: 0.8125rem;
+  color: #6d6d6d;
 }
 
 .header {
@@ -1029,7 +1114,11 @@
   background-color: #1278a5;
   padding: 0rem 0.5rem;
   border-radius: 4px;
-  font-family: "Inter" !important;
+  font-family: "Inter";
+  text-decoration: none;
+}
+.header__link {
+  text-decoration: none;
 }
 
 .popGaming {
@@ -1062,6 +1151,156 @@
   font-family: "Roboto", sans-serif;
 }
 
+.businessLaptops {
+  display: flex;
+}
+
+.filterBlock {
+  padding-left: 3.125rem;
+  margin-top: 3.125rem;
+}
+.filterBlock__store {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.upperBlock {
+  margin-left: 17.1875rem;
+}
+.upperBlock__breadcrumbs {
+  display: flex;
+  align-items: center;
+  color: #0d4f77;
+  font-size: 0.8125rem;
+  font-family: "Roboto", sans-serif;
+  margin-top: 1.875rem;
+}
+.upperBlock__breadcrumbs--current {
+  color: #4e4e4e;
+}
+.upperBlock__mainHead {
+  color: #0d4f77;
+  font-size: 2rem;
+  font-family: "Roboto", sans-serif;
+}
+
+.sortBar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 1.875rem;
+  margin-right: 23.3125rem;
+}
+.sortBar__text {
+  margin-right: 1.25rem;
+}
+
+.businessList {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 21.875rem;
+  margin-top: 2.3125rem;
+  width: 26.25rem;
+  font-family: "Roboto", sans-serif;
+}
+.businessList__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 74.375rem;
+  margin-left: 21.25rem;
+  margin-top: 0.625rem;
+  margin-bottom: 0.625rem;
+}
+.businessList__container--tiles {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #eeeeee;
+  height: 34.375rem;
+  width: 21.875rem;
+  border-radius: 4px;
+  margin-bottom: 0.9375rem;
+}
+.businessList__container--tiles_img {
+  background-color: #eeeeee;
+  margin-left: 0.3125rem;
+  padding: 0.625rem;
+  width: 20rem;
+}
+.businessList__container--tiles_text {
+  margin-top: -0.625rem;
+  padding-left: 0.9375rem;
+  font-family: "Inter";
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1278a5;
+}
+.businessList__container--tiles_special {
+  font-family: "Inter";
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: #f02222;
+}
+.businessList__container--tiles_noSpecial {
+  font-family: "Inter";
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: #6d6d6d;
+}
+.businessList__container--price {
+  display: flex;
+  align-items: flex-start;
+}
+.businessList__container--price_dollars {
+  color: black;
+  font-family: "Inter";
+  font-size: 1.625rem;
+  font-weight: 700;
+}
+.businessList__container--price_cents {
+  color: black;
+  font-family: "Inter";
+  font-size: 0.8125rem;
+  font-weight: 700;
+  vertical-align: top;
+}
+
+.dropDown__container {
+  text-align: left;
+  border: 1px solid black;
+  position: relative;
+  border-radius: 4px;
+  width: 12.5rem;
+}
+.dropDown__input {
+  padding: 0.3125rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+}
+.dropDown__menu {
+  position: absolute;
+  transform: translateY(6.125rem) translateX(-0.375rem);
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 4px;
+  overflow: auto;
+  max-height: 9.375rem;
+  background-color: white;
+}
+.dropDown__menu--item {
+  padding: 0.3125rem;
+  cursor: pointer;
+}
+.dropDown__menu--item:hover {
+  background-color: #6d6d6d;
+}
+
 .main {
   position: absolute;
   top: 0;
@@ -1069,4 +1308,6 @@
   right: 0;
   bottom: 0;
   font-family: "Roboto", sans-serif;
-}/*# sourceMappingURL=index.css.map */
+}
+
+/*# sourceMappingURL=index.css.map */
