@@ -1086,7 +1086,8 @@
   padding: 0.625rem;
   width: 20rem;
   height: 16.8125rem;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .laptopList__articlesContainer--tiles_text {
   margin-top: -0.625rem;
@@ -1281,7 +1282,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .dropDown__menu {
   position: absolute;
@@ -1308,6 +1311,4 @@
   right: 0;
   bottom: 0;
   font-family: "Roboto", sans-serif;
-}
-
-/*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=index.css.map */
