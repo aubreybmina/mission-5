@@ -12,11 +12,15 @@
 
     &--photos {
       position: relative;
-      padding: u.toRem(8);
-      width: u.toRem(328);
-      height: u.toRem(328);
-      border: 1px solid #e4e4e4;
-      border-radius: 4px;
+      height: u.toRem(450);
+
+      &--img {
+        padding: u.toRem(8);
+        width: u.toRem(328);
+        height: u.toRem(328);
+        border: 1px solid #e4e4e4;
+        border-radius: 4px;
+      }
 
       img {
         width: 100%;
@@ -143,6 +147,25 @@
       }
     }
   }
+}
+
+.carousel .thumb {
+  display: inline-block;
+  margin-right: 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  border: 1px solid #e4e4e4 !important;
+  border-radius: 4px;
+  padding: 2px;
+}
+.carousel .thumb .carousel .thumb.selected,
+.carousel .thumb:hover {
+  border: 1px solid #9d9d9d !important;
+}
+
+.carousel .thumbs-wrapper {
+  margin: 0px !important;
+  overflow: hidden;
 }
 
 @keyframes slide-in {
