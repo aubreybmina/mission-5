@@ -35,9 +35,9 @@ export default function Carousel() {
 
   const carouselImage = currentCarousel()
   return (
-    <div className="carousel">
+    <div className="carouselHome">
       <img
-        className="carousel__image"
+        className="carouselHome__image"
         src={carouselImage}
         alt="carousel image"
       />

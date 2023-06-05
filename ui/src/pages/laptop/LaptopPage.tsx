@@ -6,6 +6,8 @@ import ArrowRightSLineIcon from 'remixicon-react/ArrowRightSLineIcon'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faScaleBalanced } from '@fortawesome/free-solid-svg-icons'
 import { faHeart } from '@fortawesome/free-regular-svg-icons'
+import { Carousel } from 'react-responsive-carousel/lib/js'
+import 'react-responsive-carousel/lib/styles/carousel.min.css' // requires a loader
 
 const LaptopPage = () => {
   const { title } = useParams()
@@ -57,7 +59,7 @@ const LaptopPage = () => {
   return (
     <>
       <div className="breadcrumbs">
-        <p>Home</p>
+        <Link to="/">Home</Link>
         <ArrowRightSLineIcon />
         <p>Computers & Tablets</p>
         <ArrowRightSLineIcon />
@@ -70,10 +72,33 @@ const LaptopPage = () => {
       <div className="productpage">
         <div className="productpage__main">
           <div className="productpage__main--photos">
-            <img
-              src="https://www.pbtech.co.nz/imgprod/N/B/NBKASU506040__1.jpg?h=2005533558"
-              alt="Laptop photo"
-            />
+            <div className="productpage__main--photos--img">
+              <Carousel autoPlay>
+                <img
+                  src="https://www.pbtech.co.nz/imgprod/N/B/NBKASU506040__1.jpg?h=2005533558"
+                  alt="Laptop photo"
+                />
+                <img
+                  src="https://www.pbtech.co.nz/imgprod/N/B/NBKASU506040__1.jpg?h=2005533558"
+                  alt="Laptop photo"
+                />
+
+                <img
+                  src="https://www.pbtech.co.nz/imgprod/N/B/NBKASU506040__1.jpg?h=2005533558"
+                  alt="Laptop photo"
+                />
+
+                <img
+                  src="https://www.pbtech.co.nz/imgprod/N/B/NBKASU506040__1.jpg?h=2005533558"
+                  alt="Laptop photo"
+                />
+
+                <img
+                  src="https://www.pbtech.co.nz/imgprod/N/B/NBKASU506040__1.jpg?h=2005533558"
+                  alt="Laptop photo"
+                />
+              </Carousel>
+            </div>
             <div className="productpage__main--photos--icons">
               <FontAwesomeIcon
                 className="productpage__main--photos--icons--scaleheart"
