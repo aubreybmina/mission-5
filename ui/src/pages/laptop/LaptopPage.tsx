@@ -114,6 +114,9 @@ const LaptopPage = () => {
             <div className="productpage__main--details--productName">
               {title?.split('-').join(' ')}
             </div>
+            <div className="productpage__main--details--options">
+              <label>SSD Capacity</label>
+            </div>
           </div>
         </div>
         <div className="productpage__frame">
