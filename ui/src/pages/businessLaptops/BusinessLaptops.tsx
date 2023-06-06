@@ -4,10 +4,11 @@ import ArrowRightSLineIcon from 'remixicon-react/ArrowRightSLineIcon'
 import Carousel from '../home/Carousel'
 import DropDown from './DropDown'
 import { stores } from '../../assets/data/storesArray'
+import { Link } from 'react-router-dom'
 
 const BusinessLaptops: React.FC = () => {
   const [laptops, setLaptops] = useState<LaptopModel[]>([])
-  const [rangeValue, setRangeValue] = useState(0)
+  const [rangeValue, setRangeValue] = useState(4000)
   const [selectedSortOption, setSelectedSortOption] = useState('')
 
   useEffect(() => {
@@ -125,7 +126,7 @@ const BusinessLaptops: React.FC = () => {
               value={rangeValue}
               onChange={handleRangeChange}
             />
-            <p>{rangeValue.toFixed(2)}</p>
+            <p>${rangeValue.toFixed(2)}</p>
           </div>
         </div>
         <div className="upperBlock">
@@ -164,9 +165,11 @@ const BusinessLaptops: React.FC = () => {
                 alt="laptop image"
               />
               <div className="businessList__container--tiles_text">
-                <p>
-                  {laptop.brand} {laptop.model}
-                </p>
+                <Link to={`laptop/${laptop._id}`}>
+                  <p>
+                    {laptop.brand} {laptop.model}
+                  </p>
+                </Link>
                 {laptop.special ? (
                   <p className="businessList__container--tiles_special">
                     {price[0]}
