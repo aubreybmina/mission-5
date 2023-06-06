@@ -6,28 +6,14 @@ import ArrowRightSLineIcon from 'remixicon-react/ArrowRightSLineIcon'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faScaleBalanced } from '@fortawesome/free-solid-svg-icons'
 import { faHeart } from '@fortawesome/free-regular-svg-icons'
-import { Carousel } from 'react-responsive-carousel/lib/js'
+import { Carousel } from 'react-responsive-carousel'
 import 'react-responsive-carousel/lib/styles/carousel.min.css' // requires a loader
+import LaptopDetails from './LaptopDetails'
 
 const LaptopPage = () => {
   const { title } = useParams()
-  // const { id } = useParams()
-  // const [laptop, setLaptop] = useState<LaptopModel[]>([])
-
-  // useEffect(() => {
-  //   async function loadLaptop() {
-  //     try {
-  //       const response = await fetch(`/api/laptop/${id}`, {
-  //         method: 'GET',
-  //       })
-  //       const result = await response.json()
-  //       setLaptop(result)
-  //     } catch (error) {
-  //       console.log(error)
-  //     }
-  //   }
-  //   loadLaptop()
-  // }, [])
+  const { id } = useParams()
+  const [laptop, setLaptop] = useState<LaptopModel[]>([])
   const [showPlusDesc, setshowPlusDesc] = useState(true)
   const [showCloseDesc, setShowCloseDesc] = useState(false)
   const [showDescription, setshowDescription] = useState(false)
@@ -37,6 +23,21 @@ const LaptopPage = () => {
   const [showPlusWarranty, setshowPlusWarranty] = useState(true)
   const [showCloseWarranty, setShowCloseWarranty] = useState(false)
   const [showWarranty, setshowWarranty] = useState(false)
+
+  useEffect(() => {
+    async function loadLaptop() {
+      try {
+        const response = await fetch(`/api/laptop/${id}`, {
+          method: 'GET',
+        })
+        const result = await response.json()
+        setLaptop(result.laptop)
+      } catch (error) {
+        console.log(error)
+      }
+    }
+    loadLaptop()
+  }, [])
 
   const handleDescription = () => {
     setshowPlusDesc(!showPlusDesc)
@@ -68,6 +69,7 @@ const LaptopPage = () => {
         </p>
         <ArrowRightSLineIcon />
         <p className="breadcrumbs__current">{title?.split('-').join(' ')}</p>
+        {/* {JSON.stringify(laptop._id)} */}
       </div>
       <div className="productpage">
         <div className="productpage__main">
@@ -75,7 +77,9 @@ const LaptopPage = () => {
             <div className="productpage__main--photos--img">
               <Carousel autoPlay>
                 <img
-                  src="https://www.pbtech.co.nz/imgprod/N/B/NBKASU506040__1.jpg?h=2005533558"
+                  src={
+                    'https://www.pbtech.co.nz/imgprod/N/B/NBKASU506040__1.jpg?h=2005533558'
+                  }
                   alt="Laptop photo"
                 />
                 <img
@@ -110,14 +114,7 @@ const LaptopPage = () => {
               />
             </div>
           </div>
-          <div className="productpage__main--details">
-            <div className="productpage__main--details--productName">
-              {title?.split('-').join(' ')}
-            </div>
-            <div className="productpage__main--details--options">
-              <label>SSD Capacity</label>
-            </div>
-          </div>
+          <LaptopDetails />
         </div>
         <div className="productpage__frame">
           <div className="productpage__frame--tile">

@@ -100,11 +100,17 @@
 }
 
 .productpage {
-  margin: 3.75rem 21.875rem;
+  padding: 3.75rem 21.875rem;
   font-family: "Inter" !important;
 }
 .productpage__main {
   display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 48rem) {
+  .productpage__main {
+    display: grid;
+  }
 }
 .productpage__main--photos {
   position: relative;
@@ -153,6 +159,71 @@
   font-weight: 700;
   color: #1278a5;
   margin: 0.3125rem 0rem;
+  padding-bottom: 3.8125rem;
+}
+.productpage__main--details--options {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-between;
+  -moz-columns: 100px 3;
+       columns: 100px 3;
+  align-items: center;
+}
+@media (max-width: 48rem) {
+  .productpage__main--details--options {
+    display: flex;
+  }
+}
+.productpage__main--details--options label {
+  font-family: "Inter" !important;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.36125rem;
+}
+.productpage__main--details--options--dropdown {
+  padding: 0.3125rem;
+}
+.productpage__main--details--options--dropdown select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("../images/feather-arrow-down.png");
+  width: 7.5rem;
+  background-repeat: no-repeat;
+  background-position: right 8% bottom 50%;
+  border-radius: 0.3125rem;
+  padding-right: 20px;
+  margin-right: 0.625rem;
+  padding: 0.625rem;
+}
+.productpage__main--details--options--dropdown option {
+  padding: 0.625rem;
+  height: 10px;
+}
+.productpage__main--details--price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.15625rem 0;
+}
+.productpage__main--button button {
+  background-color: #1278a5;
+  color: #ffffff;
+  border-radius: 0.25rem;
+  border-style: none;
+  width: 100%;
+  padding: 0.5rem;
+  font-family: "Inter" !important;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  text-align: center;
+  margin: 0.34375rem 0;
+}
+.productpage__main--button button:hover {
+  background-color: #ffffff;
+  color: #1278a5;
 }
 .productpage__frame {
   margin: 1.875rem 0;
@@ -186,7 +257,6 @@
   transform: translateY(-1%);
   -webkit-transform: translateY(-1%);
   animation: slide-in 0.5s backwards;
-  -webkit-animation: slide-in 0.5s backwards;
   animation: slide-out 0.5s backwards;
   -webkit-animation: slide-out 0.5s backwards;
 }
@@ -251,28 +321,12 @@
     -webkit-transform: translateY(0%);
   }
 }
-@-webkit-keyframes slide-in {
-  0% {
-    transform: translateY(-1%);
-  }
-  100% {
-    transform: translateY(0%);
-  }
-}
 @keyframes slide-out {
   0% {
     transform: translateY(0%);
   }
   100% {
     transform: translateY(-1%);
-  }
-}
-@-webkit-keyframes slide-out {
-  0% {
-    -webkit-transform: translateY(0%);
-  }
-  100% {
-    -webkit-transform: translateY(-1%);
   }
 }
 .testimonial {
@@ -1200,7 +1254,8 @@
   padding: 0.625rem;
   width: 20rem;
   height: 16.8125rem;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .laptopList__articlesContainer--tiles_text {
   margin-top: -0.625rem;
@@ -1395,7 +1450,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .dropDown__menu {
   position: absolute;
@@ -1422,6 +1479,4 @@
   right: 0;
   bottom: 0;
   font-family: "Roboto", sans-serif;
-}
-
-/*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=index.css.map */
