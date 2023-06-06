@@ -1,14 +1,16 @@
 @use 'colors' as c;
 @use 'utils' as u;
 @use 'media-queries' as m;
-@import url('https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css');
 
 .sitelinks {
   background-color: c.$ft-testimonial-tile;
-  display: flex;
-  justify-content: space-between;
-  align-content: flex-start;
   padding: 0 u.toRem(180);
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-content: flex-start;
+  }
 
   &--icon {
     color: c.$pb-orange;
@@ -18,9 +20,12 @@
   &__section {
     display: flex;
     justify-content: space-between;
+    align-items: start;
+    font-size: u.toRem(12);
+    margin-bottom: u.toRem(20);
+    padding: u.toRem(10);
 
     &--title {
-      font-size: u.toRem(12);
       color: c.$ft-testimonial-text;
       font-weight: 700;
       padding: u.toRem(20) 0;
@@ -31,6 +36,7 @@
 
       &--list {
         font-size: u.toRem(12);
+        padding-right: u.toRem(50);
 
         &-ul {
           color: c.$standout-color;
@@ -51,25 +57,174 @@
     &--company {
       grid-template-rows: 1fr 1fr;
       justify-content: flex-start;
+      padding: 0 u.toRem(50);
 
       &--list {
-        font-size: u.toRem(12);
-
         &-ul {
           color: c.$standout-color;
-          font-size: u.toRem(12);
           padding: 0;
           margin: 0;
           list-style: none;
         }
         ul li::before {
           content: '\f04b';
+          font-family: FontAwesome;
+          font-size: u.toRem(8) !important;
           color: c.$pb-orange;
           padding-right: u.toRem(5);
-          font-family: 'Font Awesome\ 5 Free' !important;
-          font-weight: 900;
+        }
+
+        &-li {
+          padding: u.toRem(5) 0;
         }
       }
+    }
+
+    &--insider {
+      &--details {
+        margin: u.toRem(5);
+        border-radius: u.toRem(4);
+        background-color: c.$ft-testimonial;
+        min-height: u.toRem(140);
+        width: u.toRem(273.75);
+
+        &--content {
+          display: flex;
+          justify-content: space-between;
+          align-items: stretch;
+
+          img {
+            height: u.toRem(60);
+            width: u.toRem(60);
+            margin: u.toRem(14) 0 u.toRem(10) u.toRem(20);
+            font-size: u.toRem(25);
+            font-weight: 700;
+          }
+
+          p {
+            font-size: u.toRem(13.2);
+            color: c.$standout-color;
+            margin: u.toRem(20) u.toRem(10) 0;
+          }
+        }
+
+        button {
+          background-color: c.$pb-orange;
+          color: c.$standout-color;
+          border-radius: u.toRem(4);
+          border-style: none;
+          height: u.toRem(33);
+          width: u.toRem(253.75);
+          margin: u.toRem(10);
+
+          &:hover {
+            cursor: pointer;
+            border: u.toRem(0) solid c.$standout-color;
+            text-decoration: underline;
+            background-color: c.$pb-orange-dark;
+            transition: border 100ms, color 100ms;
+          }
+        }
+      }
+    }
+
+    &--pay {
+      img {
+        height: u.toRem(23);
+        margin: u.toRem(2.5);
+        border-radius: u.toRem(4);
+      }
+    }
+
+    &--country {
+      padding: u.toRem(5) u.toRem(10);
+      font-size: u.toRem(13.2);
+      color: c.$standout-color;
+      border-radius: u.toRem(4);
+      background-color: c.$ft-testimonial;
+
+      &--icon {
+        padding-right: u.toRem(5);
+      }
+
+      a {
+        color: c.$standout-color;
+        text-decoration: none;
+        padding: u.toRem(5);
+      }
+    }
+
+    &--download {
+      padding: u.toRem(5) u.toRem(10);
+      font-size: u.toRem(13.2);
+      color: c.$no-special-gray;
+      display: flex;
+      align-items: center;
+
+      &--icon {
+        padding: 0 u.toRem(5);
+        height: u.toRem(25);
+
+        &:hover {
+          cursor: pointer;
+          color: c.$standout-color;
+        }
+      }
+    }
+
+    &--socials {
+      padding: u.toRem(5) u.toRem(10);
+      font-size: u.toRem(13.2);
+      color: c.$no-special-gray;
+      display: flex;
+      align-items: center;
+
+      &--icon {
+        padding: 0 u.toRem(5);
+        height: u.toRem(25);
+      }
+    }
+  }
+
+  &__bottom {
+    border-top: u.toRem(1) solid c.$ft-testimonial;
+    display: flex;
+    justify-content: space-between;
+    align-content: flex-start;
+  }
+
+  &__fb {
+    &:hover {
+      cursor: pointer;
+      color: c.$ft-icon-fb;
+    }
+  }
+
+  &__twitter {
+    &:hover {
+      cursor: pointer;
+      color: c.$ft-icon-twitter;
+    }
+  }
+
+  &__yt {
+    &:hover {
+      cursor: pointer;
+      color: c.$ft-icon-yt;
+    }
+  }
+
+  &__ig {
+    &:hover {
+      cursor: pointer;
+      color: c.$ft-icon-ig;
+    }
+  }
+
+  &__linkedin {
+    &:hover {
+      cursor: pointer;
+      color: c.$ft-icon-linkedin;
     }
   }
 }
