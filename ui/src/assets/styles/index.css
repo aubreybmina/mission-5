@@ -186,6 +186,7 @@
   transform: translateY(-1%);
   -webkit-transform: translateY(-1%);
   animation: slide-in 0.5s backwards;
+  -webkit-animation: slide-in 0.5s backwards;
   animation: slide-out 0.5s backwards;
   -webkit-animation: slide-out 0.5s backwards;
 }
@@ -250,12 +251,28 @@
     -webkit-transform: translateY(0%);
   }
 }
+@-webkit-keyframes slide-in {
+  0% {
+    transform: translateY(-1%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
 @keyframes slide-out {
   0% {
     transform: translateY(0%);
   }
   100% {
     transform: translateY(-1%);
+  }
+}
+@-webkit-keyframes slide-out {
+  0% {
+    -webkit-transform: translateY(0%);
+  }
+  100% {
+    -webkit-transform: translateY(-1%);
   }
 }
 .testimonial {
@@ -1183,8 +1200,7 @@
   padding: 0.625rem;
   width: 20rem;
   height: 16.8125rem;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .laptopList__articlesContainer--tiles_text {
   margin-top: -0.625rem;
@@ -1379,9 +1395,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
 }
 .dropDown__menu {
   position: absolute;
@@ -1408,4 +1422,6 @@
   right: 0;
   bottom: 0;
   font-family: "Roboto", sans-serif;
-}/*# sourceMappingURL=index.css.map */
+}
+
+/*# sourceMappingURL=index.css.map */
