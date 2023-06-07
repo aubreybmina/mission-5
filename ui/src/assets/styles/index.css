@@ -697,7 +697,7 @@
   align-items: center;
   justify-content: space-between;
   color: white;
-  font-family: "Inter" !important;
+  font-family: "Roboto", sans-serif;
 }
 .navbarLower__burger {
   display: flex;
@@ -1003,7 +1003,7 @@
   padding-bottom: 1.25rem;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
   color: #3e586d;
-  font-family: "Inter" !important;
+  font-family: "Roboto", sans-serif;
 }
 .burgerMenu__left {
   display: flex;
@@ -1121,7 +1121,7 @@
   justify-content: space-between;
   margin-left: 21.875rem;
   margin-right: 23.4375rem;
-  font-family: "Inter" !important;
+  font-family: "Roboto", sans-serif;
 }
 .laptopType__container--buttons,
 .screenSize__container--buttons {
@@ -1173,7 +1173,7 @@
   width: 56.25rem;
   margin-left: 21.875rem;
   margin-right: 23.4375rem;
-  font-family: "Inter";
+  font-family: "Roboto", sans-serif;
 }
 .operatingSystem__container--buttons {
   font-size: 1rem;
@@ -1227,20 +1227,20 @@
   padding-right: 0.9375rem;
 }
 .laptopList__container--tiles_text_link {
-  font-family: "Inter";
+  font-family: "Roboto", sans-serif;
   font-size: 1rem;
   font-weight: 700;
   color: #1278a5;
   text-decoration: none;
 }
 .laptopList__container--tiles_special {
-  font-family: "Inter";
+  font-family: "Roboto", sans-serif;
   font-size: 0.8125rem;
   font-weight: 700;
   color: #f02222;
 }
 .laptopList__container--tiles_noSpecial {
-  font-family: "Inter";
+  font-family: "Roboto", sans-serif;
   font-size: 0.8125rem;
   font-weight: 700;
   color: #6d6d6d;
@@ -1251,13 +1251,13 @@
 }
 .laptopList__container--price_dollars {
   color: black;
-  font-family: "Inter";
+  font-family: "Roboto", sans-serif;
   font-size: 1.625rem;
   font-weight: 700;
 }
 .laptopList__container--price_cents {
   color: black;
-  font-family: "Inter";
+  font-family: "Roboto", sans-serif;
   font-size: 0.8125rem;
   font-weight: 700;
   vertical-align: top;
@@ -1290,7 +1290,7 @@
 .laptopList__articlesContainer--tiles_text {
   margin-top: -0.625rem;
   padding-left: 0.9375rem;
-  font-family: "Inter";
+  font-family: "Roboto", sans-serif;
   font-size: 1rem;
   font-weight: 700;
   color: #1278a5;
@@ -1313,7 +1313,7 @@
   background-color: #0d4f77;
   padding: 0rem 0.5rem;
   border-radius: 4px;
-  font-family: "Inter";
+  font-family: "Roboto", sans-serif;
   text-decoration: none;
   cursor: pointer;
 }
@@ -1547,13 +1547,13 @@
   text-decoration: none;
 }
 .businessList__container--tiles_special {
-  font-family: "Inter";
+  font-family: "Roboto", sans-serif;
   font-size: 0.8125rem;
   font-weight: 700;
   color: #f02222;
 }
 .businessList__container--tiles_noSpecial {
-  font-family: "Inter";
+  font-family: "Roboto", sans-serif;
   font-size: 0.8125rem;
   font-weight: 700;
   color: #6d6d6d;
@@ -1564,13 +1564,13 @@
 }
 .businessList__container--price_dollars {
   color: black;
-  font-family: "Inter";
+  font-family: "Roboto", sans-serif;
   font-size: 1.625rem;
   font-weight: 700;
 }
 .businessList__container--price_cents {
   color: black;
-  font-family: "Inter";
+  font-family: "Roboto", sans-serif;
   font-size: 0.8125rem;
   font-weight: 700;
   vertical-align: top;

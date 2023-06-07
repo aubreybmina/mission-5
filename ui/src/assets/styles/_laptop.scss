@@ -224,14 +224,14 @@
       }
 
       &_special {
-        font-family: f.$inter;
+        font-family: f.$roboto;
         font-size: u.toRem(13);
         font-weight: 700;
         color: c.$special-red;
       }
 
       &_noSpecial {
-        font-family: f.$inter;
+        font-family: f.$roboto;
         font-size: u.toRem(13);
         font-weight: 700;
         color: c.$no-special-gray;
@@ -244,14 +244,14 @@
 
       &_dollars {
         color: black;
-        font-family: f.$inter;
+        font-family: f.$roboto;
         font-size: u.toRem(26);
         font-weight: 700;
       }
 
       &_cents {
         color: black;
-        font-family: f.$inter;
+        font-family: f.$roboto;
         font-size: u.toRem(13);
         font-weight: 700;
         vertical-align: top;

@@ -17,7 +17,7 @@ const BusinessLaptops: React.FC = () => {
   const [memSliderStyle, setMemSliderStyle] = useState({})
   const [selectedBrand, setSelectedBrand] = useState('All Brands')
   const [selectedCPU, setSelectedCPU] = useState('All')
-  const [memRangeValue, setMemRangeValue] = useState(8)
+  const [memRangeValue, setMemRangeValue] = useState(32)
 
   useEffect(() => {
     async function loadLaptops() {

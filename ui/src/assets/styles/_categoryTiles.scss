@@ -41,7 +41,7 @@
         padding-right: u.toRem(15);
 
         &_link {
-          font-family: f.$inter;
+          font-family: f.$roboto;
           font-size: u.toRem(16);
           font-weight: 700;
           color: c.$text-highlight;
@@ -50,14 +50,14 @@
       }
 
       &_special {
-        font-family: f.$inter;
+        font-family: f.$roboto;
         font-size: u.toRem(13);
         font-weight: 700;
         color: c.$special-red;
       }
 
       &_noSpecial {
-        font-family: f.$inter;
+        font-family: f.$roboto;
         font-size: u.toRem(13);
         font-weight: 700;
         color: c.$no-special-gray;
@@ -70,14 +70,14 @@
 
       &_dollars {
         color: black;
-        font-family: f.$inter;
+        font-family: f.$roboto;
         font-size: u.toRem(26);
         font-weight: 700;
       }
 
       &_cents {
         color: black;
-        font-family: f.$inter;
+        font-family: f.$roboto;
         font-size: u.toRem(13);
         font-weight: 700;
         vertical-align: top;
@@ -114,7 +114,7 @@
       &_text {
         margin-top: u.toRem(-10);
         padding-left: u.toRem(15);
-        font-family: f.$inter;
+        font-family: f.$roboto;
         font-size: u.toRem(16);
         font-weight: 700;
         color: c.$text-highlight;
@@ -142,7 +142,7 @@
     background-color: c.$pb-blue;
     padding: u.toRem(0) u.toRem(8);
     border-radius: 4px;
-    font-family: f.$inter;
+    font-family: f.$roboto;
     text-decoration: none;
     cursor: pointer;
   }
