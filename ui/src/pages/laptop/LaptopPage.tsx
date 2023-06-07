@@ -9,7 +9,7 @@ import { Carousel } from 'react-responsive-carousel'
 import 'react-responsive-carousel/lib/styles/carousel.min.css' // requires a loader
 import { useLocation } from 'react-router-dom'
 
-const LaptopPage = (props) => {
+const LaptopPage = () => {
   const location = useLocation()
   const laptopdetails = location.state
   const { title } = useParams()
@@ -38,7 +38,7 @@ const LaptopPage = (props) => {
     currency: 'NZD',
   })
 
-  const handleValue = (event) => {
+  const handleValue = () => {
     const price = laptopdetails.price
     const ssd: HTMLInputElement | null = document.getElementById(
       'ssd'
@@ -46,7 +46,7 @@ const LaptopPage = (props) => {
     const memory = document.getElementById('memory') as HTMLInputElement | null
     const screen = document.getElementById('screen') as HTMLInputElement | null
     if (ssd === null || memory === null || screen === null) {
-      console.log(`Fields are set to null`)
+      return 0
     } else {
       const value =
         parseFloat(ssd.value) +
@@ -75,6 +75,12 @@ const LaptopPage = (props) => {
     setshowWarranty(!showWarranty)
   }
 
+  const images = require.context(
+    '../../assets/images/laptop-photos',
+    true,
+    /\.(png|ico|svg|jpg|gif|webp)$/
+  )
+  const imageList = images.keys().map((image: string) => images(image))
   return (
     <>
       <div className="breadcrumbs">
@@ -93,31 +99,10 @@ const LaptopPage = (props) => {
           <div className="productpage__main--photos">
             <div className="productpage__main--photos--img">
               <Carousel autoPlay>
-                <img
-                  src={
-                    'https://www.pbtech.co.nz/imgprod/N/B/NBKASU506040__1.jpg?h=2005533558'
-                  }
-                  alt="Laptop photo"
-                />
-                <img
-                  src="https://www.pbtech.co.nz/imgprod/N/B/NBKASU506040__1.jpg?h=2005533558"
-                  alt="Laptop photo"
-                />
-
-                <img
-                  src="https://www.pbtech.co.nz/imgprod/N/B/NBKASU506040__1.jpg?h=2005533558"
-                  alt="Laptop photo"
-                />
-
-                <img
-                  src="https://www.pbtech.co.nz/imgprod/N/B/NBKASU506040__1.jpg?h=2005533558"
-                  alt="Laptop photo"
-                />
-
-                <img
-                  src="https://www.pbtech.co.nz/imgprod/N/B/NBKASU506040__1.jpg?h=2005533558"
-                  alt="Laptop photo"
-                />
+                <img src={laptopdetails.imageURL} alt="Laptop photo" />
+                {imageList.map((image: string, index: number) => (
+                  <img key={index} src={image} alt={`${title}-${index}`} />
+                ))}
               </Carousel>
             </div>
             <div className="productpage__main--photos--icons">
@@ -135,6 +120,20 @@ const LaptopPage = (props) => {
             <div className="productpage__main--details--productName">
               {title?.split('-').join(' ')}{' '}
               {`${laptopdetails.screenSize}" ${laptopdetails.cpuFamily} ${laptopdetails.memorySize}GB ${laptopdetails.ssdCapacity}GB ${laptopdetails.operatingSystem} ${laptopdetails.warranty} - ${laptopdetails.features}`}
+            </div>
+            <div className="productpage__main--details--rating">
+              <p>
+                <meter
+                  className="productpage__main--details--rating--star"
+                  min="0"
+                  max="5"
+                  value="2.5"
+                  title="2.5 out of 5 stars"
+                >
+                  2.5 out of 5
+                </meter>
+                2 Reviews
+              </p>
             </div>
             <div className="productpage__main--details--options">
               <label>SSD Capacity</label>
