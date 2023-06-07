@@ -32,10 +32,7 @@ export default function CategoryButtons() {
         {typeArray.map(function (type, index: number) {
           if (index === 0) {
             return (
-              <Link
-                to="business-laptops"
-                className="laptopType__container--buttons"
-              >
+              <Link to="laptop" className="laptopType__container--buttons">
                 <div key={index}>
                   <p>{type}</p>
                 </div>

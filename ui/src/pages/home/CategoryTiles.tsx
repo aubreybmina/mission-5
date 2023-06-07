@@ -8,6 +8,11 @@ import article3 from '../../assets/images/article3.jpg'
 
 export default function CategoryTiles() {
   const [laptops, setLaptops] = useState<LaptopModel[]>([])
+  const [showAltDetails, setshowAltDetails] = useState({
+    hot: '',
+    business: '',
+    gaming: '',
+  })
 
   useEffect(() => {
     async function loadLaptops() {
@@ -60,16 +65,43 @@ export default function CategoryTiles() {
       </div>
       <div className="laptopList__container">
         {laptops.slice(0, 3).map((laptop) => (
-          <div className="laptopList__container--tiles">
+          <div
+            className="laptopList__container--tiles"
+            onMouseEnter={() =>
+              setshowAltDetails((prevState) => ({
+                ...prevState,
+                hot: laptop._id,
+              }))
+            }
+            onMouseLeave={() =>
+              setshowAltDetails((prevState) => ({ ...prevState, hot: '' }))
+            }
+          >
             <img
               className="laptopList__container--tiles_img"
               src={laptop.imageURL}
               alt="laptop image"
             />
             <div className="laptopList__container--tiles_text">
-              <p>
-                {laptop.brand} {laptop.model}
-              </p>
+              {showAltDetails.hot !== laptop._id ? (
+                <Link
+                  to={`laptop/${laptop._id}`}
+                  className="laptopList__container--tiles_text_link"
+                >
+                  <p>
+                    {laptop.brand} {laptop.model}
+                  </p>
+                </Link>
+              ) : (
+                <Link
+                  to={`laptop/${laptop._id}`}
+                  className="laptopList__container--tiles_text_link"
+                >
+                  <p>
+                    {`${laptop.brand} ${laptop.model} ${laptop.screenSize} ${laptop.category} Laptop ${laptop.cpuFamily} ${laptop.memorySize}GB ${laptop.ssdCapacity}GB SSD ${laptop.operatingSystem} ${laptop.warranty} - ${laptop.features}`}
+                  </p>
+                </Link>
+              )}
               {laptop.special ? (
                 <p className="laptopList__container--tiles_special">
                   {price[0]}
@@ -93,7 +125,7 @@ export default function CategoryTiles() {
       </div>
       <div className="popBusiness">
         <h3 className="header">Popular Business Laptops</h3>
-        <Link to="business-laptops" className="header__link">
+        <Link to="laptop" className="header__link">
           <div className="header__button">
             <p>Shop all Business Laptops</p>
             <ArrowRightLineIcon />
@@ -105,16 +137,46 @@ export default function CategoryTiles() {
           .slice(0, 1)
           .concat(laptops.slice(3, 5))
           .map((laptop) => (
-            <div className="laptopList__container--tiles">
+            <div
+              className="laptopList__container--tiles"
+              onMouseEnter={() =>
+                setshowAltDetails((prevState) => ({
+                  ...prevState,
+                  business: laptop._id,
+                }))
+              }
+              onMouseLeave={() =>
+                setshowAltDetails((prevState) => ({
+                  ...prevState,
+                  business: '',
+                }))
+              }
+            >
               <img
                 className="laptopList__container--tiles_img"
                 src={laptop.imageURL}
                 alt="laptop image"
               />
               <div className="laptopList__container--tiles_text">
-                <p>
-                  {laptop.brand} {laptop.model}
-                </p>
+                {showAltDetails.business !== laptop._id ? (
+                  <Link
+                    to={`laptop/${laptop._id}`}
+                    className="laptopList__container--tiles_text_link"
+                  >
+                    <p>
+                      {laptop.brand} {laptop.model}
+                    </p>
+                  </Link>
+                ) : (
+                  <Link
+                    to={`laptop/${laptop._id}`}
+                    className="laptopList__container--tiles_text_link"
+                  >
+                    <p>
+                      {`${laptop.brand} ${laptop.model} ${laptop.screenSize} ${laptop.category} Laptop ${laptop.cpuFamily} ${laptop.memorySize}GB ${laptop.ssdCapacity}GB SSD ${laptop.operatingSystem} ${laptop.warranty} - ${laptop.features}`}
+                    </p>
+                  </Link>
+                )}
                 {laptop.special ? (
                   <p className="laptopList__container--tiles_special">
                     {price[0]}
@@ -145,16 +207,43 @@ export default function CategoryTiles() {
       </div>
       <div className="laptopList__container">
         {laptops.slice(5, 8).map((laptop) => (
-          <div className="laptopList__container--tiles">
+          <div
+            className="laptopList__container--tiles"
+            onMouseEnter={() =>
+              setshowAltDetails((prevState) => ({
+                ...prevState,
+                gaming: laptop._id,
+              }))
+            }
+            onMouseLeave={() =>
+              setshowAltDetails((prevState) => ({ ...prevState, gaming: '' }))
+            }
+          >
             <img
               className="laptopList__container--tiles_img"
               src={laptop.imageURL}
               alt="laptop image"
             />
             <div className="laptopList__container--tiles_text">
-              <p>
-                {laptop.brand} {laptop.model}
-              </p>
+              {showAltDetails.gaming !== laptop._id ? (
+                <Link
+                  to={`laptop/${laptop._id}`}
+                  className="laptopList__container--tiles_text_link"
+                >
+                  <p>
+                    {laptop.brand} {laptop.model}
+                  </p>
+                </Link>
+              ) : (
+                <Link
+                  to={`laptop/${laptop._id}`}
+                  className="laptopList__container--tiles_text_link"
+                >
+                  <p>
+                    {`${laptop.brand} ${laptop.model} ${laptop.screenSize} ${laptop.category} Laptop ${laptop.cpuFamily} ${laptop.memorySize}GB ${laptop.ssdCapacity}GB SSD ${laptop.operatingSystem} ${laptop.warranty} - ${laptop.features}`}
+                  </p>
+                </Link>
+              )}
               {laptop.special ? (
                 <p className="laptopList__container--tiles_special">
                   {price[0]}
