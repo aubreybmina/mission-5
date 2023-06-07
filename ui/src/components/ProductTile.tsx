@@ -24,7 +24,7 @@ const ProductTile = ({ laptop }: LaptopProps) => {
   const formatPrice = price.toFixed(2).toString().split('.')
   const whole = formatPrice[0]
   const cents = formatPrice[1]
-  const link = `http://localhost/laptop/${_id}/${brand} ${model} ${screenSize} ${category} Laptop`
+  const link = `/laptop/${_id}/${brand} ${model} ${screenSize} ${category} Laptop`
 
   const [showAltDetails, setshowAltDetails] = useState(false)
 

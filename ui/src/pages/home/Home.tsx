@@ -1,4 +1,3 @@
-import LaptopList from '../laptop/LaptopList'
 import ArrowRightSLineIcon from 'remixicon-react/ArrowRightSLineIcon'
 import Carousel from './Carousel'
 import CategoryButtons from './CategoryButtons'
