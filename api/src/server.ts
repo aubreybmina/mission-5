@@ -6,12 +6,12 @@ import app from './app'
 
 const configuration = dotenv.config()
 
-const SERVER_PORT = configuration?.parsed?.SERVER_PORT
-  ? Number(configuration?.parsed?.SERVER_PORT)
-  : 1337
+const SERVER_PORT = 9090 || 3000
+
+const MONGO_URL = `mongodb://127.0.0.1:27017/pbtech`
 
 try {
-  connectDb(configuration?.parsed?.MONGO_URL as string)
+  connectDb(MONGO_URL as string)
   Logging.info('Connected to mongoDB.')
   http
     .createServer(app)
