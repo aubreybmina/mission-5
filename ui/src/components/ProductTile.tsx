@@ -31,7 +31,7 @@ const ProductTile = ({ laptop }: LaptopProps) => {
   return (
     <>
       <div className="products__card">
-        <Link to={link.split(' ').join('-')}>
+        <Link to={link.split(' ').join('-')} state={laptop}>
           <div className="products__card--image">
             <img
               className="products__card--photo"
