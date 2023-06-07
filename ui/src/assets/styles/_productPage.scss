@@ -4,11 +4,16 @@
 @use 'fonts' as f;
 
 .productpage {
-  margin: u.toRem(60) u.toRem(350);
+  padding: u.toRem(60) u.toRem(350);
   font-family: f.$inter !important;
 
   &__main {
     display: flex;
+    justify-content: space-between;
+
+    @include m.tablet {
+      display: grid;
+    }
 
     &--photos {
       position: relative;
@@ -63,6 +68,79 @@
         font-weight: 700;
         color: c.$text-highlight;
         margin: u.toRem(5) u.toRem(0);
+        padding-bottom: u.toRem(61);
+      }
+
+      &--options {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: space-between;
+        columns: 100px 3;
+        align-items: center;
+
+        @include m.tablet {
+          display: flex;
+        }
+
+        label {
+          font-family: f.$inter !important;
+          font-weight: 400;
+          font-size: u.toRem(18);
+          line-height: u.toRem(21.78);
+        }
+
+        &--dropdown {
+          padding: u.toRem(5);
+
+          select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url('../images/feather-arrow-down.png');
+            width: u.toRem(120);
+            background-repeat: no-repeat;
+            background-position: right 8% bottom 50%;
+            border-radius: u.toRem(5);
+            padding-right: 20px;
+            margin-right: u.toRem(10);
+            padding: u.toRem(10);
+          }
+
+          option {
+            padding: u.toRem(10);
+            height: 10px;
+          }
+        }
+      }
+
+      &--price {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: u.toRem(18.5) 0;
+      }
+    }
+
+    &--button {
+      button {
+        background-color: c.$text-highlight;
+        color: c.$standout-color;
+        border-radius: u.toRem(4);
+        border-style: none;
+        width: 100%;
+        padding: u.toRem(8);
+        font-family: f.$inter !important;
+        font-style: normal;
+        font-weight: 700;
+        font-size: u.toRem(18);
+        line-height: u.toRem(24);
+        text-align: center;
+        margin: u.toRem(5.5) 0;
+
+        &:hover {
+          background-color: c.$standout-color;
+          color: c.$text-highlight;
+        }
       }
     }
   }
