@@ -9,7 +9,6 @@
 
   &__main {
     display: flex;
-    justify-content: space-between;
 
     @include m.tablet {
       display: grid;
@@ -123,8 +122,6 @@
 
     &--button {
       button {
-        background-color: c.$text-highlight;
-        color: c.$standout-color;
         border-radius: u.toRem(4);
         border-style: none;
         width: 100%;
@@ -136,11 +133,6 @@
         line-height: u.toRem(24);
         text-align: center;
         margin: u.toRem(5.5) 0;
-
-        &:hover {
-          background-color: c.$standout-color;
-          color: c.$text-highlight;
-        }
       }
     }
   }
@@ -224,6 +216,27 @@
         min-width: u.toRem(250);
       }
     }
+  }
+}
+
+.buy-now {
+  color: c.$standout-color;
+  background-color: #0d4f77;
+
+  &:hover {
+    color: #0d4f77;
+    background-color: c.$standout-color;
+  }
+}
+
+.add-to-cart {
+  color: c.$text-highlight;
+  border-color: #f0f0f0;
+  background-color: #f0f0f0;
+
+  &:hover {
+    color: #f0f0f0;
+    background-color: c.$text-highlight;
   }
 }
 

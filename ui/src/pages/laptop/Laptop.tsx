@@ -165,7 +165,10 @@ const BusinessLaptops: React.FC = () => {
                 alt="laptop image"
               />
               <div className="businessList__container--tiles_text">
-                <Link to={`laptop/${laptop._id}`}>
+                <Link
+                  to={`http://localhost/laptop/${laptop._id}/${laptop.brand} ${laptop.model} ${laptop.screenSize} ${laptop.category} Laptop`}
+                  state={laptop}
+                >
                   <p>
                     {laptop.brand} {laptop.model}
                   </p>

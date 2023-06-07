@@ -1,19 +1,18 @@
 import { useEffect, useState } from 'react'
 import { FaPlus, FaTimes } from 'react-icons/fa'
 import { useParams, Link } from 'react-router-dom'
-import { Laptop as LaptopModel } from '../../models/laptop'
 import ArrowRightSLineIcon from 'remixicon-react/ArrowRightSLineIcon'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faScaleBalanced } from '@fortawesome/free-solid-svg-icons'
 import { faHeart } from '@fortawesome/free-regular-svg-icons'
 import { Carousel } from 'react-responsive-carousel'
 import 'react-responsive-carousel/lib/styles/carousel.min.css' // requires a loader
-import LaptopDetails from './LaptopDetails'
+import { useLocation } from 'react-router-dom'
 
-const LaptopPage = () => {
+const LaptopPage = (props) => {
+  const location = useLocation()
+  const laptopdetails = location.state
   const { title } = useParams()
-  const { id } = useParams()
-  const [laptop, setLaptop] = useState<LaptopModel[]>([])
   const [showPlusDesc, setshowPlusDesc] = useState(true)
   const [showCloseDesc, setShowCloseDesc] = useState(false)
   const [showDescription, setshowDescription] = useState(false)
@@ -23,21 +22,40 @@ const LaptopPage = () => {
   const [showPlusWarranty, setshowPlusWarranty] = useState(true)
   const [showCloseWarranty, setShowCloseWarranty] = useState(false)
   const [showWarranty, setshowWarranty] = useState(false)
+  const [selectValue, setSelectValue] = useState([])
 
   useEffect(() => {
-    async function loadLaptop() {
-      try {
-        const response = await fetch(`/api/laptop/${id}`, {
-          method: 'GET',
-        })
-        const result = await response.json()
-        setLaptop(result.laptop)
-      } catch (error) {
-        console.log(error)
-      }
-    }
-    loadLaptop()
+    const price = formatPrice(NZDollar.format(laptopdetails.price))
+    setSelectValue(price)
   }, [])
+
+  const formatPrice = (price) => {
+    return price.toString().split('.')
+  }
+
+  const NZDollar = new Intl.NumberFormat('en-NZ', {
+    style: 'currency',
+    currency: 'NZD',
+  })
+
+  const handleValue = (event) => {
+    const price = laptopdetails.price
+    const ssd: HTMLInputElement | null = document.getElementById(
+      'ssd'
+    ) as HTMLInputElement | null
+    const memory = document.getElementById('memory') as HTMLInputElement | null
+    const screen = document.getElementById('screen') as HTMLInputElement | null
+    if (ssd === null || memory === null || screen === null) {
+      console.log(`Fields are set to null`)
+    } else {
+      const value =
+        parseFloat(ssd.value) +
+        parseFloat(memory.value) +
+        parseFloat(screen.value) +
+        parseFloat(price)
+      setSelectValue(formatPrice(NZDollar.format(value)))
+    }
+  }
 
   const handleDescription = () => {
     setshowPlusDesc(!showPlusDesc)
@@ -69,7 +87,6 @@ const LaptopPage = () => {
         </p>
         <ArrowRightSLineIcon />
         <p className="breadcrumbs__current">{title?.split('-').join(' ')}</p>
-        {/* {JSON.stringify(laptop._id)} */}
       </div>
       <div className="productpage">
         <div className="productpage__main">
@@ -114,7 +131,66 @@ const LaptopPage = () => {
               />
             </div>
           </div>
-          <LaptopDetails />
+          <div className="productpage__main--details">
+            <div className="productpage__main--details--productName">
+              {title?.split('-').join(' ')}{' '}
+              {`${laptopdetails.screenSize}" ${laptopdetails.cpuFamily} ${laptopdetails.memorySize}GB ${laptopdetails.ssdCapacity}GB ${laptopdetails.operatingSystem} ${laptopdetails.warranty} - ${laptopdetails.features}`}
+            </div>
+            <div className="productpage__main--details--options">
+              <label>SSD Capacity</label>
+              <div className="productpage__main--details--options--dropdown">
+                <select id="ssd" onChange={handleValue} defaultValue={0}>
+                  <option value="0">256 GB</option>
+                  <option value="100">500 GB</option>
+                  <option value="200">1000 GB</option>
+                </select>
+              </div>
+            </div>
+
+            <div className="productpage__main--details--options">
+              <label>Memory Size</label>
+              <div className="productpage__main--details--options--dropdown">
+                <select id="memory" onChange={handleValue} defaultValue={0}>
+                  <option value="0">8 GB</option>
+                  <option value="100">16 GB</option>
+                  <option value="200">32 GB</option>
+                </select>
+              </div>
+            </div>
+
+            <div className="productpage__main--details--options">
+              <label>Screen Size</label>
+              <div className="productpage__main--details--options--dropdown">
+                <select id="screen" onChange={handleValue} defaultValue={0}>
+                  <option value="0">13"</option>
+                  <option value="200">14"</option>
+                  <option value="400">16"</option>
+                </select>
+              </div>
+            </div>
+
+            <div className="productpage__main--details--options">
+              <label>Price</label>
+              <div>
+                <h1 className="products__card--text--priceDollar">
+                  {selectValue[0] || '$0'}
+                </h1>
+                <h6 className="products__card--text--priceCents">
+                  {selectValue[1] || '00'}
+                </h6>
+              </div>
+              <div className="productpage__main--button">
+                <button className="buy-now">Buy Now</button>
+              </div>
+            </div>
+            <div className="productpage__main--details--options">
+              <label></label>
+              <h2></h2>
+              <div className="productpage__main--button">
+                <button className="add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
         </div>
         <div className="productpage__frame">
           <div className="productpage__frame--tile">
