@@ -4,12 +4,20 @@ import ArrowRightSLineIcon from 'remixicon-react/ArrowRightSLineIcon'
 import Carousel from '../home/Carousel'
 import DropDown from '../businessLaptops/DropDown'
 import { stores } from '../../assets/data/storesArray'
+import { brands } from '../../assets/data/brandsArray'
+import { cpu } from '../../assets/data/cpuArray'
 import { Link } from 'react-router-dom'
 
 const BusinessLaptops: React.FC = () => {
   const [laptops, setLaptops] = useState<LaptopModel[]>([])
   const [rangeValue, setRangeValue] = useState(4000)
   const [selectedSortOption, setSelectedSortOption] = useState('')
+  const [showAltDetails, setshowAltDetails] = useState('')
+  const [sliderStyle, setSliderStyle] = useState({})
+  const [memSliderStyle, setMemSliderStyle] = useState({})
+  const [selectedBrand, setSelectedBrand] = useState('All Brands')
+  const [selectedCPU, setSelectedCPU] = useState('All')
+  const [memRangeValue, setMemRangeValue] = useState(32)
 
   useEffect(() => {
     async function loadLaptops() {
@@ -31,8 +39,57 @@ const BusinessLaptops: React.FC = () => {
     setRangeValue(value)
   }
 
+  const handleMemRangeChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const value = parseFloat(event.target.value)
+    setMemRangeValue(value)
+  }
+
+  useEffect(() => {
+    const updateSliderStyle = () => {
+      const maxValue = 9698
+      const minValue = 500
+      const colorLeft = '#0d4f77'
+      const colorRight = '#d1eeff'
+
+      const percent = ((rangeValue - minValue) / (maxValue - minValue)) * 100
+      const gradientColor = `linear-gradient(to right, ${colorLeft} 0%, ${colorLeft} ${percent}%, ${colorRight} ${percent}%, ${colorRight} 100%)`
+
+      setSliderStyle({
+        background: gradientColor,
+      })
+    }
+
+    updateSliderStyle()
+  }, [rangeValue])
+
+  useEffect(() => {
+    const updateMemSliderStyle = () => {
+      const maxValue = 64
+      const minValue = 4
+      const colorLeft = '#0d4f77'
+      const colorRight = '#d1eeff'
+
+      const percent = ((memRangeValue - minValue) / (maxValue - minValue)) * 100
+      const gradientColor = `linear-gradient(to right, ${colorLeft} 0%, ${colorLeft} ${percent}%, ${colorRight} ${percent}%, ${colorRight} 100%)`
+
+      setMemSliderStyle({
+        background: gradientColor,
+      })
+    }
+
+    updateMemSliderStyle()
+  }, [memRangeValue])
+
   const handleSortChange = (option: string) => {
     setSelectedSortOption(option)
+  }
+
+  const handleBrandChange = (option: string) => {
+    setSelectedBrand(option === 'All Brands' ? 'All Brands' : option)
+  }
+
+  const handleCPUChange = (option: string) => {
+    setSelectedCPU(option === 'All' ? 'All' : option)
   }
 
   const sortedLaptops = [...laptops]
@@ -43,6 +100,9 @@ const BusinessLaptops: React.FC = () => {
       break
     case 'Lowest Price':
       sortedLaptops.sort((a, b) => a.price - b.price)
+      break
+    case 'On Special':
+      sortedLaptops.sort((a, b) => Number(b.special) - Number(a.special))
       break
     default:
       break
@@ -66,6 +126,10 @@ const BusinessLaptops: React.FC = () => {
     {
       value: 'Name',
       label: 'Name',
+    },
+    {
+      value: 'On Special',
+      label: 'On Special',
     },
     {
       value: 'Best Rating',
@@ -95,38 +159,79 @@ const BusinessLaptops: React.FC = () => {
         <div className="filterBlock">
           <div className="filterBlock__store">
             <p>Select Your PB Tech Store</p>
-            <DropDown
-              placeHolder="Select Store"
-              options={stores}
-              onSortChange={handleSortChange}
-            />
+            <div className="filterBlock__store--dropdown">
+              <DropDown
+                placeHolder="Select Store"
+                options={stores}
+                onSortChange={handleSortChange}
+              />
+            </div>
           </div>
           <div className="filterBlock__shipping">
-            <p>Shipping / Click & Collect</p>
-            <div>
+            <p className="filterBlock__shipping--header">
+              Shipping / Click & Collect
+            </p>
+            <div className="filterBlock__shipping--inputs">
               <input type="radio" name="shipping" />
               <label>Show All</label>
             </div>
-            <div>
+            <div className="filterBlock__shipping--inputs">
               <input type="radio" name="shipping" />
               <label>Ships within 1 working day</label>
             </div>
-            <div>
+            <div className="filterBlock__shipping--inputs">
               <input type="radio" name="shipping" />
               <label>Click & Collect today</label>
             </div>
           </div>
           <div className="filterBlock__price">
-            <p>Price (inc GST)</p>
+            <p className="filterBlock__price--header">Price (inc GST)</p>
             <input
               type="range"
               min={500}
-              max={9698.18}
+              max={9698}
               step={1}
               value={rangeValue}
               onChange={handleRangeChange}
+              style={sliderStyle}
             />
-            <p>${rangeValue.toFixed(2)}</p>
+            <p className="filterBlock__price--text">${rangeValue.toFixed(2)}</p>
+          </div>
+          <div className="filterBlock__brands">
+            <p className="filterBlock__brands--header">Brands</p>
+            <div className="filterBlock__brands--dropdown">
+              <DropDown
+                placeHolder="All Brands"
+                options={brands}
+                onSortChange={handleBrandChange}
+              />
+            </div>
+          </div>
+          <div className="filterBlock__cpu">
+            <p className="filterBlock__cpu--header">CPU Family</p>
+            <div className="filterBlock__cpu--dropdown">
+              <DropDown
+                placeHolder="All"
+                options={cpu}
+                onSortChange={handleCPUChange}
+              />
+            </div>
+          </div>
+          <div className="filterBlock__memory">
+            <p className="filterBlock__memory--header">Memory Size</p>
+            <input
+              type="range"
+              min={4}
+              max={64}
+              step={4}
+              value={memRangeValue}
+              onChange={handleMemRangeChange}
+              style={memSliderStyle}
+            />
+            <p className="filterBlock__memory--text">{memRangeValue} GB</p>
+          </div>
+          <div>
+            <button className="filterBlock__showMore">Show More Filters</button>
           </div>
         </div>
         <div className="upperBlock">
@@ -155,21 +260,44 @@ const BusinessLaptops: React.FC = () => {
         {sortedLaptops
           .filter(
             (laptop) =>
-              laptop.category === 'Business' && laptop.price <= rangeValue
+              laptop.category === 'Business' &&
+              laptop.price <= rangeValue &&
+              (selectedBrand === 'All Brands' ||
+                laptop.brand === selectedBrand) &&
+              (selectedCPU === 'All' || laptop.cpuFamily === selectedCPU) &&
+              laptop.memorySize <= memRangeValue
           )
           .map((laptop) => (
-            <div className="businessList__container--tiles">
+            <div
+              className="businessList__container--tiles"
+              onMouseEnter={() => setshowAltDetails(laptop._id)}
+              onMouseLeave={() => setshowAltDetails('')}
+            >
               <img
                 className="businessList__container--tiles_img"
                 src={laptop.imageURL}
                 alt="laptop image"
               />
               <div className="businessList__container--tiles_text">
-                <Link to={`laptop/${laptop._id}`}>
-                  <p>
-                    {laptop.brand} {laptop.model}
-                  </p>
-                </Link>
+                {showAltDetails !== laptop._id ? (
+                  <Link
+                    to={`laptop/${laptop._id}`}
+                    className="businessList__container--tiles_text_link"
+                  >
+                    <p>
+                      {laptop.brand} {laptop.model}
+                    </p>
+                  </Link>
+                ) : (
+                  <Link
+                    to={`laptop/${laptop._id}`}
+                    className="businessList__container--tiles_text_link"
+                  >
+                    <p>
+                      {`${laptop.brand} ${laptop.model} ${laptop.screenSize} ${laptop.category} Laptop ${laptop.cpuFamily} ${laptop.memorySize}GB ${laptop.ssdCapacity}GB SSD ${laptop.operatingSystem} ${laptop.warranty} - ${laptop.features}`}
+                    </p>
+                  </Link>
+                )}
                 {laptop.special ? (
                   <p className="businessList__container--tiles_special">
                     {price[0]}

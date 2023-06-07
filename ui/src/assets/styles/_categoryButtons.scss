@@ -20,7 +20,7 @@
     justify-content: space-between;
     margin-left: u.toRem(350);
     margin-right: u.toRem(375);
-    font-family: f.$inter !important;
+    font-family: f.$roboto;
 
     &--buttons {
       font-size: u.toRem(16);
@@ -32,6 +32,11 @@
       text-align: center;
       margin: u.toRem(20) u.toRem(20) u.toRem(20) u.toRem(0);
       text-decoration: none;
+      cursor: pointer;
+    }
+
+    &--buttons:hover {
+      color: c.$pb-orange;
     }
   }
 }
@@ -48,6 +53,7 @@
     background-color: c.$text-highlight;
     padding: u.toRem(0) u.toRem(8);
     border-radius: 4px;
+    cursor: pointer;
   }
 }
 
@@ -68,7 +74,7 @@
     width: u.toRem(900);
     margin-left: u.toRem(350);
     margin-right: u.toRem(375);
-    font-family: f.$inter;
+    font-family: f.$roboto;
 
     &--buttons {
       font-size: u.toRem(16);
@@ -79,6 +85,11 @@
       padding: u.toRem(20);
       text-align: center;
       margin: u.toRem(20) u.toRem(20) u.toRem(20) u.toRem(0);
+      cursor: pointer;
+    }
+
+    &--buttons:hover {
+      color: c.$pb-orange;
     }
   }
 }
