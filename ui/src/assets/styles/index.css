@@ -165,8 +165,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   justify-content: space-between;
-  -moz-columns: 100px 3;
-       columns: 100px 3;
+  columns: 100px 3;
   align-items: center;
 }
 @media (max-width: 48rem) {
@@ -257,6 +256,7 @@
   transform: translateY(-1%);
   -webkit-transform: translateY(-1%);
   animation: slide-in 0.5s backwards;
+  -webkit-animation: slide-in 0.5s backwards;
   animation: slide-out 0.5s backwards;
   -webkit-animation: slide-out 0.5s backwards;
 }
@@ -321,12 +321,28 @@
     -webkit-transform: translateY(0%);
   }
 }
+@-webkit-keyframes slide-in {
+  0% {
+    transform: translateY(-1%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
 @keyframes slide-out {
   0% {
     transform: translateY(0%);
   }
   100% {
     transform: translateY(-1%);
+  }
+}
+@-webkit-keyframes slide-out {
+  0% {
+    -webkit-transform: translateY(0%);
+  }
+  100% {
+    -webkit-transform: translateY(-1%);
   }
 }
 .testimonial {
@@ -703,6 +719,7 @@
   width: 46.875rem;
   font-size: 0.875rem;
   margin-right: 29.375rem;
+  cursor: pointer;
 }
 .navbarLower__dropdowns--chevrons {
   display: flex;
@@ -1117,6 +1134,11 @@
   text-align: center;
   margin: 1.25rem 1.25rem 1.25rem 0rem;
   text-decoration: none;
+  cursor: pointer;
+}
+.laptopType__container--buttons:hover,
+.screenSize__container--buttons:hover {
+  color: #f08222;
 }
 
 .header {
@@ -1131,6 +1153,7 @@
   background-color: #1278a5;
   padding: 0rem 0.5rem;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .operatingSystem {
@@ -1161,6 +1184,10 @@
   padding: 1.25rem;
   text-align: center;
   margin: 1.25rem 1.25rem 1.25rem 0rem;
+  cursor: pointer;
+}
+.operatingSystem__container--buttons:hover {
+  color: #f08222;
 }
 
 .laptopList {
@@ -1197,10 +1224,14 @@
 .laptopList__container--tiles_text {
   margin-top: -0.625rem;
   padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+}
+.laptopList__container--tiles_text_link {
   font-family: "Inter";
   font-size: 1rem;
   font-weight: 700;
   color: #1278a5;
+  text-decoration: none;
 }
 .laptopList__container--tiles_special {
   font-family: "Inter";
@@ -1254,8 +1285,7 @@
   padding: 0.625rem;
   width: 20rem;
   height: 16.8125rem;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .laptopList__articlesContainer--tiles_text {
   margin-top: -0.625rem;
@@ -1280,11 +1310,15 @@
   align-items: center;
   font-size: 0.8125rem;
   color: white;
-  background-color: #1278a5;
+  background-color: #0d4f77;
   padding: 0rem 0.5rem;
   border-radius: 4px;
   font-family: "Inter";
   text-decoration: none;
+  cursor: pointer;
+}
+.header__button:hover {
+  background-color: #0e6ea9;
 }
 .header__link {
   text-decoration: none;
@@ -1327,15 +1361,115 @@
 .filterBlock {
   padding-left: 3.125rem;
   margin-top: 3.125rem;
+  font-family: "Roboto", sans-serif;
+  width: 12.5rem;
+  position: absolute;
 }
 .filterBlock__store {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+.filterBlock__store--dropdown {
+  margin-bottom: 3.125rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+.filterBlock__shipping {
+  margin-bottom: 3.125rem;
+}
+.filterBlock__shipping--header {
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+.filterBlock__shipping--inputs {
+  font-size: 0.8125rem;
+}
+.filterBlock__price {
+  margin-bottom: 3.125rem;
+}
+.filterBlock__price--header {
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+.filterBlock__price input[type=range] {
+  appearance: none;
+  margin-left: 0.3125rem;
+  width: 10.9375rem;
+  height: 0.25rem;
+  border-radius: 2px;
+  background-repeat: no-repeat;
+}
+.filterBlock__price input[type=range]::-webkit-slider-thumb {
+  appearance: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: white;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.filterBlock__brands {
+  margin-bottom: 3.125rem;
+  font-size: 0.875rem;
+}
+.filterBlock__brands--header {
+  font-weight: 700;
+}
+.filterBlock__brands--dropdown {
+  cursor: pointer;
+}
+.filterBlock__cpu {
+  margin-bottom: 3.125rem;
+  font-size: 0.875rem;
+}
+.filterBlock__cpu--header {
+  font-weight: 700;
+}
+.filterBlock__cpu--dropdown {
+  cursor: pointer;
+}
+.filterBlock__memory {
+  margin-bottom: 3.125rem;
+}
+.filterBlock__memory--header {
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+.filterBlock__memory input[type=range] {
+  appearance: none;
+  margin-left: 0.3125rem;
+  width: 10.9375rem;
+  height: 0.25rem;
+  border-radius: 2px;
+  background-repeat: no-repeat;
+}
+.filterBlock__memory input[type=range]::-webkit-slider-thumb {
+  appearance: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: white;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.filterBlock__showMore {
+  width: 9.375rem;
+  height: 1.75rem;
+  background-color: #0d4f77;
+  color: white;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  border-radius: 4px;
+  border: none;
+  margin-left: 0.9375rem;
+  cursor: pointer;
 }
 
 .upperBlock {
-  margin-left: 17.1875rem;
+  margin-left: 21.875rem;
 }
 .upperBlock__breadcrumbs {
   display: flex;
@@ -1402,11 +1536,15 @@
 }
 .businessList__container--tiles_text {
   margin-top: -0.625rem;
-  padding-left: 0.9375rem;
+  margin-left: 0.9375rem;
+  margin-right: 0.9375rem;
+}
+.businessList__container--tiles_text_link {
   font-family: "Inter";
   font-size: 1rem;
   font-weight: 700;
   color: #1278a5;
+  text-decoration: none;
 }
 .businessList__container--tiles_special {
   font-family: "Inter";
@@ -1450,9 +1588,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
 }
 .dropDown__menu {
   position: absolute;
@@ -1479,4 +1615,6 @@
   right: 0;
   bottom: 0;
   font-family: "Roboto", sans-serif;
-}/*# sourceMappingURL=index.css.map */
+}
+
+/*# sourceMappingURL=index.css.map */

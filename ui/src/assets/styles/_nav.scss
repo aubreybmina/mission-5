@@ -117,6 +117,7 @@
     width: u.toRem(750);
     font-size: u.toRem(14);
     margin-right: u.toRem(470);
+    cursor: pointer;
 
     &--chevrons {
       display: flex;

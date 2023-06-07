@@ -38,10 +38,15 @@
       &_text {
         margin-top: u.toRem(-10);
         padding-left: u.toRem(15);
-        font-family: f.$inter;
-        font-size: u.toRem(16);
-        font-weight: 700;
-        color: c.$text-highlight;
+        padding-right: u.toRem(15);
+
+        &_link {
+          font-family: f.$inter;
+          font-size: u.toRem(16);
+          font-weight: 700;
+          color: c.$text-highlight;
+          text-decoration: none;
+        }
       }
 
       &_special {
@@ -134,11 +139,16 @@
     align-items: center;
     font-size: u.toRem(13);
     color: white;
-    background-color: c.$text-highlight;
+    background-color: c.$pb-blue;
     padding: u.toRem(0) u.toRem(8);
     border-radius: 4px;
     font-family: f.$inter;
     text-decoration: none;
+    cursor: pointer;
+  }
+
+  &__button:hover {
+    background-color: c.$hover-blue;
   }
 
   &__link {
