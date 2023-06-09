@@ -9,7 +9,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/aubreybmina/mission-5.git">
-    <img src="ui/src/assets/images/pbtech-blue.png" alt="Logo" width="80">
+    <img src="src/assets/images/pbtech-blue.png" alt="Logo" width="80">
   </a>
 
 <h3 align="center">Mission 5 - PB Tech Laptop Page Re-design</h3>
@@ -98,12 +98,12 @@ Make sure you have Node.js and MongoDB Compass installed in your computer. To ch
    ```sh
    MONGO_URL = 'url of your mongodb compass working database'
    MONGO_URL_TEST = 'url of your mongodb compass test database'
-   SERVER_PORT = 'desired port number, could be 9090'
+   SERVER_PORT = 9090 //this is to make sure that the port is the same as what is set on the Dockerfile
    ```
 
 3. Create a .env file at the parent directory of ui
    ```sh
-   PORT = 'desired port number, could be 3000'
+   PORT = 3000 //this is to make sure that the port is the same as what is set on the Dockerfile
    ```
 4. On your terminal, go to api directory then install the packages inside package.json using the following scripts
 
@@ -140,13 +140,13 @@ To run the project on your local desktop run the following scripts:
    yarn start
    ```
 
-3. You can import the initial list of laptop collections from your MongoDB Compass application. Make sure that you're inside the laptops collection in your database.
+3. You can import the initial list of laptop collections from your MongoDB Compass application. Simply follow the steps below.
    ```sh
-   Open MongoDB Compass
-   Click 'Connect' button
-   Open the database you created then open 'laptops' collection
-   Click Add Data Dropdown button then choose Import JSON or CSV file
-   Upload laptopCollections.json inside 'mission-5\api\src\config' directory
+   1. Open MongoDB Compass
+   2. Click 'Connect' button
+   3. Open the database you created then open 'laptops' collection
+   4. Click Add Data Dropdown button then choose 'Import JSON or CSV file'
+   5. Upload 'laptopCollections.json' inside 'mission-5\api\src\config\' folder
    ```
 
 <!-- DOCKER -->
@@ -155,13 +155,13 @@ To run the project on your local desktop run the following scripts:
 
 To create a docker image of the project on your local desktop run the following scripts:
 
-1. On ui folder, change the proxy settings to http://api:9090".
+1. Inside the ui folder, change the proxy settings from "http://localhost:9090" to "http://api:9090" on the package.json file.
 
    ```sh
    "proxy": "http://api:9090"
    ```
 
-2. On your api's .env file, change MONGO_URL localhost to mongo
+2. Inside the ui folder, change the MONGO_URL from "mongodb://127.0.0.1:27017/db-name?" to "mongodb://mongo:27017/db-name?" on the .env file.
 
    ```sh
    MONGO_URL = 'mongodb://mongo:27017/db-name?'
