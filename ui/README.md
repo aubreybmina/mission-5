@@ -54,7 +54,7 @@
 
 ## About The Project
 
-<img src="ui/src/assets/images/laptop-landing-page.png" alt="img" height="400">&nbsp;&nbsp;&nbsp;<img src="ui/src/assets/images/business-laptop-page.png" alt="img2" height="400">&nbsp;&nbsp;&nbsp;<img src="ui/src/assets/images/laptop-page.png" alt="img2" height="400">
+<img src="src/assets/images/laptop-landing-page.png" alt="img" height="400">&nbsp;&nbsp;&nbsp;<img src="src/assets/images/business-laptop-page.png" alt="img2" height="400">&nbsp;&nbsp;&nbsp;<img src="src/assets/images/laptop-page.png" alt="img2" height="400">
 
 This PB Tech Laptop Landing Page Re-design project is part of our requirement for Mission Ready Level 5 Certification. As the developer, we were tasked to use MongoDB Compass as our database, create an API to talk to the db, and develop the UI that our UXD Team provided to display the collection from MongoDB. The working application was dockerized using Docker Compose.
 
