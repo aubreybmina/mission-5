@@ -82,7 +82,7 @@ Make sure you have Node.js and MongoDB Compass installed in your computer. To ch
 - Terminal
   ```sh
   node -v
-  mongo -version
+  mongod -version
   ```
 
 ### Installation
@@ -105,14 +105,16 @@ Make sure you have Node.js and MongoDB Compass installed in your computer. To ch
    ```sh
    PORT = 'desired port number, could be 3001'
    ```
-4. On your terminal, go to api folder then install the packages inside package.json using the following scripts
+4. On your terminal, go to api directory then install the packages inside package.json using the following scripts
 
    ```sh
+   cd api
    npm install
    ```
 
-5. Add a new terminal, go to ui folder then install the packages inside package.json using the following scripts
+5. Add a new terminal, go to ui directory then install the packages inside package.json using the following scripts
    ```sh
+   cd ui
    npm install
    ```
 
@@ -124,14 +126,14 @@ Make sure you have Node.js and MongoDB Compass installed in your computer. To ch
 
 To run the project on your local desktop run the following scripts:
 
-1. On your terminal, go to api folder then start the db connection and the server
+1. On your terminal, go to api directory then start the db connection and the server
 
    ```sh
    cd api
    yarn dev
    ```
 
-2. Add a new terminal, go to ui folder then run the ui. It will automatically open a browser tab
+2. Add a new terminal, go to ui directory then run the ui. It will automatically open a browser tab
    ```sh
    cd ui
    yarn start
@@ -155,8 +157,24 @@ To create a docker image of the project on your local desktop run the following 
    MONGO_URL = 'mongodb://mongo:27017/db-name?'
    ```
 
-3. Once everything is changed, you can finally run the docker script on the terminal of mission-5's parent directory
+3. Once everything is changed, go to api directory on your terminal then run the docker script
+
    ```sh
+   cd api
+   build -t laptop_api
+   ```
+
+4. Go to ui directory then run the docker script
+
+   ```sh
+   cd..
+   cd ui
+   build -t pb_frontend
+   ```
+
+5. You can finally run the docker script on the terminal of mission-5's parent directory
+   ```sh
+   cd..
    docker-compose up
    ```
 

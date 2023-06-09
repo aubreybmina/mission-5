@@ -4,20 +4,18 @@
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
 
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
   <a href="https://github.com/aubreybmina/mission-5.git">
-    <img src="src/images/company_logo.png" alt="Logo" width="80">
+    <img src="ui/src/assets/images/pbtech-blue.png" alt="Logo" width="80">
   </a>
 
-<h3 align="center">Mission 5</h3>
+<h3 align="center">Mission 5 - PB Tech Laptop Page Re-design</h3>
+<h4 align="center">Aubrey Mina and Wilhelmus Duncker<h4>
 
-  <p align="center">
-    This is a working readme file and should be updated before submission
-    <br />
+  <p align="center">  
     <a href="https://github.com/aubreybmina/mission-5"><strong>Explore the docs »</strong></a>
     <br />
     <br />
@@ -56,13 +54,16 @@
 
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]]
+<img src="ui/src/assets/images/laptop-landing-page.png" alt="img" height="400">&nbsp;&nbsp;&nbsp;<img src="ui/src/assets/images/business-laptop-page.png" alt="img2" height="400">&nbsp;&nbsp;&nbsp;<img src="ui/src/assets/images/laptop-page.png" alt="img2" height="400">
 
-This is a working readme file and should be updated before submission
+This PB Tech Laptop Landing Page Re-design project is part of our requirement for Mission Ready Level 5 Certification. As the developer, we were tasked to use MongoDB Compass as our database, create an API to talk to the db, and develop the UI that our UXD Team provided to display the collection from MongoDB. The working application was dockerized using Docker Compose.
 
 ### Built With
 
+- [![MongoDB][mongodb.com]][MongoDB-url]
+- [![Express][expressjs.com]][Express-url]
 - [![React][React.js]][React-url]
+- [![NodeJS][nodejs.org]][NodeJS-url]
 - [![Sass][sass-lang.com]][Sass-url]
 - [![Typescript][typescriptlang.org]][Typescript-url]
 
@@ -76,22 +77,45 @@ To get a local copy up and running, follow these simple example steps.
 
 ### Prerequisites
 
-Make sure you have Node.js installed in your computer. To check if you have it installed and see its version, type the following script in your Terminal
+Make sure you have Node.js and MongoDB Compass installed in your computer. To check if you have it installed and see its version, type the following script in your Terminal
 
-- npm
+- Terminal
   ```sh
   node -v
+  mongod -version
   ```
 
 ### Installation
 
 1. Clone the repository
+
    ```sh
    git clone https://github.com/aubreybmina/mission-5.git
    ```
-2. Instrunctions here
+
+2. Create a .env file at the parent directory of api
+
    ```sh
-   some script here
+   MONGO_URL = 'url of your mongodb compass working database'
+   MONGO_URL_TEST = 'url of your mongodb compass test database'
+   SERVER_PORT = 'desired port number, could be 9090'
+   ```
+
+3. Create a .env file at the parent directory of ui
+   ```sh
+   PORT = 'desired port number, could be 3001'
+   ```
+4. On your terminal, go to api directory then install the packages inside package.json using the following scripts
+
+   ```sh
+   cd api
+   npm install
+   ```
+
+5. Add a new terminal, go to ui directory then install the packages inside package.json using the following scripts
+   ```sh
+   cd ui
+   npm install
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -100,19 +124,59 @@ Make sure you have Node.js installed in your computer. To check if you have it i
 
 ## Usage
 
-To run the project on your local desktop run the following script:
+To run the project on your local desktop run the following scripts:
 
-### `yarn start`
+1. On your terminal, go to api directory then start the db connection and the server
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+   ```sh
+   cd api
+   yarn dev
+   ```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. Add a new terminal, go to ui directory then run the ui. It will automatically open a browser tab
+   ```sh
+   cd ui
+   yarn start
+   ```
 
-## Available Scripts
+<!-- DOCKER -->
 
-In the project directory, you can run:
+## Running the Docker Image
+
+To create a docker image of the project on your local desktop run the following scripts:
+
+1. On ui folder, change the proxy settings to http://api:9090".
+
+   ```sh
+   "proxy": "http://api:9090"
+   ```
+
+2. On your api's .env file, change MONGO_URL localhost to mongo
+
+   ```sh
+   MONGO_URL = 'mongodb://mongo:27017/db-name?'
+   ```
+
+3. Once everything is changed, go to api directory on your terminal then run the docker script
+
+   ```sh
+   cd api
+   build -t laptop_api
+   ```
+
+4. Go to ui directory then run the docker script
+
+   ```sh
+   cd..
+   cd ui
+   build -t pb_frontend
+   ```
+
+5. You can finally run the docker script on the terminal of mission-5's parent directory
+   ```sh
+   cd..
+   docker-compose up
+   ```
 
 <!-- CONTRIBUTING -->
 
@@ -136,8 +200,17 @@ Don't forget to give the project a star! Thanks again!
 ## Contact
 
 Aubrey Mina - aubreybmina@gmail.com
+Wilhelmus Duncker - wimduncker17@hotmail.co.nz
 
 Project Link: [https://github.com/aubreybmina/mission-5](https://github.com/aubreybmina/mission-5)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGMENTS -->
+
+## Acknowledgments
+
+We would like to acknowledge our UXD Team, Mina Park and Jeremy Feng, for the awesome design they provided and for being patient with us as we code the project :)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -151,8 +224,6 @@ Project Link: [https://github.com/aubreybmina/mission-5](https://github.com/aubr
 [stars-url]: https://github.com/aubreybmina/mission-5/stargazers
 [issues-shield]: https://img.shields.io/github/issues/aubreybmina/mission-5.svg?style=for-the-badge
 [issues-url]: https://github.com/aubreybmina/mission-5/issues
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://www.linkedin.com/in/aubrey-blancas/
 [product-screenshot]: src/images/screenshot.png
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
@@ -160,3 +231,9 @@ Project Link: [https://github.com/aubreybmina/mission-5](https://github.com/aubr
 [Sass-url]: https://sass-lang.com/
 [typescriptlang.org]: https://img.shields.io/badge/Typescript-20232A?style=for-the-badge&logo=typescript&logoColor=3178C6
 [Typescript-url]: https://www.typescriptlang.org/
+[mongodb.com]: https://img.shields.io/badge/MongoDB-20232A?style=for-the-badge&logo=mongodb&logoColor=409937
+[MongoDB-url]: https://www.typescriptlang.org/
+[expressjs.com]: https://img.shields.io/badge/Express-20232A?style=for-the-badge&logo=express&logoColor=646464
+[Express-url]: https://www.typescriptlang.org/
+[nodejs.org]: https://img.shields.io/badge/NodeJS-20232A?style=for-the-badge&logo=node.js&logoColor=5AAB46
+[NodeJS-url]: https://nodejs.org/en
