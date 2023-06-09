@@ -282,7 +282,7 @@ const BusinessLaptops: React.FC = () => {
                 {showAltDetails !== laptop._id ? (
                   <Link
                     to={`http://localhost/laptop/${laptop._id}/${laptop.brand} ${laptop.model} ${laptop.screenSize} ${laptop.category} Laptop`}
-                  state={laptop}
+                    // state={laptop}
                     className="businessList__container--tiles_text_link"
                   >
                     <p>
