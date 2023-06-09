@@ -14,6 +14,7 @@
   </a>
 
 <h3 align="center">Mission 5</h3>
+<h4 align="center">Aubrey Mina and Wilhelmus Duncker<h4>
 
   <p align="center">
     This is a working readme file and should be updated before submission
@@ -103,7 +104,7 @@ Make sure you have Node.js installed in your computer. To check if you have it i
 
 ## Usage
 
-To run the project on your local desktop run the following script:
+To run the project on your local desktop run the following scripts:
 
 ### `yarn start`
 
@@ -113,9 +114,9 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-## Available Scripts
-
-In the project directory, you can run:
+You can also run this project in containers using docker. You will need to have a local Mongo database and the mongo image pulled from the docker hub.
+Use the Dockerfiles in the ui and api directories to create your images, then use docker-compose up in the terminal to create your stack of containers from these images.
+The project will then run on [http://localhost:3000](http://localhost:3000) via the containers.
 
 <!-- CONTRIBUTING -->
 
@@ -139,6 +140,7 @@ Don't forget to give the project a star! Thanks again!
 ## Contact
 
 Aubrey Mina - aubreybmina@gmail.com
+Wilhelmus Duncker - wimduncker17@hotmail.co.nz
 
 Project Link: [https://github.com/aubreybmina/mission-5](https://github.com/aubreybmina/mission-5)
 
