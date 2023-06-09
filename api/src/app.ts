@@ -3,8 +3,10 @@ import Logging from './library/Logging'
 import userRoutes from './routes/userRoutes'
 import laptopRoutes from './routes/laptopRoutes'
 import createHttpError, { isHttpError } from 'http-errors'
+import cors from 'cors'
 
 const app = express()
+app.use(cors())
 
 app.use((req, res, next) => {
   Logging.info(

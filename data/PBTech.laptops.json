@@ -1,0 +1,406 @@
+[{
+  "_id": {
+    "$oid": "6477c710aa0c9e47174d60a9"
+  },
+  "brand": "Lenovo",
+  "model": "V15 G2",
+  "category": "Business",
+  "cpuFamily": "Intel Core i7",
+  "memorySize": 8,
+  "screenSize": 14.5,
+  "screenResolution": "1920x1080",
+  "ssdCapacity": 256,
+  "operatingSystem": "Windows 11 Pro",
+  "warranty": "1 Year",
+  "features": "WiFiAC + BT5, Webcam, USB-C, HDMI1.4b",
+  "price": 976.5,
+  "imageURL": "https://www.pbtech.co.nz/imgprod/N/B/NBKLEN150200__1.jpg?h=2930035477",
+  "userName": {
+    "$oid": "64760b2f2bbf7c731a5c7edf"
+  },
+  "createdAt": {
+    "$date": "2023-05-31T22:15:44.213Z"
+  },
+  "updatedAt": {
+    "$date": "2023-06-04T06:28:11.159Z"
+  },
+  "__v": 0,
+  "special": true
+},
+{
+  "_id": {
+    "$oid": "647b20e00ff9456d9003d1b4"
+  },
+  "brand": "HP",
+  "model": "15s-fq2733TU",
+  "category": "Home & Study",
+  "cpuFamily": "Intel Core i5",
+  "memorySize": 16,
+  "screenSize": 15.6,
+  "screenResolution": "1920x1080",
+  "ssdCapacity": 512,
+  "operatingSystem": "Windows 11 Home S",
+  "warranty": "1 Year",
+  "features": "WiFiAC + BT5, Webcam, USB-C, HDMI1.4b, SD Card Reader",
+  "price": 1035,
+  "imageURL": "https://www.pbtech.co.nz/imgprod/N/B/NBKHNB152733__1.jpg?h=3112455732",
+  "userName": {
+    "$oid": "64760b2f2bbf7c731a5c7edf"
+  },
+  "createdAt": {
+    "$date": "2023-06-03T11:15:45.125Z"
+  },
+  "updatedAt": {
+    "$date": "2023-06-04T06:29:10.813Z"
+  },
+  "__v": 0,
+  "special": true
+},
+{
+  "_id": {
+    "$oid": "647b22530ff9456d9003d1b7"
+  },
+  "brand": "Apple",
+  "model": "Macbook Air",
+  "category": "Home & Study",
+  "cpuFamily": "Apple",
+  "memorySize": 8,
+  "screenSize": 13,
+  "screenResolution": "2560x1600",
+  "ssdCapacity": 256,
+  "operatingSystem": "Mac OS",
+  "warranty": "1 Year",
+  "features": "Retina Display, Magic Keyboard, Touch ID, Force Touch Trackpad, 2 Thunderbolt/USB4 ports",
+  "price": 1555,
+  "imageURL": "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/refurb-macbook-air-silver-m1-202010?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1634145618000",
+  "userName": {
+    "$oid": "64760b2f2bbf7c731a5c7edf"
+  },
+  "createdAt": {
+    "$date": "2023-06-03T11:21:55.236Z"
+  },
+  "updatedAt": {
+    "$date": "2023-06-04T06:31:05.954Z"
+  },
+  "__v": 0,
+  "special": false
+},
+{
+  "_id": {
+    "$oid": "647c2827e5ce50bfd07e1d45"
+  },
+  "brand": "Acer",
+  "model": "Extensa EX215-32",
+  "category": "Business",
+  "cpuFamily": "Intel Celeron",
+  "memorySize": 8,
+  "screenSize": 15.6,
+  "screenResolution": "1920x1080",
+  "ssdCapacity": 256,
+  "operatingSystem": "Windows 11 Pro",
+  "warranty": "1 Year",
+  "features": "WiFiAC + BT5.0, Webam, HDMI 2.0",
+  "price": 829,
+  "imageURL": "https://www.pbtech.co.nz/imgprod/N/B/NBKACN544203__1.jpg?h=3724885298",
+  "userName": {
+    "$oid": "64760b2f2bbf7c731a5c7edf"
+  },
+  "createdAt": {
+    "$date": "2023-06-04T05:59:03.661Z"
+  },
+  "updatedAt": {
+    "$date": "2023-06-04T06:32:39.252Z"
+  },
+  "__v": 0,
+  "special": false
+},
+{
+  "_id": {
+    "$oid": "647c2d520bd4d5e86cf2f4b7"
+  },
+  "brand": "HP",
+  "model": "240 G9",
+  "category": "Business",
+  "cpuFamily": "Intel Core i5",
+  "memorySize": 16,
+  "screenSize": 14,
+  "screenResolution": "1920x1080",
+  "ssdCapacity": 256,
+  "operatingSystem": "Windows 11 Pro",
+  "warranty": "1 Year",
+  "features": "WiFi6 + BT5.2, HD Cam, USB-C, HDMI 1.4b",
+  "price": 943,
+  "imageURL": "https://www.pbtech.co.nz/imgprod/N/B/NBKHNB732040B__1.jpg?h=2430107891",
+  "userName": {
+    "$oid": "64760b2f2bbf7c731a5c7edf"
+  },
+  "createdAt": {
+    "$date": "2023-06-04T06:21:06.069Z"
+  },
+  "updatedAt": {
+    "$date": "2023-06-04T06:25:42.922Z"
+  },
+  "__v": 0,
+  "special": true
+},
+{
+  "_id": {
+    "$oid": "647c341df4e4700518b6833b"
+  },
+  "brand": "Asus",
+  "model": "TUF F15",
+  "category": "Gaming",
+  "cpuFamily": "Intel Core i5",
+  "memorySize": 16,
+  "screenSize": 15.6,
+  "screenResolution": "1920x1080",
+  "ssdCapacity": 512,
+  "operatingSystem": "Windows 11 Home",
+  "warranty": "1 Year",
+  "features": "WiFi6 + BT5.2, Webam, Thunderbolt4 (with DP), HDMI 2.1 TMDS, 1-Zone RGB Backlit Keyboard",
+  "price": 1568.46,
+  "special": true,
+  "imageURL": "https://www.pbtech.co.nz/imgprod/N/B/NBKASU506040__1.jpg?h=2005533558",
+  "userName": {
+    "$oid": "64760b2f2bbf7c731a5c7edf"
+  },
+  "createdAt": {
+    "$date": "2023-06-04T06:50:05.718Z"
+  },
+  "updatedAt": {
+    "$date": "2023-06-04T06:50:05.718Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "647c3559f4e4700518b6834e"
+  },
+  "brand": "Asus",
+  "model": "ROG Strix G16",
+  "category": "Gaming",
+  "cpuFamily": "Intel Core i7",
+  "memorySize": 16,
+  "screenSize": 16,
+  "screenResolution": "1920x1200",
+  "ssdCapacity": 512,
+  "operatingSystem": "Windows 11 Home",
+  "warranty": "1 Year",
+  "features": "WiFi6E + BT5.2, Webam, Thunderbolt4 (with DP), HDMI 2.1 FRL, 4-Zone RGB Backlit Keyboard",
+  "price": 2874.75,
+  "special": true,
+  "imageURL": "https://www.pbtech.co.nz/imgprod/N/B/NBKASU6143110__1.jpg?h=3991477500",
+  "userName": {
+    "$oid": "64760b2f2bbf7c731a5c7edf"
+  },
+  "createdAt": {
+    "$date": "2023-06-04T06:55:21.268Z"
+  },
+  "updatedAt": {
+    "$date": "2023-06-04T07:00:05.182Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "647c362bf4e4700518b68351"
+  },
+  "brand": "Acer",
+  "model": "Aspire A715",
+  "category": "Gaming",
+  "cpuFamily": "Intel Core i5",
+  "memorySize": 16,
+  "screenSize": 15.6,
+  "screenResolution": "1920x1080",
+  "ssdCapacity": 512,
+  "operatingSystem": "Windows 11 Home",
+  "warranty": "1 Year",
+  "features": "BT5.2, Webam, Thunderbolt4, HDMI 2.0",
+  "price": 1512.18,
+  "special": true,
+  "imageURL": "https://www.pbtech.co.nz/imgprod/N/B/NBKACN7157651__1.jpg?h=3080812371",
+  "userName": {
+    "$oid": "64760b2f2bbf7c731a5c7edf"
+  },
+  "createdAt": {
+    "$date": "2023-06-04T06:58:51.155Z"
+  },
+  "updatedAt": {
+    "$date": "2023-06-04T06:58:51.155Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "647c7c87470cdf6c509bfb2f"
+  },
+  "brand": "Apple",
+  "model": "Macbook Pro M1",
+  "category": "Business",
+  "cpuFamily": "Apple",
+  "memorySize": 16,
+  "screenSize": 16,
+  "screenResolution": "3456x2234",
+  "ssdCapacity": 512,
+  "operatingSystem": "Mac OS",
+  "warranty": "1 Year",
+  "features": "WiFi6 + BT5.0, HD Webcam, Thunderbolt2 (with DP), HDMI, Liquid Retina XDR Display",
+  "price": 3498.99,
+  "special": true,
+  "imageURL": "https://www.pbtech.co.nz/imgprod/N/B/NBKAPP162151211__1.jpg?h=2640446476",
+  "userName": {
+    "$oid": "64760b2f2bbf7c731a5c7edf"
+  },
+  "createdAt": {
+    "$date": "2023-06-04T11:59:03.339Z"
+  },
+  "updatedAt": {
+    "$date": "2023-06-04T11:59:03.339Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "647c7d3c470cdf6c509bfb32"
+  },
+  "brand": "Asus",
+  "model": "Zenbook Pro 16X",
+  "category": "Business",
+  "cpuFamily": "Intel Core i7",
+  "memorySize": 16,
+  "screenSize": 16,
+  "screenResolution": "3840x2400",
+  "ssdCapacity": 512,
+  "operatingSystem": "Windows 11 Pro",
+  "warranty": "1 Year",
+  "features": "WiFi6E + BT5, IR Cam, Thunderbolt4 (with PowerDelivery), HDMI 2.1",
+  "price": 3996,
+  "special": true,
+  "imageURL": "https://www.pbtech.co.nz/imgprod/N/B/NBKASU7602071__1.jpg?h=1075866321",
+  "userName": {
+    "$oid": "64760b2f2bbf7c731a5c7edf"
+  },
+  "createdAt": {
+    "$date": "2023-06-04T12:02:04.992Z"
+  },
+  "updatedAt": {
+    "$date": "2023-06-04T12:02:04.992Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "647c7ddb470cdf6c509bfb35"
+  },
+  "brand": "Dell",
+  "model": "XPS 13",
+  "category": "Business",
+  "cpuFamily": "Intel Core i7",
+  "memorySize": 32,
+  "screenSize": 13.4,
+  "screenResolution": "1920x1200",
+  "ssdCapacity": 1000,
+  "operatingSystem": "Windows 11 Home",
+  "warranty": "1 Year",
+  "features": "WiFi6 + BT5.2, IR Webcam, Thunderbolt4 (with DP & PD), Backlit Keyboard",
+  "price": 2869,
+  "special": false,
+  "imageURL": "https://www.pbtech.co.nz/imgprod/N/B/NBKDEL1393151__1.jpg?h=1768237953",
+  "userName": {
+    "$oid": "64760b2f2bbf7c731a5c7edf"
+  },
+  "createdAt": {
+    "$date": "2023-06-04T12:04:43.470Z"
+  },
+  "updatedAt": {
+    "$date": "2023-06-04T12:04:43.470Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "647c81f5470cdf6c509bfb44"
+  },
+  "brand": "Asus",
+  "model": "Zenbook Pro 15",
+  "category": "Business",
+  "cpuFamily": "AMD Ryzen 7",
+  "memorySize": 16,
+  "screenSize": 15.6,
+  "screenResolution": "1920x1080",
+  "ssdCapacity": 1000,
+  "operatingSystem": "Windows 11 Pro",
+  "warranty": "1 Year",
+  "features": "WiFi6 + BT5, IR Webcam, HDMI 2.0b",
+  "price": 2086.66,
+  "special": true,
+  "imageURL": "https://www.pbtech.co.nz/imgprod/N/B/NBKASU535232__1.jpg?h=1060964360",
+  "userName": {
+    "$oid": "64760b2f2bbf7c731a5c7edf"
+  },
+  "createdAt": {
+    "$date": "2023-06-04T12:22:13.051Z"
+  },
+  "updatedAt": {
+    "$date": "2023-06-04T12:22:13.051Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "647c827f470cdf6c509bfb4b"
+  },
+  "brand": "Dell",
+  "model": "Latitude 7320 Flip",
+  "category": "Business",
+  "cpuFamily": "Intel Core i7",
+  "memorySize": 16,
+  "screenSize": 13.3,
+  "screenResolution": "1920x1080",
+  "ssdCapacity": 512,
+  "operatingSystem": "Windows 11 Pro",
+  "warranty": "1 Year",
+  "features": "WiFi6 + BT5.2, Thunderbolt4 (with PD & DP), HDMI 2.0",
+  "price": 1725,
+  "special": true,
+  "imageURL": "https://www.pbtech.co.nz/imgprod/N/B/NBKDEL732001__1.jpg?h=586204837",
+  "userName": {
+    "$oid": "64760b2f2bbf7c731a5c7edf"
+  },
+  "createdAt": {
+    "$date": "2023-06-04T12:24:31.100Z"
+  },
+  "updatedAt": {
+    "$date": "2023-06-04T12:24:31.100Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "647c82e3470cdf6c509bfb4e"
+  },
+  "brand": "Dell",
+  "model": "Latitude 5520",
+  "category": "Business",
+  "cpuFamily": "Intel Core i5",
+  "memorySize": 8,
+  "screenSize": 15.6,
+  "screenResolution": "1920x1080",
+  "ssdCapacity": 256,
+  "operatingSystem": "Windows 10 Pro",
+  "warranty": "1 Year",
+  "features": "WiFi6 + BT5.1, Thunderbolt4, Webcam",
+  "price": 1462,
+  "special": false,
+  "imageURL": "https://www.pbtech.co.nz/imgprod/N/B/NBKDEL293423__1.jpg?h=2911734190",
+  "userName": {
+    "$oid": "64760b2f2bbf7c731a5c7edf"
+  },
+  "createdAt": {
+    "$date": "2023-06-04T12:26:11.270Z"
+  },
+  "updatedAt": {
+    "$date": "2023-06-04T12:26:11.270Z"
+  },
+  "__v": 0
+}]
