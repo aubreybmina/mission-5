@@ -134,9 +134,19 @@ To run the project on your local desktop run the following scripts:
    ```
 
 2. Add a new terminal, go to ui directory then run the ui. It will automatically open a browser tab
+
    ```sh
    cd ui
    yarn start
+   ```
+
+3. You can import the initial list of laptop collections from your MongoDB Compass application. Make sure that you're inside the laptops collection in your database.
+   ```sh
+   Open MongoDB Compass
+   Click 'Connect' button
+   Open the database you created then open 'laptops' collection
+   Click Add Data Dropdown button then choose Import JSON or CSV file
+   Upload laptopCollections.json inside 'mission-5\api\src\config' directory
    ```
 
 <!-- DOCKER -->
