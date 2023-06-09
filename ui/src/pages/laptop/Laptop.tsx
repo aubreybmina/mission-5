@@ -281,8 +281,13 @@ const BusinessLaptops: React.FC = () => {
               <div className="businessList__container--tiles_text">
                 {showAltDetails !== laptop._id ? (
                   <Link
+<<<<<<< HEAD
                     to={`http://localhost/laptop/${laptop._id}/${laptop.brand} ${laptop.model} ${laptop.screenSize} ${laptop.category} Laptop`}
                     // state={laptop}
+=======
+                    to={`${laptop._id}/${laptop.brand} ${laptop.model} ${laptop.screenSize} ${laptop.category} Laptop`}
+                    state={laptop}
+>>>>>>> 9196b2af0c04861e9ea811d19a7927281962f447
                     className="businessList__container--tiles_text_link"
                   >
                     <p>
@@ -291,7 +296,8 @@ const BusinessLaptops: React.FC = () => {
                   </Link>
                 ) : (
                   <Link
-                    to={`laptop/${laptop._id}`}
+                    to={`${laptop._id}/${laptop.brand} ${laptop.model} ${laptop.screenSize} ${laptop.category} Laptop`}
+                    state={laptop}
                     className="businessList__container--tiles_text_link"
                   >
                     <p>

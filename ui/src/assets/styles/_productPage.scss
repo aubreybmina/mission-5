@@ -70,6 +70,39 @@
         padding-bottom: u.toRem(61);
       }
 
+      &--rating {
+        font-size: u.toRem(18);
+        line-height: u.toRem(22);
+        font-weight: 400;
+        font-family: f.$inter !important;
+
+        &--star {
+          position: relative;
+          appearance: none;
+          color: transparent;
+          width: auto;
+          display: inline-block;
+          vertical-align: baseline;
+          font-size: 25px;
+
+          &::before {
+            --percent: calc(2.5 / 5 * 100%);
+            content: '★★★★★';
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: rgba(0, 0, 0, 0.2);
+            background: linear-gradient(
+              80deg,
+              #f08222 var(--percent),
+              rgba(0, 0, 0, 0.2) var(--percent)
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+        }
+      }
+
       &--options {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -224,8 +257,8 @@
   background-color: #0d4f77;
 
   &:hover {
-    color: #0d4f77;
-    background-color: c.$standout-color;
+    color: #f0f0f0;
+    background-color: c.$text-highlight;
   }
 }
 

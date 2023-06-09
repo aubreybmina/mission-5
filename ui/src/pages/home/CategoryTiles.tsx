@@ -85,7 +85,8 @@ export default function CategoryTiles() {
             <div className="laptopList__container--tiles_text">
               {showAltDetails.hot !== laptop._id ? (
                 <Link
-                  to={`laptop/${laptop._id}`}
+                  to={`laptop/${laptop._id}/${laptop.brand} ${laptop.model} ${laptop.screenSize} ${laptop.category} Laptop`}
+                  state={laptop}
                   className="laptopList__container--tiles_text_link"
                 >
                   <p>
@@ -94,7 +95,8 @@ export default function CategoryTiles() {
                 </Link>
               ) : (
                 <Link
-                  to={`laptop/${laptop._id}`}
+                  to={`laptop/${laptop._id}/${laptop.brand} ${laptop.model} ${laptop.screenSize} ${laptop.category} Laptop`}
+                  state={laptop}
                   className="laptopList__container--tiles_text_link"
                 >
                   <p>
@@ -160,7 +162,8 @@ export default function CategoryTiles() {
               <div className="laptopList__container--tiles_text">
                 {showAltDetails.business !== laptop._id ? (
                   <Link
-                    to={`laptop/${laptop._id}`}
+                    to={`laptop/${laptop._id}/${laptop.brand} ${laptop.model} ${laptop.screenSize} ${laptop.category} Laptop`}
+                    state={laptop}
                     className="laptopList__container--tiles_text_link"
                   >
                     <p>
@@ -169,7 +172,8 @@ export default function CategoryTiles() {
                   </Link>
                 ) : (
                   <Link
-                    to={`laptop/${laptop._id}`}
+                    to={`laptop/${laptop._id}/${laptop.brand} ${laptop.model} ${laptop.screenSize} ${laptop.category} Laptop`}
+                    state={laptop}
                     className="laptopList__container--tiles_text_link"
                   >
                     <p>
@@ -227,7 +231,8 @@ export default function CategoryTiles() {
             <div className="laptopList__container--tiles_text">
               {showAltDetails.gaming !== laptop._id ? (
                 <Link
-                  to={`laptop/${laptop._id}`}
+                  to={`laptop/${laptop._id}/${laptop.brand} ${laptop.model} ${laptop.screenSize} ${laptop.category} Laptop`}
+                  state={laptop}
                   className="laptopList__container--tiles_text_link"
                 >
                   <p>
@@ -236,7 +241,8 @@ export default function CategoryTiles() {
                 </Link>
               ) : (
                 <Link
-                  to={`laptop/${laptop._id}`}
+                  to={`laptop/${laptop._id}/${laptop.brand} ${laptop.model} ${laptop.screenSize} ${laptop.category} Laptop`}
+                  state={laptop}
                   className="laptopList__container--tiles_text_link"
                 >
                   <p>
