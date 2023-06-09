@@ -4,12 +4,9 @@ import Nav from './components/Nav'
 import Home from './pages/home/Home'
 import Laptop from './pages/laptop/Laptop'
 import LaptopPage from './pages/laptop/LaptopPage'
-import Login from './pages/Login'
-import Search from './pages/search/Search'
 import Missing from './pages/Missing'
 import Footer from './components/Footer'
 import UpperNav from './components/UpperNav'
-import BusinessLaptops from './pages/businessLaptops/BusinessLaptops'
 import '@fontsource/inter/100.css'
 import '@fontsource/inter/200.css'
 import '@fontsource/inter/300.css'
@@ -28,13 +25,10 @@ function App() {
         <Nav />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="login" element={<Login />} />
           <Route path="laptop" element={<Laptop />} />
           <Route path="laptop/:id" element={<LaptopPage />} />
           <Route path="laptop/:id/:title" element={<LaptopPage />} />
-          <Route path="search" element={<Search />} />
           <Route path="*" element={<Missing />} />
-          <Route path="business-laptops" element={<BusinessLaptops />} />
         </Routes>
         <Footer />
       </BrowserRouter>

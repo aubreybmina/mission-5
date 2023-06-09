@@ -3,7 +3,7 @@ import mongoose, { ConnectOptions } from 'mongoose'
 import Logging from '../library/Logging'
 
 const connectionOptions: ConnectOptions = {
-  serverSelectionTimeoutMS: 30000, // Increase the timeout to 30 seconds
+  serverSelectionTimeoutMS: 30000,
 }
 
 export async function connectDb(mongoUrl: string) {

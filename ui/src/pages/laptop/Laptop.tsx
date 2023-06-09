@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { Laptop as LaptopModel } from '../../models/laptop'
 import ArrowRightSLineIcon from 'remixicon-react/ArrowRightSLineIcon'
 import Carousel from '../home/Carousel'
-import DropDown from '../businessLaptops/DropDown'
+import DropDown from '../../components/DropDown'
 import { stores } from '../../assets/data/storesArray'
 import { brands } from '../../assets/data/brandsArray'
 import { cpu } from '../../assets/data/cpuArray'
@@ -28,7 +28,7 @@ const BusinessLaptops: React.FC = () => {
         const laptops = await response.json()
         setLaptops(laptops.laptops)
       } catch (error) {
-        console.log(error)
+        return error
       }
     }
     loadLaptops()
@@ -281,13 +281,8 @@ const BusinessLaptops: React.FC = () => {
               <div className="businessList__container--tiles_text">
                 {showAltDetails !== laptop._id ? (
                   <Link
-<<<<<<< HEAD
-                    to={`http://localhost/laptop/${laptop._id}/${laptop.brand} ${laptop.model} ${laptop.screenSize} ${laptop.category} Laptop`}
-                    // state={laptop}
-=======
                     to={`${laptop._id}/${laptop.brand} ${laptop.model} ${laptop.screenSize} ${laptop.category} Laptop`}
                     state={laptop}
->>>>>>> 9196b2af0c04861e9ea811d19a7927281962f447
                     className="businessList__container--tiles_text_link"
                   >
                     <p>

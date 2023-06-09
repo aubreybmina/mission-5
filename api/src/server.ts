@@ -6,9 +6,13 @@ import Logging from './library/Logging'
 
 import app from './app'
 
-const SERVER_PORT = 9090 || 9000
+import dotenv from 'dotenv'
 
-const MONGO_URL = 'mongodb://mongo:27017/PBTech?'
+const configuration = dotenv.config()
+
+const SERVER_PORT = configuration?.parsed?.SERVER_PORT || 9000
+
+const MONGO_URL = configuration?.parsed?.MONGO_URL
 
 try {
   connectDb(MONGO_URL as string)

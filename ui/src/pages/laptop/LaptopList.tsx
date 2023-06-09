@@ -15,7 +15,7 @@ const LaptopList = () => {
         const laptops = await response.json()
         setLaptops(laptops.laptops)
       } catch (error) {
-        console.log(error)
+        return error
       }
     }
     loadLaptops()
