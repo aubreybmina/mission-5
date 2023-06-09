@@ -103,7 +103,7 @@ Make sure you have Node.js and MongoDB Compass installed in your computer. To ch
 
 3. Create a .env file at the parent directory of ui
    ```sh
-   PORT = 'desired port number, could be 3001'
+   PORT = 'desired port number, could be 3000'
    ```
 4. On your terminal, go to api directory then install the packages inside package.json using the following scripts
 
