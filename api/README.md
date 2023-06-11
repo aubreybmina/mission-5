@@ -161,7 +161,7 @@ To create a docker image of the project on your local desktop run the following 
    "proxy": "http://api:9090"
    ```
 
-2. Inside the ui folder, change the MONGO_URL from "mongodb://127.0.0.1:27017/db-name?" to "mongodb://mongo:27017/db-name?" on the .env file.
+2. Inside the api folder, change the MONGO_URL from "mongodb://127.0.0.1:27017/db-name?" to "mongodb://mongo:27017/db-name?" on the .env file.
 
    ```sh
    MONGO_URL = 'mongodb://mongo:27017/db-name?'
